@@ -1,0 +1,88 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: #fff;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.navbar-container {
+  max-width: 1720px;
+  margin: 0 auto;
+  padding: 0 clamp(24px, 5vw, 64px);
+  height: 96px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ── Logo ─────────────────────── */
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.logo-icon {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.logo-text {
+  font-size: 32px;
+  font-weight: 800;
+  color: #111827;
+  letter-spacing: -0.5px;
+  line-height: 1;
+}
+
+.logo-key {
+  color: #2563EB;
+}
+
+/* ── Nav links ────────────────── */
+.navbar-links {
+  display: flex;
+  list-style: none;
+  gap: 48px;
+}
+
+.navbar-links a {
+  font-size: 22px;
+  font-weight: 700;
+  color: #475569;
+  transition: color 0.15s;
+  text-decoration: none;
+}
+
+.navbar-links a:hover {
+  color: #111827;
+}
+
+/* ── CTA button ───────────────── */
+.btn-demo {
+  background: #2563EB;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+  padding: 15px 30px;
+  border-radius: 10px;
+  transition: background 0.15s, transform 0.12s;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-demo:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+/* ── Mobile ───────────────────── */
+@media (max-width: 1024px) {
+  .navbar-links {
+    display: none;
+  }
+}

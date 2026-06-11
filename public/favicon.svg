@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 100 100" fill="none">
+  <!--
+    SolarKey Logo — exact recreation from high-res reference image.
+    Center=(50,50)  Radius=33  StrokeWidth=8
+
+    Gap: ±30° from 12-o'clock (total 60°)
+      Left-gap  240° → (33.5, 21.4)
+      Right-gap 300° → (66.5, 21.4)
+
+    Color split at horizontal midline:
+      9-o'clock → (17, 50)
+      3-o'clock → (83, 50)
+      6-o'clock → (50, 83)
+
+    Stem+bracket: sharp 90° corners (strokeLinejoin=miter)
+      Down: (50,4)→(50,52)  Right: (50,52)→(64,52)  Down: (64,52)→(64,67)
+  -->
+
+  <!-- BLACK top-left arc -->
+  <path d="M 17 50 A 33 33 0 0 1 33.5 21.4"
+        stroke="#222222" stroke-width="8" stroke-linecap="round"/>
+
+  <!-- BLACK top-right arc -->
+  <path d="M 66.5 21.4 A 33 33 0 0 1 83 50"
+        stroke="#222222" stroke-width="8" stroke-linecap="round"/>
+
+  <!-- BLUE bottom arc (two 90° arcs: 3→6 o'clock, then 6→9 o'clock) -->
+  <path d="M 83 50 A 33 33 0 0 1 50 83 A 33 33 0 0 1 17 50"
+        stroke="#2563EB" stroke-width="8" stroke-linecap="round"/>
+
+  <!-- Stem + sharp right-angle bracket terminal -->
+  <path d="M 50 4 L 50 52 L 64 52"
+        stroke="#222222" stroke-width="8"
+        stroke-linecap="round" stroke-linejoin="miter" fill="none"/>
+</svg>
