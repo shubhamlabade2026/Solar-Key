@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './Navbar.css';
 
 /**
@@ -90,33 +90,82 @@ const SolarKeyLogo = ({ size = 28 }) => (
 
 /* ──────────────────────────────────────────────────────────────── */
 
-const Navbar = () => (
-  <nav className="navbar">
-    <div className="navbar-container">
+const Navbar = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
 
-      {/* ── Logo ── */}
-      <div className="navbar-logo">
-        <SolarKeyLogo size={42} />
-        <span className="logo-text">
-          Solar<span className="logo-key">Key</span>
-        </span>
+  // Close menu on resize to desktop
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth > 1024) setMenuOpen(false);
+    };
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  // Prevent body scroll when menu is open
+  useEffect(() => {
+    if (menuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => { document.body.style.overflow = ''; };
+  }, [menuOpen]);
+
+  return (
+    <nav className="navbar">
+      <div className="navbar-container">
+
+        {/* ── Logo ── */}
+        <div className="navbar-logo">
+          <SolarKeyLogo size={42} />
+          <span className="logo-text">
+            Solar<span className="logo-key">Key</span>
+          </span>
+        </div>
+
+        {/* ── Nav links (desktop) ── */}
+        <ul className="navbar-links">
+          <li><a href="#platform">Platform</a></li>
+          <li><a href="#solutions">Solutions</a></li>
+          <li><a href="#resources">Resources</a></li>
+          <li><a href="#company">Company</a></li>
+        </ul>
+
+        {/* ── CTA (desktop) ── */}
+        <button className="btn-demo btn-demo-desktop" id="nav-request-demo">
+          Request a demo
+        </button>
+
+        {/* ── Hamburger toggle (mobile) ── */}
+        <button
+          className={`hamburger${menuOpen ? ' hamburger--active' : ''}`}
+          id="nav-hamburger"
+          onClick={() => setMenuOpen(!menuOpen)}
+          aria-label="Toggle navigation menu"
+          aria-expanded={menuOpen}
+        >
+          <span className="hamburger-line" />
+          <span className="hamburger-line" />
+          <span className="hamburger-line" />
+        </button>
+
       </div>
 
-      {/* ── Nav links ── */}
-      <ul className="navbar-links">
-        <li><a href="#platform">Platform</a></li>
-        <li><a href="#solutions">Solutions</a></li>
-        <li><a href="#resources">Resources</a></li>
-        <li><a href="#company">Company</a></li>
-      </ul>
-
-      {/* ── CTA ── */}
-      <button className="btn-demo" id="nav-request-demo">
-        Request a demo
-      </button>
-
-    </div>
-  </nav>
-);
+      {/* ── Mobile menu overlay ── */}
+      <div className={`mobile-menu${menuOpen ? ' mobile-menu--open' : ''}`}>
+        <ul className="mobile-menu-links">
+          <li><a href="#platform" onClick={() => setMenuOpen(false)}>Platform</a></li>
+          <li><a href="#solutions" onClick={() => setMenuOpen(false)}>Solutions</a></li>
+          <li><a href="#resources" onClick={() => setMenuOpen(false)}>Resources</a></li>
+          <li><a href="#company" onClick={() => setMenuOpen(false)}>Company</a></li>
+        </ul>
+        <button className="btn-demo btn-demo-mobile" id="nav-request-demo-mobile" onClick={() => setMenuOpen(false)}>
+          Request a demo
+        </button>
+      </div>
+    </nav>
+  );
+};
 
 export default Navbar;

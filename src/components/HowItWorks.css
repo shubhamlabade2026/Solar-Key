@@ -73,27 +73,72 @@
   flex-shrink: 0;
 }
 
-@media (max-width: 768px) {
-  .hiw-steps {
-    justify-content: flex-start;
-    overflow-x: auto;
-    padding-bottom: 8px;
-    padding-left: 0;
-    padding-right: 0;
+/* ── Tablet ── */
+@media (max-width: 1024px) {
+  .how-it-works {
+    padding: 72px 0 32px;
+  }
+  .hiw-heading {
+    font-size: 30px;
+    margin-bottom: 32px;
   }
   .step-btn {
-    flex: 0 0 auto;
-    padding: 12px 24px;
-    font-size: 15px;
+    font-size: 17px;
+    padding: 14px 8px;
   }
   .step-arrow {
     padding: 0 6px;
-    font-size: 16px;
+    font-size: 18px;
   }
 }
 
+/* ── Mobile: vertical stacking ── */
 @media (max-width: 640px) {
+  .how-it-works {
+    padding: 56px 0 24px;
+  }
+  .hiw-container {
+    padding: 0 20px;
+  }
+  .hiw-eyebrow {
+    font-size: 12px;
+  }
   .hiw-heading {
-    font-size: 22px;
+    font-size: 24px;
+    margin-bottom: 24px;
+  }
+  .hiw-steps {
+    flex-direction: column;
+    gap: 0;
+    padding: 0;
+  }
+  .step-btn {
+    width: 100%;
+    flex: none;
+    font-size: 16px;
+    padding: 16px 16px;
+    border-radius: 8px;
+  }
+  .step-arrow {
+    transform: rotate(90deg);
+    font-size: 16px;
+    padding: 6px 0;
+  }
+}
+
+/* ── Small mobile ── */
+@media (max-width: 380px) {
+  .how-it-works {
+    padding: 44px 0 20px;
+  }
+  .hiw-container {
+    padding: 0 16px;
+  }
+  .hiw-heading {
+    font-size: 21px;
+  }
+  .step-btn {
+    font-size: 15px;
+    padding: 14px 12px;
   }
 }

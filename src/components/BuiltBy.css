@@ -79,7 +79,9 @@
   font-weight: 700;
   color: #111827;
   margin-bottom: 2px;
-  white-space: nowrap;
+  /* Allow wrapping on mobile instead of overflow */
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .founder-role {
@@ -95,13 +97,78 @@
   max-width: 520px;
 }
 
-/* Responsive */
+/* ── Tablet ── */
 @media (max-width: 1024px) {
+  .built-by {
+    padding: 72px 0 80px;
+  }
   .founders-grid {
     grid-template-columns: 1fr;
-    gap: 16px;
+    gap: 12px;
   }
   .builtby-heading {
-    font-size: 20px;
+    font-size: 28px;
+    margin-bottom: 32px;
+  }
+}
+
+/* ── Mobile ── */
+@media (max-width: 640px) {
+  .built-by {
+    padding: 56px 0 64px;
+  }
+  .builtby-container {
+    padding: 0 20px;
+  }
+  .builtby-eyebrow {
+    font-size: 12px;
+  }
+  .builtby-heading {
+    font-size: 24px;
+    margin-bottom: 24px;
+    max-width: 100%;
+  }
+  .founder-card {
+    padding: 18px 16px 24px;
+    gap: 10px;
+  }
+  .founder-avatar {
+    width: 46px;
+    height: 46px;
+    font-size: 13px;
+    border-radius: 8px;
+  }
+  .founder-name {
+    font-size: 16px;
+  }
+  .founder-role {
+    font-size: 13px;
+  }
+  .founders-footnote {
+    font-size: 13px;
+  }
+}
+
+/* ── Small mobile ── */
+@media (max-width: 380px) {
+  .built-by {
+    padding: 44px 0 52px;
+  }
+  .builtby-container {
+    padding: 0 16px;
+  }
+  .builtby-heading {
+    font-size: 21px;
+  }
+  .founder-card {
+    padding: 16px 14px 20px;
+  }
+  .founder-avatar {
+    width: 42px;
+    height: 42px;
+    font-size: 12px;
+  }
+  .founder-name {
+    font-size: 15px;
   }
 }
