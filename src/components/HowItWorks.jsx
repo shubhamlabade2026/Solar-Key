@@ -1,5 +1,4 @@
 import React from 'react';
-import './HowItWorks.css';
 
 const steps = [
   { label: 'Connect',  active: false },

@@ -1,5 +1,4 @@
 import React from 'react';
-import './BuiltBy.css';
 
 const founders = [
   { id: 'founder-vs', initials: 'VS', name: 'Vikram Shetty',  role: 'Co-founder & CEO' },

@@ -1,5 +1,4 @@
 import React from 'react';
-import './DashboardPreview.css';
 
 // Bar heights matching the reference image pattern (7 bars, varying heights)
 // Reference: short, medium, medium-tall, tall, medium, tall, tallest

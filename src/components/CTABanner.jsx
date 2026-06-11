@@ -1,5 +1,4 @@
 import React from 'react';
-import './CTABanner.css';
 
 const CTABanner = () => {
   return (

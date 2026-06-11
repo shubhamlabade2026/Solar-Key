@@ -1,5 +1,6 @@
+'use client';
+
 import React, { useState, useEffect } from 'react';
-import './Navbar.css';
 
 /**
  * SolarKeyLogo — exact recreation from the high-resolution uploaded image.
