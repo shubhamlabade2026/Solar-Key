@@ -127,7 +127,7 @@ const Navbar = () => {
 
         {/* ── Nav links (desktop) ── */}
         <ul className="navbar-links">
-          <li><a href="#platform">Platform</a></li>
+          <li><a href="/platform">Platform</a></li>
           <li><a href="#solutions">Solutions</a></li>
           <li><a href="#resources">Resources</a></li>
           <li><a href="#company">Company</a></li>
@@ -156,7 +156,7 @@ const Navbar = () => {
       {/* ── Mobile menu overlay ── */}
       <div className={`mobile-menu${menuOpen ? ' mobile-menu--open' : ''}`}>
         <ul className="mobile-menu-links">
-          <li><a href="#platform" onClick={() => setMenuOpen(false)}>Platform</a></li>
+          <li><a href="/platform" onClick={() => setMenuOpen(false)}>Platform</a></li>
           <li><a href="#solutions" onClick={() => setMenuOpen(false)}>Solutions</a></li>
           <li><a href="#resources" onClick={() => setMenuOpen(false)}>Resources</a></li>
           <li><a href="#company" onClick={() => setMenuOpen(false)}>Company</a></li>

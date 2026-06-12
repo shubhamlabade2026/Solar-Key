@@ -10,6 +10,7 @@ import '../components/Features.css';
 import '../components/BuiltBy.css';
 import '../components/CTABanner.css';
 import '../components/Footer.css';
+import '../components/platform/platform.css';
 
 /* ── Font ── */
 const inter = Inter({
