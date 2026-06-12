@@ -1,0 +1,479 @@
+/* ═══════════════════════════════════════════════════════════════
+   COMPANY PAGE — CSS STYLING
+   Design tokens matching SolarKey's brand theme
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── 1. HERO ── */
+.comp-page-hero {
+  background: #ffffff;
+  padding: 80px 0 40px;
+}
+
+.comp-hero-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 clamp(24px, 5vw, 64px);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.comp-eyebrow {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #2563EB;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.comp-h1 {
+  font-size: clamp(34px, 4.2vw, 52px);
+  font-weight: 800;
+  color: #111827;
+  letter-spacing: -1.2px;
+  line-height: 1.15;
+  max-width: 760px;
+  margin-bottom: 20px;
+}
+
+.comp-sub {
+  font-size: 17px;
+  color: #6b7280;
+  line-height: 1.65;
+  max-width: 680px;
+}
+
+/* ── 2. WHY WE EXIST CARD ── */
+.comp-why-exist {
+  background: #ffffff;
+  padding: 24px 0 48px;
+}
+
+.comp-why-exist-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 clamp(24px, 5vw, 64px);
+}
+
+.comp-why-exist-card {
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 40px 48px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+}
+
+.comp-why-exist-h2 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 16px;
+}
+
+.comp-why-exist-text {
+  font-size: 15px;
+  color: #4b5563;
+  line-height: 1.7;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.comp-why-exist-text p strong {
+  color: #111827;
+  font-weight: 700;
+}
+
+/* ── 3. WHAT WE BELIEVE ── */
+.comp-believe {
+  background: #ffffff;
+  padding: 48px 0 64px;
+}
+
+.comp-believe-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 clamp(24px, 5vw, 64px);
+}
+
+.comp-believe-h2 {
+  font-size: 22px;
+  font-weight: 800;
+  color: #111827;
+  margin-bottom: 32px;
+}
+
+.comp-believe-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.comp-believe-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.01);
+}
+
+.comp-believe-icon-box {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #eff6ff;
+  border: 1.5px solid #2563EB;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Checkmark SVG style */
+.comp-believe-icon-box svg {
+  width: 14px;
+  height: 14px;
+  stroke: #2563EB;
+  stroke-width: 3;
+  fill: none;
+}
+
+.comp-believe-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.comp-believe-text {
+  font-size: 14px;
+  color: #6b7280;
+  line-height: 1.6;
+}
+
+/* ── 4. THE TEAM SECTION ── */
+.comp-team {
+  background: #ffffff;
+  padding: 64px 0 72px;
+  border-top: 1px solid #f3f4f6;
+}
+
+.comp-team-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 clamp(24px, 5vw, 64px);
+}
+
+.comp-team-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 32px;
+}
+
+.comp-team-title-box {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.comp-team-eyebrow {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: #2563EB;
+  text-transform: uppercase;
+}
+
+.comp-team-h2 {
+  font-size: 22px;
+  font-weight: 800;
+  color: #111827;
+}
+
+.comp-team-sub-right {
+  font-size: 13px;
+  color: #6b7280;
+}
+
+.comp-team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.comp-team-card {
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.comp-team-avatar-box {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.comp-team-avatar-initials {
+  font-size: 16px;
+  font-weight: 700;
+  color: #2563EB;
+  letter-spacing: 0.5px;
+}
+
+.comp-team-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.comp-team-name {
+  font-size: 15px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.comp-team-role {
+  font-size: 13px;
+  color: #6b7280;
+}
+
+/* Skeleton bio lines */
+.comp-team-bio-skeleton {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+
+.comp-team-bio-line {
+  height: 6px;
+  background: #e5e7eb;
+  border-radius: 4px;
+}
+
+.comp-team-bio-line--short {
+  width: 70%;
+}
+
+/* LinkedIn icon link */
+.comp-team-social-box {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+}
+
+.comp-team-linkedin-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  background: #0a66c2;
+  color: #ffffff;
+  border-radius: 3px;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.comp-team-linkedin-btn:hover {
+  background: #004182;
+}
+
+.comp-team-footer-caption {
+  font-size: 12px;
+  color: #9ca3af;
+}
+
+/* ── 5. HIRING BANNER ── */
+.comp-hiring {
+  background: #ffffff;
+  padding: 12px 0 48px;
+}
+
+.comp-hiring-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 clamp(24px, 5vw, 64px);
+}
+
+.comp-hiring-box {
+  background: #0f172a;
+  border-radius: 12px;
+  padding: 28px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 32px;
+  color: #ffffff;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+}
+
+.comp-hiring-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.comp-hiring-h3 {
+  font-size: 15px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.comp-hiring-p {
+  font-size: 13px;
+  color: #94a3b8;
+}
+
+.comp-hiring-btn {
+  display: inline-block;
+  background: #2563EB;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 10px 22px;
+  border-radius: 6px;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background-color 0.15s;
+}
+
+.comp-hiring-btn:hover {
+  background: #1d4ed8;
+}
+
+/* ── 6. COMPANY CTA ── */
+.comp-cta-section {
+  background: #f9fafb;
+  border-top: 1px solid #e5e7eb;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.comp-cta-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 clamp(24px, 5vw, 64px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.comp-cta-h2 {
+  font-size: clamp(28px, 3.2vw, 42px);
+  font-weight: 800;
+  color: #111827;
+  letter-spacing: -0.8px;
+  line-height: 1.2;
+  margin-bottom: 12px;
+}
+
+.comp-cta-p {
+  font-size: 16px;
+  color: #6b7280;
+  line-height: 1.6;
+  margin-bottom: 32px;
+  max-width: 500px;
+}
+
+.comp-cta-btns {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.comp-cta-btn-primary {
+  background: #2563EB;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 12px 24px;
+  border-radius: 8px;
+  transition: background-color 0.15s, transform 0.12s;
+}
+
+.comp-cta-btn-primary:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+.comp-cta-btn-secondary {
+  background: #ffffff;
+  color: #374151;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 12px 24px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  transition: background-color 0.15s, border-color 0.15s, transform 0.12s;
+}
+
+.comp-cta-btn-secondary:hover {
+  border-color: #9ca3af;
+  background: #f9fafb;
+  transform: translateY(-1px);
+}
+
+/* ── 7. RESPONSIVE DESIGN ── */
+@media (max-width: 968px) {
+  .comp-believe-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .comp-team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .comp-hiring-box {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  .comp-hiring-btn {
+    align-self: flex-start;
+  }
+}
+
+@media (max-width: 640px) {
+  .comp-page-hero {
+    padding: 56px 0 32px;
+  }
+  .comp-why-exist-card {
+    padding: 32px 24px;
+  }
+  .comp-believe-grid {
+    grid-template-columns: 1fr;
+  }
+  .comp-team-grid {
+    grid-template-columns: 1fr;
+  }
+  .comp-team-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  .comp-cta-btns {
+    flex-direction: column;
+    width: 100%;
+    max-width: 320px;
+  }
+  .comp-cta-btn-primary,
+  .comp-cta-btn-secondary {
+    text-align: center;
+  }
+}

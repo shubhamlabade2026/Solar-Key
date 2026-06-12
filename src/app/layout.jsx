@@ -50,7 +50,7 @@ export const metadata = {
     locale: 'en_IN',
     images: [
       {
-        url: 'https://www.solar-key.com/og-image.png',
+        url: '/og-image.png',   // resolved by metadataBase → https://www.solar-key.com/og-image.png
         width: 1200,
         height: 630,
         alt: 'SolarKey — AI Monitoring & Operations Platform',
@@ -64,7 +64,7 @@ export const metadata = {
     title: 'SolarKey — AI Monitoring & Operations Platform',
     description:
       'See every site. Catch every fault. Prove every kWh. AI-powered solar monitoring for asset owners, O&M providers and investors across India & West Asia.',
-    images: ['https://www.solar-key.com/og-image.png'],
+    images: ['/og-image.png'],   // resolved by metadataBase → https://www.solar-key.com/og-image.png
   },
 
   /* ── Misc ── */
@@ -74,7 +74,7 @@ export const metadata = {
   },
   metadataBase: new URL('https://www.solar-key.com'),
   alternates: {
-    canonical: '/',
+    canonical: 'https://www.solar-key.com',
   },
 };
 
@@ -85,7 +85,7 @@ export const viewport = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={inter.variable}>
+    <html lang="en-IN" className={inter.variable}>
       <body style={{ fontFamily: 'var(--font-inter), sans-serif' }}>
         {children}
       </body>

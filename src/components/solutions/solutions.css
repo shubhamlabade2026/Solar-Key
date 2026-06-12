@@ -1,31 +1,754 @@
-/* ═══════════════════════════════════════════════
-   SOLUTIONS PAGES (USE CASES) CSS
-   ═══════════════════════════════════════════════ */
+/* ═══════════════════════════════════════════════════════════════
+   SOLUTIONS PAGE — complete CSS
+   Design tokens: #2563EB blue · #111827 dark · #f9fafb light grey
+   Font: Inter (from layout)
+   ═══════════════════════════════════════════════════════════════ */
 
+/* ────────────────────────────────────────────────
+   1. HERO
+   ──────────────────────────────────────────────── */
+.sol-page-hero {
+  background: #ffffff;
+  padding: 96px 0 80px;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.sol-hero-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 clamp(24px, 5vw, 64px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0;
+}
+
+.sol-eyebrow {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  color: #2563EB;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.sol-h1 {
+  font-size: clamp(36px, 4.5vw, 56px);
+  font-weight: 800;
+  color: #111827;
+  letter-spacing: -1.5px;
+  line-height: 1.12;
+  max-width: 760px;
+  margin-bottom: 20px;
+}
+
+.sol-sub {
+  font-size: 17px;
+  color: #6b7280;
+  line-height: 1.65;
+  max-width: 600px;
+  margin-bottom: 32px;
+}
+
+/* ── Tab pills ── */
+.sol-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  margin-bottom: 32px;
+}
+
+.sol-tab {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 18px;
+  border-radius: 6px;
+  background: transparent;
+  border: 1px solid #d1d5db;
+  color: #374151;
+  text-decoration: none;
+  transition: border-color 0.15s, color 0.15s;
+}
+
+.sol-tab:hover {
+  border-color: #9ca3af;
+  color: #111827;
+}
+
+.sol-tab--active {
+  background: #111827;
+  color: #ffffff !important;
+  border-color: #111827;
+  font-weight: 600;
+}
+
+.sol-tab--active:hover {
+  background: #1f2937;
+  border-color: #1f2937;
+}
+
+/* ── Hero CTA button ── */
+.sol-hero-cta {
+  display: inline-block;
+  background: #2563EB;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 700;
+  padding: 12px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.15s, transform 0.15s;
+}
+
+.sol-hero-cta:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+/* ────────────────────────────────────────────────
+   2. ROLE SECTIONS
+   ──────────────────────────────────────────────── */
+.sol-role-sections {
+  background: #ffffff;
+}
+
+.sol-role-section {
+  padding: 80px 0;
+  border-top: 1px solid #f3f4f6;
+}
+
+.sol-role-section--alt {
+  background: #fafafa;
+}
+
+.sol-role-grid {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 clamp(24px, 5vw, 64px);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+
+.sol-role-grid--reverse {
+  /* Visual reversal handled by order */
+}
+
+.sol-role-grid--reverse .sol-role-visual {
+  order: -1;
+}
+
+.sol-role-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.sol-role-eyebrow {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #2563EB;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.sol-role-h2 {
+  font-size: clamp(26px, 2.8vw, 36px);
+  font-weight: 800;
+  color: #111827;
+  letter-spacing: -0.8px;
+  line-height: 1.18;
+  margin-bottom: 16px;
+}
+
+.sol-role-para {
+  font-size: 16px;
+  color: #6b7280;
+  line-height: 1.65;
+  margin-bottom: 24px;
+}
+
+.sol-role-bullets {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sol-role-bullets li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 15px;
+  color: #374151;
+  font-weight: 500;
+}
+
+.sol-role-bullets li::before {
+  content: '';
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #2563EB;
+  flex-shrink: 0;
+  margin-top: 7px;
+}
+
+.sol-role-link {
+  font-size: 15px;
+  font-weight: 600;
+  color: #2563EB;
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+.sol-role-link:hover {
+  color: #1d4ed8;
+}
+
+/* ────────────────────────────────────────────────
+   3. MOCK UI CARDS
+   ──────────────────────────────────────────────── */
+.sol-mock-card {
+  background: #111827;
+  border-radius: 16px;
+  padding: 28px;
+  color: #ffffff;
+  box-shadow:
+    0 24px 64px rgba(0, 0, 0, 0.18),
+    0 4px 16px rgba(0, 0, 0, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.sol-mock-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.sol-mock-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: #e5e7eb;
+  letter-spacing: 0.3px;
+}
+
+.sol-mock-badge {
+  font-size: 11px;
+  font-weight: 500;
+  color: #9ca3af;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 999px;
+  padding: 3px 10px;
+}
+
+/* Asset owners — 2×2 site grid */
+.sol-mock-site-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.sol-mock-site-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  padding: 14px 16px;
+  transition: background 0.15s;
+}
+
+.sol-mock-site-card--active {
+  background: rgba(37, 99, 235, 0.18);
+  border-color: rgba(37, 99, 235, 0.4);
+}
+
+.sol-mock-site-top {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-bottom: 8px;
+}
+
+.sol-mock-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.sol-mock-site-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: #f3f4f6;
+  flex: 1;
+}
+
+.sol-mock-site-mw {
+  font-size: 11px;
+  color: #9ca3af;
+}
+
+.sol-mock-site-pr {
+  font-size: 18px;
+  font-weight: 700;
+  color: #e5e7eb;
+  letter-spacing: -0.5px;
+}
+
+/* O&M Providers — work order list */
+.sol-mock-wo-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.sol-mock-wo-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.sol-mock-wo-row:last-child {
+  border-bottom: none;
+}
+
+.sol-mock-wo-left {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.sol-mock-wo-id {
+  font-size: 13px;
+  font-weight: 600;
+  color: #e5e7eb;
+}
+
+.sol-mock-wo-desc {
+  font-size: 12px;
+  color: #9ca3af;
+}
+
+/* Work order status badges */
+.sol-badge {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+
+.sol-badge--orange {
+  background: rgba(251, 146, 60, 0.18);
+  color: #fb923c;
+  border: 1px solid rgba(251, 146, 60, 0.3);
+}
+
+.sol-badge--blue {
+  background: rgba(59, 130, 246, 0.15);
+  color: #60a5fa;
+  border: 1px solid rgba(59, 130, 246, 0.3);
+}
+
+.sol-badge--green {
+  background: rgba(34, 197, 94, 0.15);
+  color: #4ade80;
+  border: 1px solid rgba(34, 197, 94, 0.3);
+}
+
+/* Investors — table */
+.sol-mock-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.sol-mock-table th {
+  text-align: left;
+  color: #6b7280;
+  font-weight: 500;
+  font-size: 11px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  padding: 0 8px 10px 8px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.sol-mock-table td {
+  padding: 12px 8px;
+  color: #e5e7eb;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  font-size: 13px;
+}
+
+.sol-mock-table tr:last-child td {
+  border-bottom: none;
+}
+
+.sol-mock-delta {
+  color: #4ade80 !important;
+  font-weight: 600;
+}
+
+/* ────────────────────────────────────────────────
+   4. MIXED FLEETS
+   ──────────────────────────────────────────────── */
+.sol-mixed {
+  background: #f9fafb;
+  padding: 72px 0;
+  border-top: 1px solid #e5e7eb;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.sol-mixed-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 clamp(24px, 5vw, 64px);
+}
+
+.sol-mixed-h2 {
+  font-size: clamp(26px, 3vw, 38px);
+  font-weight: 800;
+  color: #111827;
+  letter-spacing: -0.8px;
+  line-height: 1.2;
+  max-width: 720px;
+  margin-bottom: 16px;
+}
+
+.sol-mixed-para {
+  font-size: 16px;
+  color: #6b7280;
+  line-height: 1.65;
+  max-width: 620px;
+  margin-bottom: 28px;
+}
+
+.sol-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.sol-tag {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 999px;
+  padding: 6px 16px;
+  font-size: 13px;
+  color: #374151;
+  font-weight: 500;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+/* ────────────────────────────────────────────────
+   5. PARTNER BANNER
+   ──────────────────────────────────────────────── */
+.sol-partner-banner {
+  background: #eff6ff;
+  border-top: 1px solid #bfdbfe;
+  border-bottom: 1px solid #bfdbfe;
+  padding: 44px 0;
+}
+
+.sol-partner-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 clamp(24px, 5vw, 64px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 32px;
+}
+
+.sol-partner-text {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  max-width: 600px;
+}
+
+.sol-partner-bold {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1e3a8a;
+  line-height: 1.4;
+}
+
+.sol-partner-sub {
+  font-size: 15px;
+  color: #3b82f6;
+  line-height: 1.5;
+}
+
+.sol-partner-btn {
+  display: inline-block;
+  background: #2563EB;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: background 0.15s, transform 0.15s;
+}
+
+.sol-partner-btn:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+/* ────────────────────────────────────────────────
+   6. FAQ
+   ──────────────────────────────────────────────── */
+.sol-faq-section {
+  background: #ffffff;
+  padding: 88px 0;
+}
+
+.sol-faq-container {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 0 clamp(24px, 5vw, 64px);
+}
+
+.sol-faq-h2 {
+  font-size: clamp(28px, 3vw, 40px);
+  font-weight: 800;
+  color: #111827;
+  letter-spacing: -0.8px;
+  margin-bottom: 40px;
+  margin-top: 10px;
+}
+
+.sol-faq-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.sol-faq-item {
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.sol-faq-item:first-child {
+  border-top: 1px solid #e5e7eb;
+}
+
+.sol-faq-q {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  font-size: 16px;
+  font-weight: 600;
+  color: #111827;
+  font-family: inherit;
+  line-height: 1.4;
+  transition: color 0.15s;
+}
+
+.sol-faq-q:hover {
+  color: #2563EB;
+}
+
+.sol-faq-chevron {
+  flex-shrink: 0;
+  transition: transform 0.22s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.sol-faq-chevron--open {
+  transform: rotate(180deg);
+}
+
+.sol-faq-a {
+  font-size: 15px;
+  color: #6b7280;
+  line-height: 1.65;
+  padding-bottom: 20px;
+  padding-right: 36px;
+}
+
+/* ────────────────────────────────────────────────
+   7. SOLUTIONS CTA (DARK)
+   ──────────────────────────────────────────────── */
+.sol-solutions-cta {
+  background: #111827;
+  padding: 88px 0;
+  text-align: center;
+}
+
+.sol-cta-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 clamp(24px, 5vw, 64px);
+}
+
+.sol-cta-h2 {
+  font-size: clamp(30px, 3.5vw, 46px);
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -1px;
+  line-height: 1.15;
+  margin-bottom: 14px;
+}
+
+.sol-cta-sub {
+  font-size: 17px;
+  color: #9ca3af;
+  line-height: 1.6;
+  margin-bottom: 36px;
+}
+
+.sol-cta-btns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+}
+
+.sol-cta-btn-primary {
+  display: inline-block;
+  background: #2563EB;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 700;
+  padding: 13px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.15s, transform 0.15s;
+}
+
+.sol-cta-btn-primary:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+.sol-cta-btn-secondary {
+  display: inline-block;
+  background: transparent;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 700;
+  padding: 12px 28px;
+  border-radius: 8px;
+  border: 1px solid #374151;
+  text-decoration: none;
+  transition: border-color 0.15s, background 0.15s, transform 0.15s;
+}
+
+.sol-cta-btn-secondary:hover {
+  border-color: #6b7280;
+  background: rgba(255, 255, 255, 0.05);
+  transform: translateY(-1px);
+}
+
+/* ────────────────────────────────────────────────
+   8. RESPONSIVE — Mobile (≤ 768px)
+   ──────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .sol-page-hero {
+    padding: 72px 0 56px;
+  }
+
+  .sol-h1 {
+    letter-spacing: -0.8px;
+  }
+
+  .sol-tabs {
+    gap: 6px;
+  }
+
+  /* Role grid: single column */
+  .sol-role-section {
+    padding: 56px 0;
+  }
+
+  .sol-role-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  /* Restore natural order on mobile (text above visual for all sections) */
+  .sol-role-grid--reverse .sol-role-visual {
+    order: 0;
+  }
+
+  .sol-role-grid--reverse .sol-role-text {
+    order: 1;
+  }
+
+  /* Mixed fleets */
+  .sol-mixed {
+    padding: 56px 0;
+  }
+
+  /* Partner banner: column on mobile */
+  .sol-partner-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+  }
+
+  .sol-partner-btn {
+    align-self: flex-start;
+  }
+
+  /* FAQ */
+  .sol-faq-section {
+    padding: 64px 0;
+  }
+
+  /* CTA */
+  .sol-solutions-cta {
+    padding: 64px 0;
+  }
+
+  .sol-cta-btns {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .sol-cta-btn-primary,
+  .sol-cta-btn-secondary {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .sol-mock-site-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ────────────────────────────────────────────────
+   PRESERVE existing sub-page styles (from original)
+   ──────────────────────────────────────────────── */
 .sol-hero {
   background: #111827;
   color: #ffffff;
   padding: 80px 0;
   text-align: center;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-.sol-hero-container {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 0 clamp(24px, 5vw, 64px);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 16px;
-}
-
-.sol-eyebrow {
-  font-size: 13px;
-  font-weight: 600;
-  letter-spacing: 2px;
-  color: #3b82f6;
-  text-transform: uppercase;
 }
 
 .sol-title {
@@ -46,7 +769,6 @@
   margin: 8px auto 0;
 }
 
-/* ── Content Section ── */
 .sol-content-section {
   background: #f9fafb;
   padding: 80px 0;
@@ -71,7 +793,7 @@
   background: #ffffff;
   border-radius: 12px;
   padding: 28px 32px;
-  box-shadow: 
+  box-shadow:
     0 10px 30px rgba(0, 0, 0, 0.02),
     0 1px 3px rgba(0, 0, 0, 0.01);
   border: 1px solid #e5e7eb;
@@ -99,7 +821,6 @@
   margin: 0;
 }
 
-/* ── CTA Banner ── */
 .sol-cta-section {
   text-align: center;
   margin-top: 16px;
@@ -123,7 +844,6 @@
   background: #1d4ed8;
 }
 
-/* ── Responsive ── */
 @media (max-width: 640px) {
   .sol-points-grid {
     grid-template-columns: 1fr;

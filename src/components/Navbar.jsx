@@ -134,9 +134,17 @@ const Navbar = () => {
               Platform
             </a>
           </li>
-          <li><a href="#solutions">Solutions</a></li>
-          <li><a href="#resources">Resources</a></li>
-          <li><a href="#company">Company</a></li>
+          <li><a href="/solutions" className={pathname === '/solutions' || pathname.startsWith('/solutions/') ? 'active' : ''}>Solutions</a></li>
+          <li>
+            <a href="/resources" className={pathname === '/resources' || pathname.startsWith('/resources/') ? 'active' : ''}>
+              Resources
+            </a>
+          </li>
+          <li>
+            <a href="/company" className={pathname === '/company' || pathname.startsWith('/company/') ? 'active' : ''}>
+              Company
+            </a>
+          </li>
         </ul>
 
         {/* ── CTA (desktop) ── */}
@@ -171,9 +179,25 @@ const Navbar = () => {
               Platform
             </a>
           </li>
-          <li><a href="#solutions" onClick={() => setMenuOpen(false)}>Solutions</a></li>
-          <li><a href="#resources" onClick={() => setMenuOpen(false)}>Resources</a></li>
-          <li><a href="#company" onClick={() => setMenuOpen(false)}>Company</a></li>
+          <li><a href="/solutions" className={pathname === '/solutions' || pathname.startsWith('/solutions/') ? 'active' : ''} onClick={() => setMenuOpen(false)}>Solutions</a></li>
+          <li>
+            <a
+              href="/resources"
+              className={pathname === '/resources' || pathname.startsWith('/resources/') ? 'active' : ''}
+              onClick={() => setMenuOpen(false)}
+            >
+              Resources
+            </a>
+          </li>
+          <li>
+            <a
+              href="/company"
+              className={pathname === '/company' || pathname.startsWith('/company/') ? 'active' : ''}
+              onClick={() => setMenuOpen(false)}
+            >
+              Company
+            </a>
+          </li>
         </ul>
         <a href="/demo" className="btn-demo btn-demo-mobile" id="nav-request-demo-mobile" onClick={() => setMenuOpen(false)}>
           Request a demo
