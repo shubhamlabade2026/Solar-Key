@@ -12,6 +12,7 @@ import '../components/BuiltBy.css';
 import '../components/CTABanner.css';
 import '../components/Footer.css';
 import '../components/platform/platform.css';
+import '../components/careers/careers.css';
 
 /* ── Font ── */
 const inter = Inter({

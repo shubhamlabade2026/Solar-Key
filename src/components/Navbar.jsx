@@ -145,6 +145,11 @@ const Navbar = () => {
               Company
             </a>
           </li>
+          <li>
+            <a href="/careers" className={pathname === '/careers' || pathname.startsWith('/careers/') ? 'active' : ''}>
+              Careers
+            </a>
+          </li>
         </ul>
 
         {/* ── CTA (desktop) ── */}
@@ -196,6 +201,15 @@ const Navbar = () => {
               onClick={() => setMenuOpen(false)}
             >
               Company
+            </a>
+          </li>
+          <li>
+            <a
+              href="/careers"
+              className={pathname === '/careers' || pathname.startsWith('/careers/') ? 'active' : ''}
+              onClick={() => setMenuOpen(false)}
+            >
+              Careers
             </a>
           </li>
         </ul>
