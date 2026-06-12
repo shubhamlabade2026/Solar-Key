@@ -73,6 +73,9 @@ export const metadata = {
     follow: true,
   },
   metadataBase: new URL('https://www.solar-key.com'),
+  alternates: {
+    canonical: '/',
+  },
 };
 
 export const viewport = {
