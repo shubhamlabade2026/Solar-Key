@@ -1,43 +1,124 @@
 import React from 'react';
 
-const Footer = () => {
-  const currentYear = new Date().getFullYear();
+const SolarKeyLogoWhite = ({ size = 28 }) => (
+  <svg
+    width={size}
+    height={size}
+    viewBox="0 0 100 100"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    aria-label="SolarKey logo"
+  >
+    {/* ── WHITE top-left arc: 9-o'clock (17,50) → left-gap (33.5,21.4) ── */}
+    <path
+      d="M 17 50 A 33 33 0 0 1 33.5 21.4"
+      stroke="#ffffff"
+      strokeWidth="8"
+      strokeLinecap="round"
+      fill="none"
+    />
 
+    {/* ── WHITE top-right arc: right-gap (66.5,21.4) → 3-o'clock (83,50) ── */}
+    <path
+      d="M 66.5 21.4 A 33 33 0 0 1 83 50"
+      stroke="#ffffff"
+      strokeWidth="8"
+      strokeLinecap="round"
+      fill="none"
+    />
+
+    {/* ── BLUE bottom arc: 3 → 6 → 9 o'clock (two unambiguous 90° arcs) ── */}
+    <path
+      d="M 83 50 A 33 33 0 0 1 50 83 A 33 33 0 0 1 17 50"
+      stroke="#2563EB"
+      strokeWidth="8"
+      strokeLinecap="round"
+      fill="none"
+    />
+
+    {/* ── STEM + SQUARE-BRACKET TERMINAL ── */}
+    <path
+      d="M 50 4 L 50 52 L 64 52"
+      stroke="#ffffff"
+      strokeWidth="8"
+      strokeLinecap="round"
+      strokeLinejoin="miter"
+      fill="none"
+    />
+  </svg>
+);
+
+const Footer = () => {
   return (
     <footer className="site-footer" id="site-footer">
       <div className="footer-container">
 
-        {/* ── Top row: brand + contact ── */}
-        <div className="footer-top">
-          <div className="footer-brand">
-            <p className="footer-company-name">SolarKey Advanced Ai Solutions Pvt. Ltd.</p>
-          </div>
-          <div className="footer-contact">
-            <a href="tel:+919619422279" className="footer-phone" id="footer-phone">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72c.13.81.36 1.6.68 2.35a2 2 0 01-.45 2.11L8.09 9.43a16 16 0 006.49 6.49l1.25-1.25a2 2 0 012.11-.45c.75.32 1.54.55 2.35.68A2 2 0 0122 16.92z"
-                  stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
-              </svg>
-              +91-9619422279
+        {/* ── Main section grid ── */}
+        <div className="footer-main-grid">
+
+          {/* Left Column: Brand Name & Address */}
+          <div className="footer-brand-column">
+            <a href="/" className="footer-logo">
+              <SolarKeyLogoWhite size={28} />
+              <span className="footer-logo-text">
+                Solar<span className="footer-logo-key">Key</span>
+              </span>
             </a>
-            <a href="mailto:hello@solar-key.com" className="footer-email" id="footer-email">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <rect x="2" y="4" width="20" height="16" rx="2" stroke="currentColor" strokeWidth="2" fill="none"/>
-                <polyline points="2 4 12 13 22 4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
-              </svg>
-              hello@solar-key.com
-            </a>
+            <div className="footer-address-info">
+              <p>SolarKey Advanced AI Solutions Pvt. Ltd.</p>
+              <p>+91 96194 22279</p>
+              <p>India - West Asia</p>
+            </div>
           </div>
+
+          {/* Right Columns: Structured links */}
+          <div className="footer-links-columns">
+            <div className="footer-links-col">
+              <h4>Platform</h4>
+              <ul>
+                <li><a href="/platform">Capabilities</a></li>
+                <li><a href="/platform#how-it-works">How it works</a></li>
+                <li><a href="/integrations">Integrations</a></li>
+                <li><a href="/platform#security">Security</a></li>
+              </ul>
+            </div>
+
+            <div className="footer-links-col">
+              <h4>Company</h4>
+              <ul>
+                <li><a href="/company">About</a></li>
+                <li><a href="/company#leadership">Leadership</a></li>
+                <li><a href="/company#careers">Careers</a></li>
+                <li><a href="/company#contact">Contact</a></li>
+              </ul>
+            </div>
+
+            <div className="footer-links-col">
+              <h4>Resources</h4>
+              <ul>
+                <li><a href="/resources">Blog</a></li>
+                <li><a href="/trust">Trust & Security</a></li>
+                <li><a href="/demo">Request a demo</a></li>
+                <li><a href="/company#partner">Become a partner</a></li>
+              </ul>
+            </div>
+          </div>
+
         </div>
 
         {/* ── Divider ── */}
         <div className="footer-divider" />
 
-        {/* ── Bottom row: copyright ── */}
-        <div className="footer-bottom">
+        {/* ── Bottom metadata bar ── */}
+        <div className="footer-bottom-bar">
           <p className="footer-copyright">
-            © {currentYear} SolarKey Advanced Ai Solutions Pvt. Ltd. All rights reserved.
+            © 2026 SolarKey Advanced AI Solutions Pvt. Ltd.
           </p>
+          <div className="footer-bottom-links">
+            <a href="/privacy">Privacy</a>
+            <span>·</span>
+            <a href="/terms">Terms</a>
+          </div>
         </div>
 
       </div>
