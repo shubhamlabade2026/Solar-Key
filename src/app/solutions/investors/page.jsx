@@ -13,8 +13,7 @@ export default function InvestorsPage() {
   const points = [
     'Due-diligence data',
     'IRR impact modelling',
-    'SLA validation across the portfolio',
-    'Asset-level drill-down for diligence'
+    'SLA validation across the portfolio'
   ];
 
   return (
