@@ -32,7 +32,7 @@
   font-size: clamp(34px, 4.2vw, 52px);
   font-weight: 800;
   color: #111827;
-  letter-spacing: -1.2px;
+  letter-spacing: -0.03em;
   line-height: 1.15;
   max-width: 760px;
   margin-bottom: 20px;
@@ -64,12 +64,13 @@
   border: 1px solid #d1d5db;
   color: #4b5563;
   cursor: pointer;
-  transition: border-color 0.15s, color 0.15s, background-color 0.15s;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .res-tab:hover {
-  border-color: #9ca3af;
-  color: #111827;
+  border-color: #2563EB;
+  color: #2563EB;
+  background: rgba(37, 99, 235, 0.03);
 }
 
 .res-tab--active {
@@ -77,6 +78,12 @@
   color: #2563EB;
   border-color: #2563EB;
   font-weight: 600;
+  box-shadow: 0 2px 4px rgba(37, 99, 235, 0.1);
+}
+
+.res-tab--active:hover {
+  background: #eff6ff;
+  border-color: #1d4ed8;
 }
 
 /* ── 2. FEATURED SECTION ── */
@@ -186,6 +193,7 @@
   font-size: 22px;
   font-weight: 800;
   color: #111827;
+  letter-spacing: -0.03em;
   margin-bottom: 32px;
 }
 
@@ -199,9 +207,17 @@
   display: flex;
   flex-direction: column;
   background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.05);
   border-radius: 12px;
   overflow: hidden;
-  transition: transform 0.15s;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03), 0 12px 24px -4px rgba(0, 0, 0, 0.03);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.3s ease;
+}
+
+.res-latest-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.03), 0 20px 25px -5px rgba(0, 0, 0, 0.05);
+  border-color: rgba(37, 99, 235, 0.15);
 }
 
 .res-card-img-placeholder {
@@ -260,6 +276,7 @@
   font-size: 22px;
   font-weight: 800;
   color: #111827;
+  letter-spacing: -0.03em;
 }
 
 .res-guides-sub-right {
@@ -274,14 +291,22 @@
 }
 
 .res-guide-card {
-  background: #f9fafb;
-  border: 1px solid #e5e7eb;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.05);
   border-radius: 12px;
   padding: 24px;
   display: flex;
   flex-direction: column;
   gap: 16px;
   min-height: 180px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03), 0 12px 24px -4px rgba(0, 0, 0, 0.03);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.3s ease;
+}
+
+.res-guide-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.03), 0 20px 25px -5px rgba(0, 0, 0, 0.05);
+  border-color: rgba(37, 99, 235, 0.15);
 }
 
 .res-guide-icon-box {

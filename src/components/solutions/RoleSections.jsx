@@ -20,12 +20,8 @@ const AssetOwnersMock = () => (
       {Array.from({ length: 8 }).map((_, i) => (
         <div
           key={i}
-          style={{
-            height: '42px',
-            background: 'rgba(255, 255, 255, 0.03)',
-            border: '1px solid rgba(255, 255, 255, 0.08)',
-            borderRadius: '6px'
-          }}
+          className="sol-mock-empty-slot"
+          title="Empty slot"
         />
       ))}
     </div>
@@ -109,7 +105,7 @@ const RoleSections = () => {
               </svg>
               FOR ASSET OWNERS
             </p>
-            <h2 className="sol-role-h2">Every site in one place, with reporting your board trusts.</h2>
+            <h2 className="sol-role-h2"><span style={{ color: '#2563EB' }}>Every site in one place</span>, with reporting your board trusts.</h2>
             <p className="sol-role-para">
               Stop stitching together vendor portals and spreadsheets. SolarKey unifies your whole
               portfolio into one live view and the numbers your board and lenders expect.
@@ -140,7 +136,7 @@ const RoleSections = () => {
               </svg>
               FOR O&amp;M PROVIDERS
             </p>
-            <h2 className="sol-role-h2">Fix faults before they escalate — cover more sites per tech.</h2>
+            <h2 className="sol-role-h2"><span style={{ color: '#2563EB' }}>Fix faults</span> before they escalate — cover more sites per tech.</h2>
             <p className="sol-role-para">
               Move from reactive callouts to predictive maintenance. SolarKey spots the fault early,
               raises the work order with a diagnosis attached, and routes it to the right crew.
@@ -166,7 +162,7 @@ const RoleSections = () => {
               </svg>
               FOR INVESTORS
             </p>
-            <h2 className="sol-role-h2">Asset-level truth across the whole fund.</h2>
+            <h2 className="sol-role-h2"><span style={{ color: '#2563EB' }}>Asset-level truth</span> across the whole fund.</h2>
             <p className="sol-role-para">
               See how every asset is really performing, validate the IRR assumptions in your model,
               and pull diligence data without chasing the operator for it each quarter.

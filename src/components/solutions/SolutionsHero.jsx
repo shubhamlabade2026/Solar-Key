@@ -5,7 +5,7 @@ const SolutionsHero = () => {
     <section className="sol-page-hero">
       <div className="sol-hero-container">
         <p className="sol-eyebrow">Solutions</p>
-        <h1 className="sol-h1">Built for every role in your<br />renewable portfolio.</h1>
+        <h1 className="sol-h1">Built for <span style={{ color: '#2563EB' }}>every role</span> in your<br />renewable portfolio.</h1>
         <p className="sol-sub">
           Asset owners, O&amp;M providers and investors use SolarKey differently.
           Pick your role to see what it does for you.

@@ -32,7 +32,7 @@
   font-size: clamp(34px, 4.2vw, 52px);
   font-weight: 800;
   color: #111827;
-  letter-spacing: -1.2px;
+  letter-spacing: -0.03em;
   line-height: 1.15;
   max-width: 760px;
   margin-bottom: 20px;
@@ -102,6 +102,7 @@
   font-size: 22px;
   font-weight: 800;
   color: #111827;
+  letter-spacing: -0.03em;
   margin-bottom: 32px;
 }
 
@@ -113,13 +114,20 @@
 
 .comp-believe-card {
   background: #ffffff;
-  border: 1px solid #e5e7eb;
+  border: 1px solid rgba(0, 0, 0, 0.05);
   border-radius: 12px;
   padding: 28px;
   display: flex;
   flex-direction: column;
   gap: 16px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.01);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03), 0 12px 24px -4px rgba(0, 0, 0, 0.03);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.3s ease;
+}
+
+.comp-believe-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.03), 0 20px 25px -5px rgba(0, 0, 0, 0.05);
+  border-color: rgba(37, 99, 235, 0.15);
 }
 
 .comp-believe-icon-box {
@@ -192,6 +200,7 @@
   font-size: 22px;
   font-weight: 800;
   color: #111827;
+  letter-spacing: -0.03em;
 }
 
 .comp-team-sub-right {
@@ -207,13 +216,21 @@
 }
 
 .comp-team-card {
-  background: #f9fafb;
-  border: 1px solid #e5e7eb;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.05);
   border-radius: 12px;
   padding: 32px 28px;
   display: flex;
   flex-direction: column;
   gap: 20px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03), 0 12px 24px -4px rgba(0, 0, 0, 0.03);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.3s ease;
+}
+
+.comp-team-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.03), 0 20px 25px -5px rgba(0, 0, 0, 0.05);
+  border-color: rgba(37, 99, 235, 0.15);
 }
 
 .comp-team-avatar-box {
@@ -259,10 +276,26 @@
   flex: 1;
 }
 
+@keyframes pulse-shimmer {
+  0% {
+    opacity: 0.6;
+    background-color: #e5e7eb;
+  }
+  50% {
+    opacity: 1;
+    background-color: #cbd5e1;
+  }
+  100% {
+    opacity: 0.6;
+    background-color: #e5e7eb;
+  }
+}
+
 .comp-team-bio-line {
   height: 6px;
   background: #e5e7eb;
   border-radius: 4px;
+  animation: pulse-shimmer 2s infinite ease-in-out;
 }
 
 .comp-team-bio-line--short {
@@ -270,29 +303,28 @@
 }
 
 /* LinkedIn icon link */
-.comp-team-social-box {
-  margin-top: auto;
-  display: flex;
+/* LinkedIn link style directly under role */
+.comp-team-linkedin-link {
+  display: inline-flex;
   align-items: center;
-}
-
-.comp-team-linkedin-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 24px;
-  height: 24px;
-  background: #0a66c2;
-  color: #ffffff;
-  border-radius: 3px;
-  text-decoration: none;
+  gap: 6px;
   font-size: 12px;
-  font-weight: 800;
-  line-height: 1;
+  color: #0a66c2;
+  text-decoration: none;
+  font-weight: 500;
+  margin-top: 6px;
+  transition: color 0.15s ease, opacity 0.15s ease;
 }
 
-.comp-team-linkedin-btn:hover {
-  background: #004182;
+.comp-team-linkedin-link:hover {
+  color: #004182;
+  text-decoration: underline;
+}
+
+.comp-team-linkedin-link svg {
+  width: 14px;
+  height: 14px;
+  fill: currentColor;
 }
 
 .comp-team-footer-caption {
