@@ -381,9 +381,9 @@
 }
 
 .res-glossary-terms span:not(:last-child)::after {
-  content: '·';
+  content: '-';
   margin-left: 8px;
-  color: #cbd5e0;
+  color: #9ca3af;
 }
 
 .res-glossary-link {

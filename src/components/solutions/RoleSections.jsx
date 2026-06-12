@@ -14,26 +14,19 @@ const AssetOwnersMock = () => (
   <div className="sol-mock-card">
     <div className="sol-mock-header">
       <span className="sol-mock-title">Portfolio view</span>
-      <span className="sol-mock-badge">Demo data</span>
+      <span className="sol-mock-badge">demo</span>
     </div>
-    <div className="sol-mock-site-grid">
-      {[
-        { name: 'Bhadla', mw: '52 MW', pr: '88.4%', color: '#22c55e', highlight: false },
-        { name: 'Pavagada', mw: '38 MW', pr: '91.2%', color: '#22c55e', highlight: false },
-        { name: 'Sweihan', mw: '64 MW', pr: '79.3%', color: '#2563EB', highlight: true },
-        { name: 'Sakaka', mw: '45 MW', pr: '93.1%', color: '#22c55e', highlight: false },
-      ].map((site) => (
-        <div key={site.name} className={`sol-mock-site-card${site.highlight ? ' sol-mock-site-card--active' : ''}`}>
-          <div className="sol-mock-site-top">
-            <span
-              className="sol-mock-dot"
-              style={{ background: site.highlight ? '#60a5fa' : site.color }}
-            />
-            <span className="sol-mock-site-name">{site.name}</span>
-            <span className="sol-mock-site-mw">{site.mw}</span>
-          </div>
-          <div className="sol-mock-site-pr">{site.pr} PR</div>
-        </div>
+    <div className="sol-mock-site-grid" style={{ gridTemplateColumns: 'repeat(4, 1fr)', gap: '12px' }}>
+      {Array.from({ length: 8 }).map((_, i) => (
+        <div
+          key={i}
+          style={{
+            height: '42px',
+            background: 'rgba(255, 255, 255, 0.03)',
+            border: '1px solid rgba(255, 255, 255, 0.08)',
+            borderRadius: '6px'
+          }}
+        />
       ))}
     </div>
   </div>
@@ -44,13 +37,13 @@ const OMMock = () => (
   <div className="sol-mock-card">
     <div className="sol-mock-header">
       <span className="sol-mock-title">Work queue</span>
-      <span className="sol-mock-badge">Demo data</span>
+      <span className="sol-mock-badge">demo</span>
     </div>
     <div className="sol-mock-wo-list">
       {[
-        { id: 'WO #1042', desc: 'Inverter 3', badge: 'Review', badgeClass: 'sol-badge--orange' },
-        { id: 'WO #1045', desc: 'String drift', badge: 'Open', badgeClass: 'sol-badge--blue' },
-        { id: 'WO #1261', desc: 'Tracker', badge: 'Closed', badgeClass: 'sol-badge--green' },
+        { id: 'WO #1042', desc: 'Inverter 3', badge: 'Routed', badgeClass: 'sol-badge--blue' },
+        { id: 'WO #1043', desc: 'String drift', badge: 'Open', badgeClass: 'sol-badge--blue-outline' },
+        { id: 'WO #1051', desc: 'Tracker', badge: 'Closed', badgeClass: 'sol-badge--dark-outline' },
       ].map((wo) => (
         <div key={wo.id} className="sol-mock-wo-row">
           <div className="sol-mock-wo-left">
@@ -69,27 +62,27 @@ const InvestorsMock = () => (
   <div className="sol-mock-card">
     <div className="sol-mock-header">
       <span className="sol-mock-title">Fund overview</span>
-      <span className="sol-mock-badge">Demo data</span>
+      <span className="sol-mock-badge">demo</span>
     </div>
     <table className="sol-mock-table">
       <thead>
         <tr>
           <th>Asset</th>
-          <th>IRR</th>
-          <th>Yield</th>
+          <th>PR</th>
+          <th>Avail.</th>
           <th>IRR Δ</th>
         </tr>
       </thead>
       <tbody>
         {[
-          { asset: 'Rajasthan I', irr: '88%', yield: '80.3%', delta: '+0.4' },
-          { asset: 'Gujarat II', irr: '86%', yield: '66.9%', delta: '+0.2' },
-          { asset: 'Sakaka', irr: '90%', yield: '98.9%', delta: '+0.8' },
+          { asset: 'Rajasthan I', pr: '88%', avail: '90.3%', delta: '+0.4' },
+          { asset: 'Gujarat II', pr: '86%', avail: '90.9%', delta: '+0.2' },
+          { asset: 'Sakaka', pr: '90%', avail: '89.5%', delta: '+0.8' },
         ].map((row) => (
           <tr key={row.asset}>
             <td>{row.asset}</td>
-            <td>{row.irr}</td>
-            <td>{row.yield}</td>
+            <td>{row.pr}</td>
+            <td>{row.avail}</td>
             <td className="sol-mock-delta">{row.delta}</td>
           </tr>
         ))}
@@ -107,7 +100,15 @@ const RoleSections = () => {
       <section className="sol-role-section" id="asset-owners">
         <div className="sol-role-grid">
           <div className="sol-role-text">
-            <p className="sol-role-eyebrow">For Asset Owners</p>
+            <p className="sol-role-eyebrow" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px' }}>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                <rect x="3" y="3" width="7" height="7" />
+                <rect x="14" y="3" width="7" height="7" />
+                <rect x="14" y="14" width="7" height="7" />
+                <rect x="3" y="14" width="7" height="7" />
+              </svg>
+              FOR ASSET OWNERS
+            </p>
             <h2 className="sol-role-h2">Every site in one place, with reporting your board trusts.</h2>
             <p className="sol-role-para">
               Stop stitching together vendor portals and spreadsheets. SolarKey unifies your whole
@@ -133,7 +134,12 @@ const RoleSections = () => {
             <OMMock />
           </div>
           <div className="sol-role-text">
-            <p className="sol-role-eyebrow">For O&amp;M Providers</p>
+            <p className="sol-role-eyebrow" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px' }}>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
+              </svg>
+              FOR O&amp;M PROVIDERS
+            </p>
             <h2 className="sol-role-h2">Fix faults before they escalate — cover more sites per tech.</h2>
             <p className="sol-role-para">
               Move from reactive callouts to predictive maintenance. SolarKey spots the fault early,
@@ -153,7 +159,13 @@ const RoleSections = () => {
       <section className="sol-role-section" id="investors">
         <div className="sol-role-grid">
           <div className="sol-role-text">
-            <p className="sol-role-eyebrow">For Investors</p>
+            <p className="sol-role-eyebrow" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px' }}>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                <path d="M3 3v18h18" />
+                <path d="M18.7 8l-5.1 5.2-2.8-2.7L7 14.3" />
+              </svg>
+              FOR INVESTORS
+            </p>
             <h2 className="sol-role-h2">Asset-level truth across the whole fund.</h2>
             <p className="sol-role-para">
               See how every asset is really performing, validate the IRR assumptions in your model,
