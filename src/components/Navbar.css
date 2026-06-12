@@ -10,7 +10,7 @@
   max-width: 1720px;
   margin: 0 auto;
   padding: 0 clamp(24px, 5vw, 64px);
-  height: 96px;
+  height: 72px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -33,7 +33,7 @@
 }
 
 .logo-text {
-  font-size: 32px;
+  font-size: 22px;
   font-weight: 800;
   color: #111827;
   letter-spacing: -0.5px;
@@ -48,11 +48,11 @@
 .navbar-links {
   display: flex;
   list-style: none;
-  gap: 48px;
+  gap: 36px;
 }
 
 .navbar-links a {
-  font-size: 22px;
+  font-size: 15px;
   font-weight: 700;
   color: #475569;
   transition: color 0.15s;
@@ -77,8 +77,8 @@
   position: absolute;
   left: 0;
   right: 0;
-  bottom: -8px;
-  height: 3px;
+  bottom: -4px;
+  height: 2.5px;
   background-color: #2563EB;
   border-radius: 9999px;
 }
@@ -87,10 +87,10 @@
 .btn-demo {
   background: #2563EB;
   color: #fff;
-  font-size: 20px;
+  font-size: 14px;
   font-weight: 700;
-  padding: 15px 30px;
-  border-radius: 10px;
+  padding: 10px 20px;
+  border-radius: 8px;
   transition: background 0.15s, transform 0.12s;
   border: none;
   cursor: pointer;
@@ -147,7 +147,7 @@
 .mobile-menu {
   display: none;
   position: fixed;
-  top: 96px;
+  top: 72px;
   left: 0;
   right: 0;
   bottom: 0;

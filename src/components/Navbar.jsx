@@ -121,7 +121,7 @@ const Navbar = () => {
 
         {/* ── Logo ── */}
         <a href="/" className="navbar-logo">
-          <SolarKeyLogo size={42} />
+          <SolarKeyLogo size={32} />
           <span className="logo-text">
             Solar<span className="logo-key">Key</span>
           </span>

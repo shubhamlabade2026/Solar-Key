@@ -9,18 +9,14 @@
 
 @media (min-width: 1025px) {
   .hero {
-    min-height: calc(100vh - 84px);
-    padding: 60px 0;
-  }
-  .hero-container {
-    height: 100%;
+    min-height: auto;
+    padding: 80px 0;
   }
 }
 
 @media (max-width: 1024px) {
   .hero {
     padding: 56px 0 72px;
-    height: auto;
   }
 }
 
@@ -37,46 +33,46 @@
 }
 
 .hero-description {
-  font-size: 22px;
+  font-size: 17px;
   color: #4b5563;
-  line-height: 1.8;
-  max-width: 720px;
-  margin-bottom: 36px;
+  line-height: 1.65;
+  max-width: 580px;
+  margin-bottom: 28px;
 }
 
 /* ── Left ─────────────────────── */
 .hero-eyebrow {
-  font-size: 15px;
+  font-size: 13px;
   font-weight: 600;
-  letter-spacing: 2.5px;
+  letter-spacing: 2px;
   color: #2563EB;
   text-transform: uppercase;
-  margin-bottom: 24px;
+  margin-bottom: 16px;
 }
 
 .hero-headline {
-  font-size: clamp(52px, 5.5vw, 80px);
+  font-size: clamp(38px, 3.2vw, 48px);
   font-weight: 800;
-  line-height: 1.1;
+  line-height: 1.15;
   color: #111827;
-  letter-spacing: -1.8px;
-  margin-bottom: 24px;
+  letter-spacing: -1px;
+  margin-bottom: 20px;
 }
 
 .hero-cta {
   display: flex;
   gap: 16px;
-  margin-bottom: 32px;
+  margin-bottom: 28px;
   flex-wrap: wrap;
 }
 
 .btn-primary {
   background: #2563EB;
   color: #fff;
-  font-size: 18px;
+  font-size: 15px;
   font-weight: 700;
-  padding: 18px 36px;
-  border-radius: 9px;
+  padding: 12px 24px;
+  border-radius: 8px;
   transition: background 0.18s, transform 0.15s, box-shadow 0.18s;
   box-shadow: 0 2px 8px rgba(37, 99, 235, 0.35);
 }
@@ -84,16 +80,16 @@
 .btn-primary:hover {
   background: #1d4ed8;
   transform: translateY(-1px);
-  box-shadow: 0 6px 16px rgba(37, 99, 235, 0.42);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.4);
 }
 
 .btn-secondary {
   background: #fff;
   color: #374151;
-  font-size: 18px;
+  font-size: 15px;
   font-weight: 600;
-  padding: 18px 36px;
-  border-radius: 9px;
+  padding: 12px 24px;
+  border-radius: 8px;
   border: 1.5px solid #d1d5db;
   transition: border-color 0.18s, color 0.18s, background 0.18s, transform 0.15s;
 }
@@ -105,7 +101,7 @@
 }
 
 .hero-footnote {
-  font-size: 15px;
+  font-size: 13px;
   color: #6b7280;
   line-height: 1.5;
 }
@@ -124,12 +120,12 @@
     gap: 48px;
   }
   .hero-headline {
-    font-size: 42px;
-    line-height: 1.08;
-    letter-spacing: -1px;
+    font-size: 30px;
+    line-height: 1.15;
+    letter-spacing: -0.8px;
   }
   .hero-description {
-    font-size: 18px;
+    font-size: 15px;
     max-width: 100%;
   }
   .hero-right {
@@ -152,14 +148,14 @@
     margin-bottom: 16px;
   }
   .hero-headline {
-    font-size: 32px;
-    letter-spacing: -0.8px;
+    font-size: 26px;
+    letter-spacing: -0.5px;
   }
   .hero-description {
-    font-size: 15px;
-    line-height: 1.7;
+    font-size: 14.5px;
+    line-height: 1.6;
     max-width: 100%;
-    margin-bottom: 28px;
+    margin-bottom: 24px;
   }
   .hero-cta {
     flex-direction: column;
@@ -169,11 +165,11 @@
   .btn-secondary {
     width: 100%;
     text-align: center;
-    font-size: 16px;
-    padding: 16px 24px;
+    font-size: 14.5px;
+    padding: 12px 20px;
   }
   .hero-footnote {
-    font-size: 13px;
+    font-size: 12px;
   }
 }
 
@@ -187,14 +183,14 @@
     gap: 24px;
   }
   .hero-headline {
-    font-size: 27px;
+    font-size: 22px;
   }
   .hero-description {
-    font-size: 14px;
+    font-size: 13.5px;
   }
   .btn-primary,
   .btn-secondary {
-    font-size: 15px;
-    padding: 14px 20px;
+    font-size: 13.5px;
+    padding: 10px 16px;
   }
 }
