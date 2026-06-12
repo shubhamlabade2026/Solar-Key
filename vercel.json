@@ -1,0 +1,15 @@
+{
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "solar-key.com"
+        }
+      ],
+      "destination": "https://www.solar-key.com/:path*",
+      "permanent": true
+    }
+  ]
+}
