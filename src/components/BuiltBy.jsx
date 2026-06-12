@@ -2,8 +2,8 @@ import React from 'react';
 
 const founders = [
   { id: 'founder-vs', initials: 'VS', name: 'Vikram Shetty',  role: 'Co-founder & CEO' },
-  { id: 'founder-ps', initials: 'PS', name: 'Parag Shende',   role: 'Co-founder' },
   { id: 'founder-kc', initials: 'KC', name: 'Kunal Chandra',  role: 'Co-founder' },
+  { id: 'founder-sb', initials: 'SB', name: 'Dr. Sudesh Bhagwat', role: 'Advisor' },
 ];
 
 const BuiltBy = () => {
@@ -26,10 +26,6 @@ const BuiltBy = () => {
             </div>
           ))}
         </div>
-
-        <p className="founders-footnote">
-          Add real founder bios + prior experience here — with no clients yet, the team is your strongest trust signal.
-        </p>
       </div>
     </section>
   );

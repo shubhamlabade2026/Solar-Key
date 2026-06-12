@@ -73,7 +73,7 @@ const DashboardPreview = () => {
           <span className="alert-dot" />
           <span className="alert-text">Inverter anomaly predicted</span>
         </div>
-        <span className="alert-right">Swoihan · 48h lead</span>
+        <span className="alert-right">Sweihan · 48h lead</span>
       </div>
 
       {/* ── Site cards ─────────────────────── */}
@@ -81,7 +81,7 @@ const DashboardPreview = () => {
         {[
           { name: 'Bhadla',   mw: '52 MW' },
           { name: 'Pavagada', mw: '38 MW' },
-          { name: 'Swoihan',  mw: '64 MW', active: true },
+          { name: 'Sweihan',  mw: '64 MW', active: true },
           { name: 'Sakaka',   mw: '45 MW' },
         ].map(({ name, mw, active }) => (
           <div key={name} className={`site-card${active ? ' site-card--active' : ''}`}>

@@ -17,8 +17,7 @@ const Hero = () => {
             SolarKey connects to the inverters, SCADA and meters you already run, monitors every site in real time, and flags faults with AI before they cut your output.
           </p>
           <div className="hero-cta">
-            <button className="btn-primary" id="hero-request-demo">Request a demo</button>
-            <button className="btn-secondary" id="hero-see-savings">See your savings</button>
+            <a href="mailto:hello@solar-key.com?subject=Demo%20Request" className="btn-primary" id="hero-request-demo">Request a demo</a>
           </div>
           <p className="hero-footnote">Built for asset owners, O&amp;M providers and investors across India &amp; West Asia.</p>
         </div>

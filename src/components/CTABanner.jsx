@@ -12,9 +12,9 @@ const CTABanner = () => {
           </p>
           <p className="cta-sub">Be among the first portfolios on SolarKey.</p>
         </div>
-        <button className="cta-btn" id="cta-become-partner">
+        <a href="mailto:hello@solar-key.com?subject=Partnership%20Inquiry" className="cta-btn" id="cta-become-partner">
           Become a partner
-        </button>
+        </a>
       </div>
     </section>
   );

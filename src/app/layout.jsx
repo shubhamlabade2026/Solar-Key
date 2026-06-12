@@ -9,6 +9,7 @@ import '../components/HowItWorks.css';
 import '../components/Features.css';
 import '../components/BuiltBy.css';
 import '../components/CTABanner.css';
+import '../components/Footer.css';
 
 /* ── Font ── */
 const inter = Inter({
@@ -42,13 +43,13 @@ export const metadata = {
     title: 'SolarKey — AI Monitoring & Operations Platform',
     description:
       'See every site. Catch every fault. Prove every kWh. AI-powered solar monitoring for asset owners, O&M providers and investors across India & West Asia.',
-    url: 'https://solar-key-new.vercel.app',
+    url: 'https://www.solar-key.com',
     siteName: 'SolarKey',
     type: 'website',
-    locale: 'en_US',
+    locale: 'en_IN',
     images: [
       {
-        url: 'https://solar-key-new.vercel.app/og-image.png',
+        url: 'https://www.solar-key.com/og-image.png',
         width: 1200,
         height: 630,
         alt: 'SolarKey — AI Monitoring & Operations Platform',
@@ -62,7 +63,7 @@ export const metadata = {
     title: 'SolarKey — AI Monitoring & Operations Platform',
     description:
       'See every site. Catch every fault. Prove every kWh. AI-powered solar monitoring for asset owners, O&M providers and investors across India & West Asia.',
-    images: ['https://solar-key-new.vercel.app/og-image.png'],
+    images: ['https://www.solar-key.com/og-image.png'],
   },
 
   /* ── Misc ── */
@@ -70,7 +71,7 @@ export const metadata = {
     index: true,
     follow: true,
   },
-  metadataBase: new URL('https://solar-key-new.vercel.app'),
+  metadataBase: new URL('https://www.solar-key.com'),
 };
 
 export const viewport = {

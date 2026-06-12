@@ -4,6 +4,7 @@ import HowItWorks from '../components/HowItWorks';
 import Features from '../components/Features';
 import BuiltBy from '../components/BuiltBy';
 import CTABanner from '../components/CTABanner';
+import Footer from '../components/Footer';
 
 export default function HomePage() {
   return (
@@ -16,6 +17,8 @@ export default function HomePage() {
         <BuiltBy />
         <CTABanner />
       </main>
+      <Footer />
     </div>
   );
 }
+
