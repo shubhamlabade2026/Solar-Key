@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import { usePathname } from 'next/navigation';
 
 /**
  * SolarKeyLogo — exact recreation from the high-resolution uploaded image.
@@ -93,6 +94,7 @@ const SolarKeyLogo = ({ size = 28 }) => (
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   // Close menu on resize to desktop
   useEffect(() => {
@@ -127,7 +129,11 @@ const Navbar = () => {
 
         {/* ── Nav links (desktop) ── */}
         <ul className="navbar-links">
-          <li><a href="/platform">Platform</a></li>
+          <li>
+            <a href="/platform" className={pathname === '/platform' ? 'active' : ''}>
+              Platform
+            </a>
+          </li>
           <li><a href="#solutions">Solutions</a></li>
           <li><a href="#resources">Resources</a></li>
           <li><a href="#company">Company</a></li>
@@ -156,7 +162,15 @@ const Navbar = () => {
       {/* ── Mobile menu overlay ── */}
       <div className={`mobile-menu${menuOpen ? ' mobile-menu--open' : ''}`}>
         <ul className="mobile-menu-links">
-          <li><a href="/platform" onClick={() => setMenuOpen(false)}>Platform</a></li>
+          <li>
+            <a
+              href="/platform"
+              className={pathname === '/platform' ? 'active' : ''}
+              onClick={() => setMenuOpen(false)}
+            >
+              Platform
+            </a>
+          </li>
           <li><a href="#solutions" onClick={() => setMenuOpen(false)}>Solutions</a></li>
           <li><a href="#resources" onClick={() => setMenuOpen(false)}>Resources</a></li>
           <li><a href="#company" onClick={() => setMenuOpen(false)}>Company</a></li>

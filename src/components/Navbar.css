@@ -63,6 +63,26 @@
   color: #111827;
 }
 
+.navbar-links a.active {
+  color: #2563EB;
+  position: relative;
+}
+
+.navbar-links a.active:hover {
+  color: #2563EB;
+}
+
+.navbar-links a.active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -8px;
+  height: 3px;
+  background-color: #2563EB;
+  border-radius: 9999px;
+}
+
 /* ── CTA button ───────────────── */
 .btn-demo {
   background: #2563EB;
@@ -179,6 +199,12 @@
 
 .mobile-menu-links a:hover {
   color: #2563EB;
+  background: #f9fafb;
+}
+
+.mobile-menu-links a.active {
+  color: #2563EB;
+  font-weight: 700;
   background: #f9fafb;
 }
 
