@@ -9,7 +9,7 @@ const PlatformCTA = () => (
       </p>
       <div className="plat-cta-btns">
         <a
-          href="mailto:hello@solar-key.com?subject=Demo%20Request"
+          href="/demo"
           className="btn-primary"
           id="plat-cta-demo"
         >

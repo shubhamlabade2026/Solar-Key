@@ -140,7 +140,7 @@ const Navbar = () => {
         </ul>
 
         {/* ── CTA (desktop) ── */}
-        <a href="mailto:hello@solar-key.com?subject=Demo%20Request" className="btn-demo btn-demo-desktop" id="nav-request-demo">
+        <a href="/demo" className="btn-demo btn-demo-desktop" id="nav-request-demo">
           Request a demo
         </a>
 
@@ -175,7 +175,7 @@ const Navbar = () => {
           <li><a href="#resources" onClick={() => setMenuOpen(false)}>Resources</a></li>
           <li><a href="#company" onClick={() => setMenuOpen(false)}>Company</a></li>
         </ul>
-        <a href="mailto:hello@solar-key.com?subject=Demo%20Request" className="btn-demo btn-demo-mobile" id="nav-request-demo-mobile" onClick={() => setMenuOpen(false)}>
+        <a href="/demo" className="btn-demo btn-demo-mobile" id="nav-request-demo-mobile" onClick={() => setMenuOpen(false)}>
           Request a demo
         </a>
       </div>

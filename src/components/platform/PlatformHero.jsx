@@ -17,7 +17,7 @@ const PlatformHero = () => {
           </p>
           <div className="plat-hero-cta">
             <a
-              href="mailto:hello@solar-key.com?subject=Demo%20Request"
+              href="/demo"
               className="btn-primary"
               id="plat-hero-demo"
             >
