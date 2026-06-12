@@ -120,12 +120,12 @@ const Navbar = () => {
       <div className="navbar-container">
 
         {/* ── Logo ── */}
-        <div className="navbar-logo">
+        <a href="/" className="navbar-logo">
           <SolarKeyLogo size={42} />
           <span className="logo-text">
             Solar<span className="logo-key">Key</span>
           </span>
-        </div>
+        </a>
 
         {/* ── Nav links (desktop) ── */}
         <ul className="navbar-links">
