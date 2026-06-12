@@ -172,10 +172,11 @@ export default function DemoClient() {
                       onChange={handleChange}
                     >
                       <option value="">Select your role</option>
-                      <option value="Asset Owner">Asset Owner</option>
-                      <option value="O&M Provider">O&M Provider</option>
+                      <option value="Asset Owner / Fund Manager">Asset Owner / Fund Manager</option>
+                      <option value="O&M Service Provider">O&M Service Provider</option>
+                      <option value="Investor (PE / VC / IPP)">Investor (PE / VC / IPP)</option>
                       <option value="EPC Contractor">EPC Contractor</option>
-                      <option value="Investor">Investor</option>
+                      <option value="Project Developer">Project Developer</option>
                       <option value="Other">Other</option>
                     </select>
                   </div>
