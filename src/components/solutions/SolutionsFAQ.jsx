@@ -58,11 +58,17 @@ const FAQItem = ({ q, a, id }) => {
         <span>{q}</span>
         <ChevronIcon open={open} />
       </button>
-      {open && (
-        <div className="sol-faq-a" id={`faq-a-${id}`}>
-          {a}
+      <div
+        className={`sol-faq-a-wrapper ${open ? 'sol-faq-a-wrapper--open' : ''}`}
+        id={`faq-a-${id}`}
+        aria-hidden={!open}
+      >
+        <div className="sol-faq-a-content">
+          <div className="sol-faq-a">
+            {a}
+          </div>
         </div>
-      )}
+      </div>
     </div>
   );
 };

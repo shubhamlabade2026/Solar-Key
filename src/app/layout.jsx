@@ -1,5 +1,6 @@
 import { Inter } from 'next/font/google';
 import './globals.css';
+import ScrollProgressBar from '../components/ScrollProgressBar';
 
 /* ── Component CSS (imported here for guaranteed server-side inclusion) ── */
 import '../components/Navbar.css';
@@ -87,6 +88,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en-IN" className={inter.variable}>
       <body style={{ fontFamily: 'var(--font-inter), sans-serif' }}>
+        <ScrollProgressBar />
         {children}
       </body>
     </html>

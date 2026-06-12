@@ -5,7 +5,9 @@ import React from 'react';
 export default function CompanyHero() {
   return (
     <section className="comp-page-hero">
-      <div className="comp-hero-container">
+      <div className="ambient-glow-orb" style={{ top: '-150px', right: '-100px' }} />
+      <div className="ambient-glow-orb" style={{ bottom: '-150px', left: '-150px' }} />
+      <div className="comp-hero-container" style={{ position: 'relative', zIndex: 1 }}>
         <span className="comp-eyebrow">Company</span>
         <h1 className="comp-h1">Building the <span style={{ color: '#2563EB' }}>operating system</span> for renewable portfolios.</h1>
         <p className="comp-sub">

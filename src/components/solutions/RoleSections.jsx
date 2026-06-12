@@ -21,8 +21,9 @@ const AssetOwnersMock = () => (
         <div
           key={i}
           className="sol-mock-empty-slot"
-          title="Empty slot"
-        />
+        >
+          <span className="sol-mock-tooltip">Available Slot (Connect Site)</span>
+        </div>
       ))}
     </div>
   </div>
@@ -37,9 +38,9 @@ const OMMock = () => (
     </div>
     <div className="sol-mock-wo-list">
       {[
-        { id: 'WO #1042', desc: 'Inverter 3', badge: 'Routed', badgeClass: 'sol-badge--blue' },
-        { id: 'WO #1043', desc: 'String drift', badge: 'Open', badgeClass: 'sol-badge--blue-outline' },
-        { id: 'WO #1051', desc: 'Tracker', badge: 'Closed', badgeClass: 'sol-badge--dark-outline' },
+        { id: 'WO #1042', desc: 'Inverter 3', badge: 'Routed', badgeClass: 'sol-badge--blue', tooltip: 'Routed to Pavagada Team A · SLA: 2h' },
+        { id: 'WO #1043', desc: 'String drift', badge: 'Open', badgeClass: 'sol-badge--blue-outline', tooltip: 'String drift detected on Inverter 5 · Lead time: 3 days' },
+        { id: 'WO #1051', desc: 'Tracker', badge: 'Closed', badgeClass: 'sol-badge--dark-outline', tooltip: 'Tracker resolved on Sakaka Block 4 · Closed yesterday' },
       ].map((wo) => (
         <div key={wo.id} className="sol-mock-wo-row">
           <div className="sol-mock-wo-left">
@@ -47,6 +48,7 @@ const OMMock = () => (
             <span className="sol-mock-wo-desc">{wo.desc}</span>
           </div>
           <span className={`sol-badge ${wo.badgeClass}`}>{wo.badge}</span>
+          <span className="sol-mock-tooltip">{wo.tooltip}</span>
         </div>
       ))}
     </div>
@@ -71,12 +73,15 @@ const InvestorsMock = () => (
       </thead>
       <tbody>
         {[
-          { asset: 'Rajasthan I', pr: '88%', avail: '90.3%', delta: '+0.4' },
-          { asset: 'Gujarat II', pr: '86%', avail: '90.9%', delta: '+0.2' },
-          { asset: 'Sakaka', pr: '90%', avail: '89.5%', delta: '+0.8' },
+          { asset: 'Rajasthan I', pr: '88%', avail: '90.3%', delta: '+0.4', tooltip: 'Yield: 240 MWh · IRR positive' },
+          { asset: 'Gujarat II', pr: '86%', avail: '90.9%', delta: '+0.2', tooltip: 'Yield: 180 MWh · IRR stable' },
+          { asset: 'Sakaka', pr: '90%', avail: '89.5%', delta: '+0.8', tooltip: 'Yield: 310 MWh · IRR target exceeded' },
         ].map((row) => (
           <tr key={row.asset}>
-            <td>{row.asset}</td>
+            <td style={{ position: 'relative' }}>
+              {row.asset}
+              <span className="sol-mock-tooltip">{row.tooltip}</span>
+            </td>
             <td>{row.pr}</td>
             <td>{row.avail}</td>
             <td className="sol-mock-delta">{row.delta}</td>

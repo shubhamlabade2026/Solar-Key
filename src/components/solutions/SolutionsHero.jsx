@@ -3,7 +3,9 @@ import React from 'react';
 const SolutionsHero = () => {
   return (
     <section className="sol-page-hero">
-      <div className="sol-hero-container">
+      <div className="ambient-glow-orb" style={{ top: '-150px', right: '-100px' }} />
+      <div className="ambient-glow-orb" style={{ bottom: '-150px', left: '-150px' }} />
+      <div className="sol-hero-container" style={{ position: 'relative', zIndex: 1 }}>
         <p className="sol-eyebrow">Solutions</p>
         <h1 className="sol-h1">Built for <span style={{ color: '#2563EB' }}>every role</span> in your<br />renewable portfolio.</h1>
         <p className="sol-sub">
@@ -19,7 +21,7 @@ const SolutionsHero = () => {
         </div>
 
         {/* CTA */}
-        <a href="/demo" className="sol-hero-cta" id="sol-hero-demo-btn">
+        <a href="/demo" className="sol-hero-cta btn-premium" id="sol-hero-demo-btn">
           Request a demo
         </a>
       </div>
