@@ -101,7 +101,7 @@ export default function RootLayout({ children }) {
           ],
           "address": { "@type": "PostalAddress", "addressLocality": "Mumbai",
             "addressRegion": "Maharashtra", "addressCountry": "IN" },
-          "contactPoint": { "@type": "ContactPoint", "email": "hello@solar-key.com",
+          "contactPoint": { "@type": "ContactPoint", "email": "vikram@solar-key.com",
             "telephone": "+91-96194-22279", "contactType": "sales",
             "areaServed": ["IN","AE","SA"] },
           "sameAs": ["https://www.linkedin.com/company/solarkey-ai/"]
