@@ -1,5 +1,3 @@
-'use client';
-
 import React from 'react';
 
 const terms = [
@@ -25,7 +23,7 @@ export default function GlossarySection() {
               ))}
             </div>
           </div>
-          <a href="#" className="res-glossary-link">
+          <a href="/resources/glossary" className="res-glossary-link">
             Open the glossary →
           </a>
         </div>

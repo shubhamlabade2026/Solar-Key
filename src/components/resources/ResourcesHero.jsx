@@ -1,5 +1,3 @@
-'use client';
-
 import React from 'react';
 
 const categories = [
@@ -10,7 +8,7 @@ const categories = [
   'Integrations'
 ];
 
-export default function ResourcesHero({ activeFilter, onFilterChange }) {
+export default function ResourcesHero({ activeFilter, onFilterChange, showTabs = true }) {
   return (
     <section className="res-page-hero">
       <div className="ambient-glow-orb" style={{ top: '-150px', right: '-100px' }} />
@@ -21,17 +19,19 @@ export default function ResourcesHero({ activeFilter, onFilterChange }) {
         <p className="res-sub">
           Practical playbooks, product notes and field experience — from the team building SolarKey.
         </p>
-        <div className="res-tabs">
-          {categories.map((cat) => (
-            <button
-              key={cat}
-              className={`res-tab ${activeFilter === cat ? 'res-tab--active' : ''}`}
-              onClick={() => onFilterChange(cat)}
-            >
-              {cat}
-            </button>
-          ))}
-        </div>
+        {showTabs && (
+          <div className="res-tabs">
+            {categories.map((cat) => (
+              <button
+                key={cat}
+                className={`res-tab ${activeFilter === cat ? 'res-tab--active' : ''}`}
+                onClick={() => onFilterChange(cat)}
+              >
+                {cat}
+              </button>
+            ))}
+          </div>
+        )}
       </div>
     </section>
   );
