@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Link from 'next/link';
 
 export default function CompanyCTA() {
   return (
@@ -11,12 +12,12 @@ export default function CompanyCTA() {
           Book a walkthrough, or come in early as a design partner.
         </p>
         <div className="comp-cta-btns">
-          <a href="/demo" className="comp-cta-btn-primary">
+          <Link href="/demo" className="comp-cta-btn-primary">
             Request a demo
-          </a>
-          <a href="mailto:vikram@solar-key.com?subject=Design%20Partner%20Programme" className="comp-cta-btn-secondary">
+          </Link>
+          <Link href="/partners" className="comp-cta-btn-secondary">
             Become a design partner
-          </a>
+          </Link>
         </div>
       </div>
     </section>

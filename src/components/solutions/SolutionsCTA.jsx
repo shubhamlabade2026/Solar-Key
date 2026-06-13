@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 
 const SolutionsCTA = () => {
   return (
@@ -9,12 +10,12 @@ const SolutionsCTA = () => {
           Book a walkthrough, or come in early as a design partner.
         </p>
         <div className="sol-cta-btns">
-          <a href="/demo" className="sol-cta-btn-primary" id="sol-cta-demo-btn">
+          <Link href="/demo" className="sol-cta-btn-primary" id="sol-cta-demo-btn">
             Request a demo
-          </a>
-          <a href="mailto:vikram@solar-key.com?subject=Design%20Partner%20Programme" className="sol-cta-btn-secondary" id="sol-cta-partner-btn">
+          </Link>
+          <Link href="/partners" className="sol-cta-btn-secondary" id="sol-cta-partner-btn">
             Become a design partner
-          </a>
+          </Link>
         </div>
       </div>
     </section>

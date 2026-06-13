@@ -1,0 +1,323 @@
+/* ==========================================================================
+   PARTNERS PAGE CSS
+   ========================================================================== */
+
+.partners-page-main {
+  background: #f9fafb;
+  min-height: calc(100vh - 72px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 0;
+  border-top: 1px solid #e5e7eb;
+}
+
+.partners-page-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 clamp(24px, 5vw, 64px);
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 80px;
+  align-items: flex-start;
+  width: 100%;
+}
+
+/* ── Left Side: Partner Program Info ── */
+.partners-info-section {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.partners-info-title {
+  font-size: 32px;
+  font-weight: 800;
+  color: #111827;
+  letter-spacing: -0.8px;
+}
+
+.partners-info-subtitle {
+  font-size: 18px;
+  color: #4b5563;
+  line-height: 1.6;
+  margin-top: -16px;
+}
+
+.partnership-benefits {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.benefit-card {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.benefit-icon-wrapper {
+  background: #eff6ff; /* Soft blue background */
+  color: #2563eb; /* Blue text */
+  font-size: 14px;
+  font-weight: 700;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.benefit-content {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.benefit-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.benefit-desc {
+  font-size: 15px;
+  color: #4b5563;
+  line-height: 1.6;
+}
+
+/* Reassurance Strip */
+.partners-reassurance-strip {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  background: #f9fafb;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 16px 20px;
+  margin-top: 16px;
+}
+
+.reassurance-item {
+  font-size: 13.5px;
+  color: #4b5563;
+  font-weight: 600;
+}
+
+.reassurance-dot {
+  color: #9ca3af;
+  font-weight: 800;
+}
+
+/* ── Right Side: Partnership Form ── */
+.partners-form-section {
+  width: 100%;
+}
+
+.partners-form-card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 36px;
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.04), 
+    0 0 0 1px rgba(0, 0, 0, 0.05);
+}
+
+.partners-form-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #111827;
+  letter-spacing: -0.5px;
+  margin-bottom: 24px;
+}
+
+.partners-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-row-two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.required-star {
+  color: #ef4444;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  font-family: inherit;
+  font-size: 14px;
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  background-color: #fff;
+  color: #111827;
+  transition: border-color 0.15s, box-shadow 0.15s;
+  width: 100%;
+  outline: none;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #9ca3af;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+/* Custom Select Dropdown Styling */
+.select-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.select-wrapper select {
+  appearance: none;
+  cursor: pointer;
+  padding-right: 36px;
+}
+
+.select-wrapper::after {
+  content: '';
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 6px;
+  background-color: #4b5563;
+  clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+  pointer-events: none;
+}
+
+.submit-partners-btn {
+  font-size: 15px;
+  font-weight: 700;
+  padding: 14px;
+  text-align: center;
+  width: 100%;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  background: #2563eb;
+  color: #fff;
+  margin-top: 8px;
+  transition: background-color 0.15s;
+}
+
+.submit-partners-btn:hover {
+  background: #1d4ed8;
+}
+
+/* Error/Success Alert */
+.form-error-alert {
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  color: #dc2626;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+.partners-success-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px 0;
+  gap: 16px;
+}
+
+.success-icon-wrap {
+  width: 64px;
+  height: 64px;
+}
+
+.success-title {
+  font-size: 24px;
+  font-weight: 800;
+  color: #111827;
+}
+
+.success-desc {
+  font-size: 15px;
+  color: #4b5563;
+  line-height: 1.6;
+  max-width: 340px;
+  margin-bottom: 8px;
+}
+
+.success-btn {
+  font-size: 14px;
+  padding: 10px 20px;
+  border-radius: 8px;
+}
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+  .partners-page-container {
+    grid-template-columns: 1fr;
+    gap: 48px;
+    padding: 0 24px;
+  }
+
+  .partners-page-main {
+    padding: 40px 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .partners-form-card {
+    padding: 24px;
+  }
+
+  .form-row-two-col {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .partners-reassurance-strip {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 16px;
+  }
+  
+  .reassurance-dot {
+    display: none;
+  }
+  
+  .partners-info-title {
+    font-size: 28px;
+  }
+  
+  .partners-form-title {
+    font-size: 22px;
+  }
+}

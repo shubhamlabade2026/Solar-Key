@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 
 const PlatformCTA = () => (
   <section className="plat-cta" id="plat-cta">
@@ -8,20 +9,20 @@ const PlatformCTA = () => (
         Book a walkthrough, or come in early as a design partner.
       </p>
       <div className="plat-cta-btns">
-        <a
+        <Link
           href="/demo"
           className="btn-primary"
           id="plat-cta-demo"
         >
           Request a demo
-        </a>
-        <a
-          href="mailto:vikram@solar-key.com?subject=Design%20Partner%20Programme"
+        </Link>
+        <Link
+          href="/partners"
           className="btn-secondary"
           id="plat-cta-partner"
         >
           Become a design partner
-        </a>
+        </Link>
       </div>
     </div>
   </section>

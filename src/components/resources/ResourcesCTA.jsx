@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Link from 'next/link';
 
 export default function ResourcesCTA() {
   return (
@@ -11,12 +12,12 @@ export default function ResourcesCTA() {
           Book a walkthrough, or come in early as a design partner.
         </p>
         <div className="res-cta-btns">
-          <a href="/demo" className="res-cta-btn-primary">
+          <Link href="/demo" className="res-cta-btn-primary">
             Request a demo
-          </a>
-          <a href="mailto:vikram@solar-key.com?subject=Design%20Partner%20Programme" className="res-cta-btn-secondary">
+          </Link>
+          <Link href="/partners" className="res-cta-btn-secondary">
             Become a design partner
-          </a>
+          </Link>
         </div>
       </div>
     </section>

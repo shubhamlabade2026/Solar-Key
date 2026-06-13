@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 
 const PartnerBanner = () => {
   return (
@@ -12,9 +13,9 @@ const PartnerBanner = () => {
             Shape the roadmap for your role — and get in before everyone else.
           </p>
         </div>
-        <a href="mailto:vikram@solar-key.com?subject=Design%20Partner%20Programme" className="sol-partner-btn" id="sol-partner-cta-btn">
+        <Link href="/partners" className="sol-partner-btn" id="sol-partner-cta-btn">
           Become a partner
-        </a>
+        </Link>
       </div>
     </section>
   );

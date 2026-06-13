@@ -102,7 +102,7 @@ const Footer = () => {
                 <li><Link href="/resources">Blog</Link></li>
                 <li><Link href="/trust">Trust & Security</Link></li>
                 <li><Link href="/demo">Request a demo</Link></li>
-                <li><a href="mailto:vikram@solar-key.com?subject=Design%20Partner%20Programme">Become a partner</a></li>
+                <li><Link href="/partners">Become a partner</Link></li>
               </ul>
             </div>
           </div>
