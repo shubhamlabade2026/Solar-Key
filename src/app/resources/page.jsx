@@ -67,7 +67,7 @@ export default function ResourcesPage() {
             lineHeight: '1.6',
             margin: 0
           }}>
-            We are currently crafting practical guides, operational playbooks, and key insights for running solar and wind portfolios better. Check back soon!
+            We are currently crafting practical guides, operational playbooks, and key insights for running solar portfolios better. Check back soon!
           </p>
 
           <Link href="/" style={{
