@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 
 const SolarKeyLogoWhite = ({ size = 28 }) => (
   <svg
@@ -58,12 +59,12 @@ const Footer = () => {
 
           {/* Left Column: Brand Name & Address */}
           <div className="footer-brand-column">
-            <a href="/" className="footer-logo">
+            <Link href="/" className="footer-logo">
               <SolarKeyLogoWhite size={28} />
               <span className="footer-logo-text">
                 Solar<span className="footer-logo-key">Key</span>
               </span>
-            </a>
+            </Link>
             <div className="footer-address-info">
               <p>SolarKey Advanced AI Solutions Pvt. Ltd.</p>
               <p>2-22, Evergreen Industrial Estate, Shakti Mill Lane,</p>
@@ -78,29 +79,29 @@ const Footer = () => {
             <div className="footer-links-col">
               <h4>Platform</h4>
               <ul>
-                <li><a href="/platform">Capabilities</a></li>
-                <li><a href="/platform#how-it-works">How it works</a></li>
-                <li><a href="/integrations">Integrations</a></li>
-                <li><a href="/platform#security">Security</a></li>
+                <li><Link href="/platform">Capabilities</Link></li>
+                <li><Link href="/platform#how-it-works">How it works</Link></li>
+                <li><Link href="/integrations">Integrations</Link></li>
+                <li><Link href="/platform#security">Security</Link></li>
               </ul>
             </div>
 
             <div className="footer-links-col">
               <h4>Company</h4>
               <ul>
-                <li><a href="/company">About</a></li>
-                <li><a href="/company#leadership">Leadership</a></li>
-                <li><a href="/careers">Careers</a></li>
-                <li><a href="/company#contact">Contact</a></li>
+                <li><Link href="/company">About</Link></li>
+                <li><Link href="/company#leadership">Leadership</Link></li>
+                <li><Link href="/careers">Careers</Link></li>
+                <li><Link href="/company#contact">Contact</Link></li>
               </ul>
             </div>
 
             <div className="footer-links-col">
               <h4>Resources</h4>
               <ul>
-                <li><a href="/resources">Blog</a></li>
-                <li><a href="/trust">Trust & Security</a></li>
-                <li><a href="/demo">Request a demo</a></li>
+                <li><Link href="/resources">Blog</Link></li>
+                <li><Link href="/trust">Trust & Security</Link></li>
+                <li><Link href="/demo">Request a demo</Link></li>
                 <li><a href="mailto:vikram@solar-key.com?subject=Design%20Partner%20Programme">Become a partner</a></li>
               </ul>
             </div>
@@ -117,9 +118,9 @@ const Footer = () => {
             © 2026 SolarKey Advanced AI Solutions Pvt. Ltd.
           </p>
           <div className="footer-bottom-links">
-            <a href="/privacy">Privacy</a>
+            <Link href="/privacy">Privacy</Link>
             <span>·</span>
-            <a href="/terms">Terms</a>
+            <Link href="/terms">Terms</Link>
           </div>
         </div>
 

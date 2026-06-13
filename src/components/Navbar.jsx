@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { usePathname } from 'next/navigation';
+import Link from 'next/link';
 
 /**
  * SolarKeyLogo — exact recreation from the high-resolution uploaded image.
@@ -120,37 +121,41 @@ const Navbar = () => {
       <div className="navbar-container">
 
         {/* ── Logo ── */}
-        <a href="/" className="navbar-logo">
+        <Link href="/" className="navbar-logo">
           <SolarKeyLogo size={32} />
           <span className="logo-text">
             Solar<span className="logo-key">Key</span>
           </span>
-        </a>
+        </Link>
 
         {/* ── Nav links (desktop) ── */}
         <ul className="navbar-links">
           <li>
-            <a href="/platform" className={pathname === '/platform' ? 'active' : ''}>
+            <Link href="/platform" className={pathname === '/platform' ? 'active' : ''}>
               Platform
-            </a>
+            </Link>
           </li>
-          <li><a href="/solutions" className={pathname === '/solutions' || pathname.startsWith('/solutions/') ? 'active' : ''}>Solutions</a></li>
           <li>
-            <a href="/resources" className={pathname === '/resources' || pathname.startsWith('/resources/') ? 'active' : ''}>
+            <Link href="/solutions" className={pathname === '/solutions' || pathname.startsWith('/solutions/') ? 'active' : ''}>
+              Solutions
+            </Link>
+          </li>
+          <li>
+            <Link href="/resources" className={pathname === '/resources' || pathname.startsWith('/resources/') ? 'active' : ''}>
               Resources
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="/company" className={pathname === '/company' || pathname.startsWith('/company/') ? 'active' : ''}>
+            <Link href="/company" className={pathname === '/company' || pathname.startsWith('/company/') ? 'active' : ''}>
               Company
-            </a>
+            </Link>
           </li>
         </ul>
 
         {/* ── CTA (desktop) ── */}
-        <a href="/demo" className="btn-demo btn-demo-desktop" id="nav-request-demo">
+        <Link href="/demo" className="btn-demo btn-demo-desktop" id="nav-request-demo">
           Request a demo
-        </a>
+        </Link>
 
         {/* ── Hamburger toggle (mobile) ── */}
         <button
@@ -171,37 +176,45 @@ const Navbar = () => {
       <div className={`mobile-menu${menuOpen ? ' mobile-menu--open' : ''}`}>
         <ul className="mobile-menu-links">
           <li>
-            <a
+            <Link
               href="/platform"
               className={pathname === '/platform' ? 'active' : ''}
               onClick={() => setMenuOpen(false)}
             >
               Platform
-            </a>
+            </Link>
           </li>
-          <li><a href="/solutions" className={pathname === '/solutions' || pathname.startsWith('/solutions/') ? 'active' : ''} onClick={() => setMenuOpen(false)}>Solutions</a></li>
           <li>
-            <a
+            <Link 
+              href="/solutions" 
+              className={pathname === '/solutions' || pathname.startsWith('/solutions/') ? 'active' : ''} 
+              onClick={() => setMenuOpen(false)}
+            >
+              Solutions
+            </Link>
+          </li>
+          <li>
+            <Link
               href="/resources"
               className={pathname === '/resources' || pathname.startsWith('/resources/') ? 'active' : ''}
               onClick={() => setMenuOpen(false)}
             >
               Resources
-            </a>
+            </Link>
           </li>
           <li>
-            <a
+            <Link
               href="/company"
               className={pathname === '/company' || pathname.startsWith('/company/') ? 'active' : ''}
               onClick={() => setMenuOpen(false)}
             >
               Company
-            </a>
+            </Link>
           </li>
         </ul>
-        <a href="/demo" className="btn-demo btn-demo-mobile" id="nav-request-demo-mobile" onClick={() => setMenuOpen(false)}>
+        <Link href="/demo" className="btn-demo btn-demo-mobile" id="nav-request-demo-mobile" onClick={() => setMenuOpen(false)}>
           Request a demo
-        </a>
+        </Link>
       </div>
     </nav>
   );
