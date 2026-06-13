@@ -14,7 +14,7 @@ const teamMembers = [
     id: 2,
     initials: 'SB',
     name: 'Dr. Sudesh Bhagwat',
-    role: 'Role to confirm',
+    role: 'Director [Technology Innovation]',
     linkedin: 'https://www.linkedin.com/in/dr-sudesh-bhagwat'
   },
   {
@@ -22,7 +22,7 @@ const teamMembers = [
     initials: 'KC',
     name: 'Kunal Chandra',
     role: 'Co-founder',
-    linkedin: 'https://www.linkedin.com/company/solarkey-ai/'
+    linkedin: 'https://www.linkedin.com/in/kunal-chandra-6a0159108/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BmnlM3wkWTbGJ5w6WVo%2BrvA%3D%3D'
   }
 ];
 
@@ -42,7 +42,7 @@ export default function TeamSection() {
 
         <div className="comp-team-grid">
           {teamMembers.map((member) => (
-            <div key={member.id} className="comp-team-card">
+            <div key={member.id} className="comp-team-card scroll-reveal">
               <div className="comp-team-avatar-box">
                 <span className="comp-team-avatar-initials">{member.initials}</span>
               </div>

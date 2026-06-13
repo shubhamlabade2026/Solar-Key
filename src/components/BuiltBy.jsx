@@ -3,7 +3,7 @@ import React from 'react';
 const founders = [
   { id: 'founder-vs', initials: 'VS', name: 'Vikram Shetty',  role: 'Co-founder & CEO' },
   { id: 'founder-kc', initials: 'KC', name: 'Kunal Chandra',  role: 'Co-founder' },
-  { id: 'founder-sb', initials: 'SB', name: 'Dr. Sudesh Bhagwat', role: 'Advisor' },
+  { id: 'founder-sb', initials: 'SB', name: 'Dr. Sudesh Bhagwat', role: 'Director [Technology Innovation]' },
 ];
 
 const BuiltBy = () => {

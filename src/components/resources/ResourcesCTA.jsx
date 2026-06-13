@@ -14,7 +14,7 @@ export default function ResourcesCTA() {
           <a href="/demo" className="res-cta-btn-primary">
             Request a demo
           </a>
-          <a href="/demo" className="res-cta-btn-secondary">
+          <a href="mailto:vikram@solar-key.com?subject=Design%20Partner%20Programme" className="res-cta-btn-secondary">
             Become a design partner
           </a>
         </div>

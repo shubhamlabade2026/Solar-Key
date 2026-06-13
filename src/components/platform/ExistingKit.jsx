@@ -10,9 +10,9 @@ const ExistingKit = () => (
   <section className="existing-kit" id="integrations-teaser">
     <div className="kit-container">
       <div className="kit-text">
-        <h2 className="kit-heading">Works with your existing kit</h2>
+        <h2 className="kit-heading">Works with the equipment you already own</h2>
         <p className="kit-body">
-          SolarKey is vendor-neutral. It reads from the inverters, SCADA, meters and weather stations already on your sites: no rip-and-replace, no new hardware to buy.
+          Vendor-neutral. SolarKey reads from the inverters, SCADA, meters and weather stations already on your sites — no rip-and-replace.
         </p>
         <a href="/integrations" className="kit-link" id="kit-see-systems">
           See supported systems →

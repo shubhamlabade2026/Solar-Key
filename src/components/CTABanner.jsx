@@ -4,17 +4,16 @@ const CTABanner = () => {
   return (
     <section className="cta-banner" id="cta-partner">
       <div className="cta-inner">
-        <div className="cta-text">
-          <p className="cta-main">
-            We're onboarding our{' '}
-            <strong>first design partners</strong>{' '}
-            across India &amp; West Asia.
-          </p>
-          <p className="cta-sub">Be among the first portfolios on SolarKey.</p>
+        <h2 className="cta-heading">See SolarKey on your own portfolio.</h2>
+        <p className="cta-subheading">Book a walkthrough, or come in early as a design partner.</p>
+        <div className="cta-buttons">
+          <a href="/demo" className="btn-primary" id="cta-request-demo">
+            Request a demo
+          </a>
+          <a href="mailto:vikram@solar-key.com?subject=Design%20Partner%20Programme" className="btn-secondary" id="cta-design-partner">
+            Become a design partner
+          </a>
         </div>
-        <a href="mailto:hello@solar-key.com?subject=Partnership%20Inquiry" className="cta-btn" id="cta-become-partner">
-          Become a partner
-        </a>
       </div>
     </section>
   );

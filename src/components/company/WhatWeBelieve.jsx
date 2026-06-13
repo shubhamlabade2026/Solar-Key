@@ -27,7 +27,7 @@ export default function WhatWeBelieve() {
         <h2 className="comp-believe-h2">What we believe</h2>
         <div className="comp-believe-grid">
           {beliefs.map((b) => (
-            <div key={b.id} className="comp-believe-card">
+            <div key={b.id} className="comp-believe-card scroll-reveal">
               <div className="comp-believe-icon-box">
                 {/* SVG Checkmark */}
                 <svg viewBox="0 0 24 24">

@@ -6,7 +6,7 @@ export default function WhyExist() {
   return (
     <section className="comp-why-exist">
       <div className="comp-why-exist-container">
-        <div className="comp-why-exist-card">
+        <div className="comp-why-exist-card scroll-reveal">
           <h2 className="comp-why-exist-h2">Why we exist</h2>
           <div className="comp-why-exist-text">
             <p>

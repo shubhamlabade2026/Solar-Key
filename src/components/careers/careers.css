@@ -244,6 +244,12 @@
   font-weight: 700;
   color: #111827;
   letter-spacing: -0.01em;
+  transition: color 0.15s ease;
+}
+
+.car-role-summary:hover .car-role-title,
+.car-role-summary[aria-expanded="true"] .car-role-title {
+  color: #2563eb;
 }
 
 .car-role-meta {

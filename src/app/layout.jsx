@@ -1,6 +1,7 @@
 import { Inter } from 'next/font/google';
 import './globals.css';
 import ScrollProgressBar from '../components/ScrollProgressBar';
+import PageTransition from '../components/PageTransition';
 
 /* ── Component CSS (imported here for guaranteed server-side inclusion) ── */
 import '../components/Navbar.css';
@@ -75,9 +76,6 @@ export const metadata = {
     follow: true,
   },
   metadataBase: new URL('https://www.solar-key.com'),
-  alternates: {
-    canonical: 'https://www.solar-key.com',
-  },
 };
 
 export const viewport = {
@@ -89,8 +87,27 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en-IN" className={inter.variable}>
       <body style={{ fontFamily: 'var(--font-inter), sans-serif' }}>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "SolarKey Advanced AI Solutions Pvt. Ltd.",
+          "alternateName": "SolarKey",
+          "url": "https://www.solar-key.com",
+          "logo": "https://www.solar-key.com/logo.png",
+          "foundingDate": "2026",
+          "founders": [
+            { "@type": "Person", "name": "Vikram Shetty" },
+            { "@type": "Person", "name": "Kunal Chandra" }
+          ],
+          "address": { "@type": "PostalAddress", "addressLocality": "Mumbai",
+            "addressRegion": "Maharashtra", "addressCountry": "IN" },
+          "contactPoint": { "@type": "ContactPoint", "email": "hello@solar-key.com",
+            "telephone": "+91-96194-22279", "contactType": "sales",
+            "areaServed": ["IN","AE","SA"] },
+          "sameAs": ["https://www.linkedin.com/company/solarkey-ai/"]
+        }) }} />
         <ScrollProgressBar />
-        {children}
+        <PageTransition>{children}</PageTransition>
       </body>
     </html>
   );

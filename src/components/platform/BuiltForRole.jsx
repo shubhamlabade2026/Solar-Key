@@ -4,22 +4,22 @@ const roles = [
   {
     id: 'role-owners',
     title: 'Asset owners',
-    desc: 'See your whole fleet, catch underperformance early, and get the yield and PR reports your lenders expect.',
-    href: '/solutions/asset-owners',
+    desc: 'One dashboard across every site, with board-ready reporting.',
+    href: '/solutions#asset-owners',
     cta: 'See how →',
   },
   {
     id: 'role-om',
     title: 'O&M providers',
-    desc: 'Smarter dispatch, pre-diagnosed work orders, and predictive maintenance — more sites per tech.',
-    href: '/solutions/om-providers',
+    desc: 'Smarter dispatch and predictive maintenance — more sites per tech.',
+    href: '/solutions#om-providers',
     cta: 'See how →',
   },
   {
     id: 'role-investors',
     title: 'Investors',
-    desc: 'Due-diligence data, IRR impact modelling and SLA validation across the portfolio.',
-    href: '/solutions/investors',
+    desc: 'Asset-level diligence data and IRR validation across the portfolio.',
+    href: '/solutions#investors',
     cta: 'See how →',
   },
 ];

@@ -4,9 +4,11 @@ import Footer from '../../components/Footer';
 import DemoClient from './DemoClient';
 
 export const metadata = {
-  title: 'Book a Demo — SolarKey | AI-Powered Solar Monitoring',
+  title: 'Book a Demo — SolarKey | AI Solar Monitoring Platform',
   description:
-    'Request a demo of SolarKey\'s AI-powered solar monitoring platform. Speak with a solutions engineer and discover how we can optimize your solar asset performance.',
+    'Request a tailored walkthrough of SolarKey. See real-time monitoring, predictive faults and automated operations on a portfolio like yours.',
+  alternates: { canonical: '/demo' },
+  openGraph: { url: '/demo' },
 };
 
 export default function DemoPage() {

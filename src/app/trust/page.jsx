@@ -4,9 +4,11 @@ import Footer from '../../components/Footer';
 import '../../components/trust/trust.css';
 
 export const metadata = {
-  title: 'Trust & Security — SolarKey',
+  title: 'Trust & Security — SolarKey | Data Protection & Residency',
   description:
-    'Your generation and financial data stay protected: encryption in transit and at rest, role-based access, and data-residency options for India and the Gulf.',
+    'How SolarKey protects your data: encryption, role-based access and data-residency options for India and the Gulf. SOC 2 Type II audit planned.',
+  alternates: { canonical: '/trust' },
+  openGraph: { url: '/trust' },
 };
 
 export default function TrustPage() {

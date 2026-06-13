@@ -68,24 +68,15 @@ export default function DemoClient() {
           </div>
         </div>
 
-        {/* Metrics Card */}
-        <div className="demo-metrics-card">
-          <div className="demo-metric-item">
-            <div className="metric-num">120+</div>
-            <div className="metric-label">ENTERPRISE CLIENTS</div>
-          </div>
-          <div className="demo-metric-item">
-            <div className="metric-num">&lt;24h</div>
-            <div className="metric-label">RESPONSE TIME</div>
-          </div>
-          <div className="demo-metric-item">
-            <div className="metric-num">90 days</div>
-            <div className="metric-label">AVG TIME TO VALUE</div>
-          </div>
-          <div className="demo-metric-item">
-            <div className="metric-num">4.9/5</div>
-            <div className="metric-label">DEMO SATISFACTION</div>
-          </div>
+        {/* Reassurance Strip */}
+        <div className="demo-reassurance-strip">
+          <span className="reassurance-item">Built by operators &amp; AI engineers</span>
+          <span className="reassurance-dot">·</span>
+          <span className="reassurance-item">Vendor-neutral, works with your existing kit</span>
+          <span className="reassurance-dot">·</span>
+          <span className="reassurance-item">SOC 2 Type II audit planned</span>
+          <span className="reassurance-dot">·</span>
+          <span className="reassurance-item">India &amp; West Asia</span>
         </div>
       </div>
 

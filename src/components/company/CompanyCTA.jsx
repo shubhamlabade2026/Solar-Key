@@ -14,7 +14,7 @@ export default function CompanyCTA() {
           <a href="/demo" className="comp-cta-btn-primary">
             Request a demo
           </a>
-          <a href="/demo" className="comp-cta-btn-secondary">
+          <a href="mailto:vikram@solar-key.com?subject=Design%20Partner%20Programme" className="comp-cta-btn-secondary">
             Become a design partner
           </a>
         </div>

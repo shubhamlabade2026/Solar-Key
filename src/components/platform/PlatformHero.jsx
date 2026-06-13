@@ -1,8 +1,12 @@
 'use client';
 import React from 'react';
 import DashboardPreview from '../DashboardPreview';
+import useMagnetic from '../hooks/useMagnetic';
 
 const PlatformHero = () => {
+  const demoRef = useMagnetic();
+  const seeRef = useMagnetic();
+
   return (
     <section className="plat-hero">
       <div className="plat-hero-container">
@@ -10,16 +14,18 @@ const PlatformHero = () => {
         <div className="plat-hero-left">
           <p className="plat-eyebrow">THE PLATFORM</p>
           <h1 className="plat-h1">
-            Monitor, diagnose and run your whole portfolio from one platform.
+            Monitor, diagnose and run your whole portfolio, from one platform.
           </h1>
           <p className="plat-sub">
-            SolarKey connects to the kit already on your sites, watches every asset in real time, predicts faults before they cut output, and lets AI agents handle the routine response — so a small team can run a large portfolio.
+            SolarKey connects to the kit already on your sites, watches every asset in real time, predicts faults before they cut output, and lets AI agents handle the routine response.
           </p>
           <div className="plat-hero-cta">
             <a
               href="/demo"
               className="btn-primary"
               id="plat-hero-demo"
+              ref={demoRef}
+              style={{ display: 'inline-block' }}
             >
               Request a demo
             </a>
@@ -27,8 +33,10 @@ const PlatformHero = () => {
               href="#plat-how-it-works"
               className="btn-secondary"
               id="plat-hero-see"
+              ref={seeRef}
+              style={{ display: 'inline-block' }}
             >
-              See it in action
+              See how it works
             </a>
           </div>
           <p className="plat-hero-footnote">

@@ -9,8 +9,11 @@ import SolutionsCTA from '../../components/solutions/SolutionsCTA';
 import '../../components/solutions/solutions.css';
 
 export const metadata = {
-  title: 'Solutions — SolarKey | Built for Every Role in Solar',
-  description: 'Asset owners, O&M providers and investors use SolarKey differently. See what it does for your role.',
+  title: 'Solutions by Role — SolarKey | Asset Owners, O&M & Investors',
+  description:
+    'Asset owners, O&M providers and investors use SolarKey differently. See what it does for your role across a mixed-vendor, multi-site portfolio.',
+  alternates: { canonical: '/solutions' },
+  openGraph: { url: '/solutions' },
 };
 
 export default function SolutionsPage() {

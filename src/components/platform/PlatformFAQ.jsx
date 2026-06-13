@@ -4,18 +4,13 @@ import React, { useState } from 'react';
 const faqs = [
   {
     id: 'faq-1',
-    q: 'What does SolarKey monitor, and how is it different from my inverter\'s own portal?',
+    q: 'What does SolarKey monitor, and how is it different from my inverter\'s portal?',
     a: 'SolarKey aggregates data from every asset on every site — inverters, strings, trackers, meters and weather stations — into a single, vendor-neutral view. Your inverter portal shows one brand in isolation; SolarKey normalises output against weather-adjusted expectations across your whole portfolio, so you see fleet-wide performance and anomalies the moment they appear, not in a report next month.',
   },
   {
     id: 'faq-2',
     q: 'Which inverters, meters and SCADA does it support?',
     a: 'SolarKey reads from Sungrow, Huawei FusionSolar, ABB/Fimer, SMA, Schneider Electric, Delta, Fronius, GoodWe and more, plus standard protocols including Modbus RTU/TCP, DNP3 and IEC 61850. See the full integrations list for SCADA and weather station compatibility.',
-  },
-  {
-    id: 'faq-3',
-    q: 'How much lead time does predictive detection give?',
-    a: 'Lead time varies by fault type and asset condition, but we typically surface inverter overtemperature trends 24–72 hours before they cause a trip, and string degradation patterns 3–7 days ahead of a significant output drop. Every alert includes a lead-time estimate so your O&M team can prioritise by urgency.',
   },
   {
     id: 'faq-4',

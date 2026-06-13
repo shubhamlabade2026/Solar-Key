@@ -98,7 +98,7 @@ const RoleSections = () => {
     <div className="sol-role-sections">
 
       {/* ── Asset Owners ── */}
-      <section className="sol-role-section" id="asset-owners">
+      <section className="sol-role-section scroll-reveal" id="asset-owners">
         <div className="sol-role-grid">
           <div className="sol-role-text">
             <p className="sol-role-eyebrow" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px' }}>
@@ -129,7 +129,7 @@ const RoleSections = () => {
       </section>
 
       {/* ── O&M Providers ── */}
-      <section className="sol-role-section sol-role-section--alt" id="om-providers">
+      <section className="sol-role-section sol-role-section--alt scroll-reveal" id="om-providers">
         <div className="sol-role-grid sol-role-grid--reverse">
           <div className="sol-role-visual">
             <OMMock />
@@ -157,7 +157,7 @@ const RoleSections = () => {
       </section>
 
       {/* ── Investors ── */}
-      <section className="sol-role-section" id="investors">
+      <section className="sol-role-section scroll-reveal" id="investors">
         <div className="sol-role-grid">
           <div className="sol-role-text">
             <p className="sol-role-eyebrow" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px' }}>

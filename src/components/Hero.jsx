@@ -7,19 +7,18 @@ const Hero = () => {
       <div className="hero-container">
         {/* Left Content */}
         <div className="hero-left">
-          <p className="hero-eyebrow">AI MONITORING &amp; OPERATIONS PLATFORM</p>
+          <p className="hero-eyebrow">THE PLATFORM</p>
           <h1 className="hero-headline">
-            See every site.<br />
-            Catch every fault.<br />
-            Prove every kWh.
+            Monitor, diagnose and run your whole portfolio, from one platform.
           </h1>
           <p className="hero-description">
-            SolarKey connects to the inverters, SCADA and meters you already run, monitors every site in real time, and flags faults with AI before they cut your output.
+            SolarKey connects to the kit already on your sites, watches every asset in real time, predicts faults before they cut output, and lets AI agents handle the routine response.
           </p>
           <div className="hero-cta">
             <a href="/demo" className="btn-primary" id="hero-request-demo">Request a demo</a>
+            <a href="#how-it-works" className="btn-secondary" id="hero-see-how">See how it works</a>
           </div>
-          <p className="hero-footnote">Built for asset owners, O&amp;M providers and investors across India &amp; West Asia.</p>
+          <p className="hero-footnote">Built for asset owners, OEM providers and investors across India &amp; West Asia.</p>
         </div>
 
         {/* Right - Dashboard Preview */}

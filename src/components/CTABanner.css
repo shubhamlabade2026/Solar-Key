@@ -1,116 +1,101 @@
-/* Full-width banner matching reference — no rounded card, just a tinted strip */
 .cta-banner {
-  background: #dbeafe;   /* light blue tint matching reference */
-  border-top: 1px solid #bfdbfe;
-  padding: 44px 0;
-  margin-top: 8px;
+  background: #f9fafb;
+  border-top: 1px solid #e5e7eb;
+  padding: 80px 0;
+  text-align: center;
 }
 
 .cta-inner {
-  max-width: 1720px;
+  max-width: 800px;
   margin: 0 auto;
   padding: 0 clamp(24px, 5vw, 64px);
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  gap: 24px;
 }
 
-.cta-text {
-  flex: 1;
-  min-width: 0;
-}
-
-.cta-main {
-  font-size: 20px;
-  color: #1e3a5f;
-  font-weight: 600;
-  margin-bottom: 4px;
-  line-height: 1.55;
-}
-
-.cta-main strong {
-  font-weight: 700;
+.cta-heading {
+  font-size: clamp(26px, 3vw, 38px);
   color: #111827;
+  font-weight: 850;
+  margin-bottom: 12px;
+  letter-spacing: -0.8px;
+  line-height: 1.25;
 }
 
-.cta-sub {
+.cta-subheading {
   font-size: 16px;
-  color: #2563EB;
+  color: #4b5563;
   font-weight: 500;
+  margin-bottom: 32px;
+  line-height: 1.5;
 }
 
-.cta-btn {
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+}
+
+.cta-buttons .btn-primary {
   background: #2563EB;
   color: #fff;
-  font-size: 16px;
-  font-weight: 600;
-  padding: 16px 32px;
+  font-size: 15px;
+  font-weight: 700;
+  padding: 14px 28px;
   border-radius: 8px;
-  white-space: nowrap;
-  flex-shrink: 0;
+  text-decoration: none;
   transition: background 0.18s, transform 0.15s, box-shadow 0.18s;
-  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.32);
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.3);
 }
 
-.cta-btn:hover {
+.cta-buttons .btn-primary:hover {
   background: #1d4ed8;
   transform: translateY(-1px);
-  box-shadow: 0 6px 16px rgba(37, 99, 235, 0.42);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.4);
 }
 
-/* ── Tablet ── */
-@media (max-width: 768px) {
-  .cta-banner {
-    padding: 36px 0;
-  }
-  .cta-inner {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 20px;
-  }
-  .cta-main {
-    font-size: 18px;
-  }
-  .cta-sub {
-    font-size: 15px;
-  }
-  .cta-btn {
-    width: 100%;
-    text-align: center;
-  }
+.cta-buttons .btn-secondary {
+  background: #fff;
+  color: #374151;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 14px 28px;
+  border-radius: 8px;
+  border: 1.5px solid #d1d5db;
+  text-decoration: none;
+  transition: border-color 0.18s, color 0.18s, background 0.18s, transform 0.15s;
 }
 
-/* ── Mobile ── */
+.cta-buttons .btn-secondary:hover {
+  border-color: #9ca3af;
+  color: #111827;
+  transform: translateY(-1px);
+}
+
+/* ── Tablet & Mobile ── */
 @media (max-width: 640px) {
   .cta-banner {
-    padding: 32px 0;
+    padding: 56px 0;
   }
   .cta-inner {
     padding: 0 20px;
-    gap: 16px;
   }
-  .cta-main {
-    font-size: 16px;
-  }
-  .cta-sub {
+  .cta-subheading {
+    margin-bottom: 24px;
     font-size: 14px;
   }
-  .cta-btn {
-    font-size: 15px;
-    padding: 14px 24px;
+  .cta-buttons {
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
   }
-}
-
-/* ── Small mobile ── */
-@media (max-width: 380px) {
-  .cta-banner {
-    padding: 24px 0;
-  }
-  .cta-inner {
-    padding: 0 16px;
-  }
-  .cta-main {
-    font-size: 15px;
+  .cta-buttons .btn-primary,
+  .cta-buttons .btn-secondary {
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
   }
 }

@@ -1,102 +1,106 @@
 'use client';
 import React from 'react';
 
+/* ── Mouse Spotlight Tracking helper ── */
+const handleMouseMove = (e) => {
+  const rect = e.currentTarget.getBoundingClientRect();
+  const x = e.clientX - rect.left;
+  const y = e.clientY - rect.top;
+  e.currentTarget.style.setProperty('--mouse-x', `${x}px`);
+  e.currentTarget.style.setProperty('--mouse-y', `${y}px`);
+};
+
 /* ── Mini product visuals inline (dark panel previews) ── */
 
 const LiveDashboardVisual = () => (
-  <div className="cap-visual">
+  <div className="cap-visual" onMouseMove={handleMouseMove}>
     <div className="cap-visual-header">
       <span className="cap-visual-label">Live dashboard</span>
       <span className="cap-visual-badge">preview</span>
     </div>
-    <div className="cap-live-grid">
-      {[
-        { name: 'Bhadla', mw: '52 MW', pr: '87.2%', ok: true },
-        { name: 'Pavagada', mw: '38 MW', pr: '89.1%', ok: true },
-        { name: 'Sweihan', mw: '64 MW', pr: '74.3%', ok: false },
-        { name: 'Sakaka', mw: '45 MW', pr: '91.0%', ok: true },
-      ].map((s) => (
-        <div key={s.name} className={`cap-site-row${s.ok ? '' : ' cap-site-row--warn'}`}>
-          <div className="cap-site-dot" style={{ background: s.ok ? '#22c55e' : '#f59e0b' }} />
-          <span className="cap-site-name">{s.name}</span>
-          <span className="cap-site-mw">{s.mw}</span>
-          <span className="cap-site-pr">{s.pr}</span>
-        </div>
-      ))}
+    <div className="cap-live-row-layout">
+      <div className="cap-live-box">
+        <span className="cap-live-dot cap-live-dot--green" />
+        <div className="cap-live-line cap-live-line--short" />
+      </div>
+      <div className="cap-live-box">
+        <span className="cap-live-dot cap-live-dot--green" />
+        <div className="cap-live-line cap-live-line--medium" />
+      </div>
+      <div className="cap-live-box cap-live-box--warn">
+        <span className="cap-live-dot cap-live-dot--warn" />
+        <div className="cap-live-line cap-live-line--short" />
+      </div>
+      <div className="cap-live-box">
+        <span className="cap-live-dot cap-live-dot--green" />
+        <div className="cap-live-line cap-live-line--long" />
+      </div>
     </div>
   </div>
 );
 
 const FaultForecastVisual = () => (
-  <div className="cap-visual">
+  <div className="cap-visual" onMouseMove={handleMouseMove}>
     <div className="cap-visual-header">
       <span className="cap-visual-label">Fault forecast</span>
       <span className="cap-visual-badge">preview</span>
     </div>
-    <div className="cap-fault-list">
-      {[
-        { asset: 'INV-04 · Sweihan', type: 'Overtemp trend', lead: '36h', impact: '4.2 MWh', high: true },
-        { asset: 'String B-12 · Bhadla', type: 'Degradation', lead: '72h', impact: '1.8 MWh', high: false },
-        { asset: 'Tracker row 7 · Sakaka', type: 'Drift detected', lead: '18h', impact: '0.9 MWh', high: false },
-      ].map((f, i) => (
-        <div key={i} className={`cap-fault-item${f.high ? ' cap-fault-item--high' : ''}`}>
-          <div className="cap-fault-top">
-            <span className="cap-fault-asset">{f.asset}</span>
-            <span className="cap-fault-lead">{f.lead} lead</span>
-          </div>
-          <div className="cap-fault-bottom">
-            <span className="cap-fault-type">{f.type}</span>
-            <span className="cap-fault-impact">{f.impact} at risk</span>
-          </div>
-        </div>
-      ))}
+    <div className="cap-fault-chart-container">
+      <div className="cap-fault-chart-bars">
+        <div className="cap-fault-chart-bar" style={{ height: '35%' }} />
+        <div className="cap-fault-chart-bar" style={{ height: '55%' }} />
+        <div className="cap-fault-chart-bar" style={{ height: '45%' }} />
+        <div className="cap-fault-chart-bar" style={{ height: '75%' }} />
+        <div className="cap-fault-chart-bar cap-fault-chart-bar--active" style={{ height: '95%' }} />
+      </div>
+      <div className="cap-fault-chart-badge">
+        <span className="cap-fault-badge-dot" />
+        Fault in 48h
+      </div>
     </div>
   </div>
 );
 
 const WorkOrderVisual = () => (
-  <div className="cap-visual">
+  <div className="cap-visual" onMouseMove={handleMouseMove}>
     <div className="cap-visual-header">
       <span className="cap-visual-label">Auto work order</span>
       <span className="cap-visual-badge">preview</span>
     </div>
-    <div className="cap-wo-body">
-      <div className="cap-wo-id">Work order #41942 · <span className="cap-wo-status">resolved</span></div>
-      <div className="cap-wo-steps">
-        <span className="cap-wo-step cap-wo-step--done">Created</span>
-        <span className="cap-wo-arrow">›</span>
-        <span className="cap-wo-step cap-wo-step--done">Dispatched</span>
-        <span className="cap-wo-arrow">›</span>
-        <span className="cap-wo-step cap-wo-step--active">Closed</span>
+    <div className="cap-wo-flow">
+      <div className="cap-wo-steps-row">
+        <span className="cap-wo-step-btn">Detect</span>
+        <span className="cap-wo-step-line" />
+        <span className="cap-wo-step-btn cap-wo-step-btn--active">Diagnose</span>
+        <span className="cap-wo-step-line" />
+        <span className="cap-wo-step-btn">Dispatch</span>
       </div>
-      <div className="cap-wo-detail">INV-04 Sweihan · Recovered 4.1 MWh</div>
+      <div className="cap-wo-status-box">
+        Work order #1242 · routed
+      </div>
     </div>
   </div>
 );
 
 const ReportVisual = () => (
-  <div className="cap-visual">
+  <div className="cap-visual" onMouseMove={handleMouseMove}>
     <div className="cap-visual-header">
       <span className="cap-visual-label">Owner report</span>
       <span className="cap-visual-badge">preview</span>
     </div>
-    <div className="cap-report-body">
-      <div className="cap-report-row">
-        <span className="cap-report-metric">Energy yield</span>
-        <span className="cap-report-bar"><span style={{ width: '82%' }} className="cap-report-fill" /></span>
-        <span className="cap-report-val">189 GWh</span>
+    <div className="cap-report-layout">
+      <div className="cap-report-inner-card">
+        <span className="cap-report-inner-title">Portfolio report</span>
+        <div className="cap-report-chart">
+          <div className="cap-report-chart-bar" style={{ height: '40%' }} />
+          <div className="cap-report-chart-bar" style={{ height: '80%' }} />
+          <div className="cap-report-chart-bar" style={{ height: '60%' }} />
+        </div>
       </div>
-      <div className="cap-report-row">
-        <span className="cap-report-metric">PR</span>
-        <span className="cap-report-bar"><span style={{ width: '88%' }} className="cap-report-fill" /></span>
-        <span className="cap-report-val">88.4%</span>
+      <div className="cap-report-actions">
+        <div className="cap-report-btn">Export PDF</div>
+        <div className="cap-report-btn">Scheduled</div>
       </div>
-      <div className="cap-report-row">
-        <span className="cap-report-metric">Availability</span>
-        <span className="cap-report-bar"><span style={{ width: '99%' }} className="cap-report-fill cap-report-fill--green" /></span>
-        <span className="cap-report-val">99.4%</span>
-      </div>
-      <div className="cap-report-tag">Scheduled · Exportable</div>
     </div>
   </div>
 );
@@ -112,11 +116,11 @@ const capabilities = [
       </svg>
     ),
     heading: 'One live view of every site',
-    body: 'Pull every inverter, string, tracker and meter into a single dashboard, normalised across vendors and geographies. SolarKey compares live output against weather-adjusted expectations, so underperformance surfaces the moment it starts, not in next month\'s report.',
+    body: 'Pull every inverter, string, tracker and meter into a single dashboard, normalised across vendors and sites. Live output is compared to weather-adjusted expectations.',
     bullets: [
       'Multi-vendor, multi-site in one view',
       'Weather-adjusted performance baselines',
-      'Alerts configurable by site, asset or threshold',
+      'Alerts by site, asset or threshold',
     ],
     Visual: LiveDashboardVisual,
     flip: false,
@@ -131,11 +135,11 @@ const capabilities = [
       </svg>
     ),
     heading: 'Catch the failure before it costs you',
-    body: 'The models watch each asset\'s data stream and flag the fault that\'s coming — a failing inverter, a tracker drifting off-point, a string trending down — with enough lead time to act before generation drops.',
+    body: 'The models watch each asset\'s data stream and flag the fault that\'s coming — with enough lead-time to act before generation drops.',
     bullets: [
-      'Early warning on inverters, strings and trackers',
+      'Early warning on inverters, strings, trackers',
       'Lead-time estimates, not just alarms',
-      'Ranked by lost-generation impact, so the costly ones come first',
+      'Ranked by lost-generation impact',
     ],
     Visual: FaultForecastVisual,
     flip: true,
@@ -148,11 +152,11 @@ const capabilities = [
       </svg>
     ),
     heading: 'From alert to resolved, on its own',
-    body: 'This is where SolarKey goes past monitoring. When a fault is confirmed, the AI agent opens the work order, routes it to the right crew with the diagnosis attached, tracks it to closure, then confirms the recovered output.',
+    body: 'When a fault is confirmed, the AI agent opens the work order, routes it to the right crew with the diagnosis attached, and tracks it to closure.',
     bullets: [
       'Auto-generated, pre-diagnosed work orders',
       'Crew routing and SLA tracking',
-      'Closed-loop: confirms the generation it won back',
+      'Closed-loop: confirms recovered output',
     ],
     Visual: WorkOrderVisual,
     flip: false,
@@ -165,7 +169,7 @@ const capabilities = [
       </svg>
     ),
     heading: 'Numbers your owners trust',
-    body: 'Produce the metrics owners and lenders ask for — energy yield, performance ratio, availability, IRR impact — on schedule, branded to your fund, and exportable.',
+    body: 'Produce the metrics owners and lenders ask for — yield, performance ratio, availability, IRR impact — on schedule and branded to your fund.',
     bullets: [
       'Yield, PR, availability, IRR impact',
       'Scheduled, branded, exportable',
@@ -184,7 +188,7 @@ const Capabilities = () => (
 
       <div className="cap-list">
         {capabilities.map((cap) => (
-          <div key={cap.id} id={cap.id} className={`cap-item${cap.flip ? ' cap-item--flip' : ''}`}>
+          <div key={cap.id} id={cap.id} className={`cap-item scroll-reveal${cap.flip ? ' cap-item--flip' : ''}`}>
 
             {/* Text side */}
             <div className="cap-text">

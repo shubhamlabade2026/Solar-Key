@@ -12,7 +12,7 @@ const SolutionsCTA = () => {
           <a href="/demo" className="sol-cta-btn-primary" id="sol-cta-demo-btn">
             Request a demo
           </a>
-          <a href="/demo" className="sol-cta-btn-secondary" id="sol-cta-partner-btn">
+          <a href="mailto:vikram@solar-key.com?subject=Design%20Partner%20Programme" className="sol-cta-btn-secondary" id="sol-cta-partner-btn">
             Become a design partner
           </a>
         </div>

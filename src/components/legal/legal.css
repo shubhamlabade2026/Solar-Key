@@ -1,0 +1,77 @@
+/* ═══════════════════════════════════════════════
+   LEGAL PAGES — CSS
+   ═══════════════════════════════════════════════ */
+.legal-hero {
+  background: #0f172a;
+  color: #fff;
+  padding: 80px 0;
+  text-align: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.legal-hero-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.legal-eyebrow {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #60a5fa;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  display: block;
+}
+
+.legal-title {
+  font-size: clamp(32px, 3.5vw, 44px);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  margin-bottom: 12px;
+}
+
+.legal-meta {
+  font-size: 14px;
+  color: #94a3b8;
+}
+
+.legal-content-section {
+  padding: 80px 0;
+  background: #fff;
+}
+
+.legal-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.legal-text h2 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #111827;
+  margin-top: 40px;
+  margin-bottom: 16px;
+  letter-spacing: -0.01em;
+}
+
+.legal-text p {
+  font-size: 16px;
+  color: #4b5563;
+  line-height: 1.8;
+  margin-bottom: 24px;
+}
+
+.legal-text ul {
+  margin-bottom: 24px;
+  padding-left: 20px;
+}
+
+.legal-text li {
+  font-size: 16px;
+  color: #4b5563;
+  line-height: 1.8;
+  margin-bottom: 8px;
+}

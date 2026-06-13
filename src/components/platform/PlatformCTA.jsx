@@ -16,7 +16,7 @@ const PlatformCTA = () => (
           Request a demo
         </a>
         <a
-          href="mailto:hello@solar-key.com?subject=Design%20Partner"
+          href="mailto:vikram@solar-key.com?subject=Design%20Partner%20Programme"
           className="btn-secondary"
           id="plat-cta-partner"
         >

@@ -66,9 +66,11 @@ const Footer = () => {
             </a>
             <div className="footer-address-info">
               <p>SolarKey Advanced AI Solutions Pvt. Ltd.</p>
+              <p>2-22, Evergreen Industrial Estate, Shakti Mill Lane,</p>
+              <p>Mahalaxmi West, South Mumbai, Maharashtra, India - 400011</p>
               <p>+91 96194 22279</p>
-              <p>India - West Asia</p>
             </div>
+
           </div>
 
           {/* Right Columns: Structured links */}
@@ -99,7 +101,7 @@ const Footer = () => {
                 <li><a href="/resources">Blog</a></li>
                 <li><a href="/trust">Trust & Security</a></li>
                 <li><a href="/demo">Request a demo</a></li>
-                <li><a href="/company#partner">Become a partner</a></li>
+                <li><a href="mailto:vikram@solar-key.com?subject=Design%20Partner%20Programme">Become a partner</a></li>
               </ul>
             </div>
           </div>

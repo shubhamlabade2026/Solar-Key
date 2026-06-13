@@ -1,103 +1,224 @@
 import React from 'react';
 
-/* ── Distinct icons for each feature card ──────────────── */
+/* ── SVGs for Capability Icons ── */
 
-/** Real-time monitoring — activity / pulse line */
-const ActivityIcon = () => (
-  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <polyline
-      points="3 12 7 12 9 4 13 20 15 12 18 12 21 12"
-      stroke="#2563EB" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none"
-    />
+const LiveViewIcon = () => (
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M3 12h3L10 4l4 16 3-8h4" />
   </svg>
 );
 
-/** Predictive faults — shield with exclamation */
-const ShieldAlertIcon = () => (
-  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path
-      d="M12 2L3 7v5c0 5.25 3.83 10.16 9 11.25C17.17 22.16 21 17.25 21 12V7l-9-5z"
-      stroke="#2563EB" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none"
-    />
-    <line x1="12" y1="9" x2="12" y2="13" stroke="#2563EB" strokeWidth="2" strokeLinecap="round" />
-    <circle cx="12" cy="16.5" r="0.8" fill="#2563EB" />
+const FailureIcon = () => (
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z" />
+    <line x1="12" y1="9" x2="12" y2="13" />
+    <line x1="12" y1="17" x2="12.01" y2="17" />
   </svg>
 );
 
-/** Automated workflows — gear with circular arrows */
-const GearArrowsIcon = () => (
-  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    {/* Gear body */}
-    <path
-      d="M12 15a3 3 0 100-6 3 3 0 000 6z"
-      stroke="#2563EB" strokeWidth="1.8" fill="none"
-    />
-    <path
-      d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 11-2.83 2.83l-.06-.06A1.65 1.65 0 0015 19.4V20a2 2 0 01-4 0v-.09a1.65 1.65 0 00-1.08-1.51 1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 11-2.83-2.83l.06-.06A1.65 1.65 0 005.6 15H4a2 2 0 010-4h.09A1.65 1.65 0 005.6 9.91a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 112.83-2.83l.06.06A1.65 1.65 0 009 5.6V4a2 2 0 014 0v.09c.09.45.35.85.74 1.08a1.65 1.65 0 001.82-.33l.06-.06a2 2 0 112.83 2.83l-.06.06a1.65 1.65 0 00-.33 1.82c.23.39.63.65 1.08.74H20a2 2 0 010 4h-.09c-.45.09-.85.35-1.08.74z"
-      stroke="#2563EB" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" fill="none"
-    />
+const ResolvedIcon = () => (
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <circle cx="12" cy="12" r="10" />
+    <path d="M12 8v4l3 3" />
   </svg>
 );
 
-/** Investor reporting — bar chart with trend line */
-const ChartTrendIcon = () => (
-  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    {/* Bars */}
-    <rect x="3" y="14" width="4" height="7" rx="1" stroke="#2563EB" strokeWidth="1.8" fill="none" />
-    <rect x="10" y="10" width="4" height="11" rx="1" stroke="#2563EB" strokeWidth="1.8" fill="none" />
-    <rect x="17" y="6" width="4" height="15" rx="1" stroke="#2563EB" strokeWidth="1.8" fill="none" />
-    {/* Trend line */}
-    <polyline
-      points="4 10 12 5 20 3"
-      stroke="#2563EB" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" fill="none"
-    />
-    <circle cx="20" cy="3" r="1.2" fill="#2563EB" />
+const TrustIcon = () => (
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.0" strokeLinecap="round" strokeLinejoin="round">
+    <line x1="18" y1="20" x2="18" y2="10" />
+    <line x1="12" y1="20" x2="12" y2="4" />
+    <line x1="6" y1="20" x2="6" y2="14" />
   </svg>
 );
 
-const features = [
-  {
-    id: 'feature-realtime',
-    title: 'Real-time monitoring',
-    desc: 'Every site, every inverter, one view.',
-    Icon: ActivityIcon,
-  },
-  {
-    id: 'feature-predictive',
-    title: 'Predictive faults',
-    desc: 'AI flags the failure before it lands.',
-    Icon: ShieldAlertIcon,
-  },
-  {
-    id: 'feature-automated',
-    title: 'Automated workflows',
-    desc: 'Raises the work order, routes the crew.',
-    Icon: GearArrowsIcon,
-  },
-  {
-    id: 'feature-investor',
-    title: 'Investor reporting',
-    desc: 'Yield, PR, availability, IRR impact.',
-    Icon: ChartTrendIcon,
-  },
-];
+const BulletCheckIcon = () => (
+  <svg className="bullet-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+    <polyline points="20 6 9 17 4 12" />
+  </svg>
+);
 
 const Features = () => {
   return (
-    <section className="features" id="features">
+    <section className="features-section" id="capabilities">
       <div className="features-container">
-        <p className="features-eyebrow">WHAT SOLARKEY DOES</p>
-        <div className="features-grid">
-          {features.map((f) => (
-            <div className="feature-card" key={f.id} id={f.id}>
-              <div className="feature-icon">
-                <f.Icon />
-              </div>
-              <h3 className="feature-title">{f.title}</h3>
-              <p className="feature-desc">{f.desc}</p>
-            </div>
-          ))}
+        
+        {/* Section Header */}
+        <div className="features-header">
+          <p className="features-eyebrow">CAPABILITIES</p>
+          <h2 className="features-heading">Everything you need to run a portfolio</h2>
         </div>
+
+        {/* Capabilities Grid Rows */}
+        <div className="features-list">
+
+          {/* Row 1: One Live View of Every Site */}
+          <div className="feature-row">
+            <div className="feature-info">
+              <div className="feature-title-row">
+                <span className="feature-row-icon"><LiveViewIcon /></span>
+                <h3 className="feature-row-title">One live view of every site</h3>
+              </div>
+              <p className="feature-row-desc">
+                Pull every inverter, string, tracker and meter into a single dashboard, normalised across vendors and sites. Live output is compared to weather-adjusted expectations.
+              </p>
+              <ul className="feature-row-bullets">
+                <li><BulletCheckIcon /> <span>Multi-vendor, multi-site in one view</span></li>
+                <li><BulletCheckIcon /> <span>Weather-adjusted performance baselines</span></li>
+                <li><BulletCheckIcon /> <span>Alerts by site, asset or threshold</span></li>
+              </ul>
+            </div>
+            
+            <div className="feature-preview-container">
+              <div className="preview-card card-dark">
+                <div className="preview-header">
+                  <span className="preview-title">Live dashboard</span>
+                  <span className="preview-tag">preview</span>
+                </div>
+                <div className="preview-body live-dash-body">
+                  <div className="dash-grid-slots">
+                    <span className="dash-slot" />
+                    <span className="dash-slot" />
+                    <span className="dash-slot" />
+                    <span className="dash-slot" />
+                  </div>
+                  {/* Line Chart Visual Representation */}
+                  <div className="dash-subtle-graph">
+                    <svg viewBox="0 0 300 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M0 45 C30 40, 60 55, 90 35 C120 15, 150 45, 180 30 C210 15, 240 50, 270 20 C285 10, 300 15, 300 15" stroke="#2563EB" strokeWidth="2.5" strokeLinecap="round" />
+                      <path d="M0 45 C30 40, 60 55, 90 35 C120 15, 150 45, 180 30 C210 15, 240 50, 270 20 C285 10, 300 15, 300 15 L300 60 L0 60 Z" fill="url(#blue-grad)" opacity="0.1" />
+                      <defs>
+                        <linearGradient id="blue-grad" x1="0" y1="0" x2="0" y2="1">
+                          <stop offset="0%" stopColor="#2563EB" />
+                          <stop offset="100%" stopColor="#2563EB" stopOpacity="0" />
+                        </linearGradient>
+                      </defs>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Row 2: Catch the failure before it costs you */}
+          <div className="feature-row feature-row--reverse">
+            <div className="feature-info">
+              <div className="feature-title-row">
+                <span className="feature-row-icon"><FailureIcon /></span>
+                <h3 className="feature-row-title">Catch the failure before it costs you</h3>
+              </div>
+              <p className="feature-row-desc">
+                The models watch each asset's data stream and flag the fault that's coming — with enough lead-time to act before generation drops.
+              </p>
+              <ul className="feature-row-bullets">
+                <li><BulletCheckIcon /> <span>Early warning on inverters, strings, trackers</span></li>
+                <li><BulletCheckIcon /> <span>Lead-time estimates, not just alarms</span></li>
+                <li><BulletCheckIcon /> <span>Ranked by lost-generation impact</span></li>
+              </ul>
+            </div>
+            
+            <div className="feature-preview-container">
+              <div className="preview-card card-dark">
+                <div className="preview-header">
+                  <span className="preview-title">Fault forecast</span>
+                  <span className="preview-tag">preview</span>
+                </div>
+                <div className="preview-body fault-forecast-body">
+                  <div className="forecast-bars">
+                    <span className="forecast-bar" style={{ height: '35%' }} />
+                    <span className="forecast-bar" style={{ height: '55%' }} />
+                    <span className="forecast-bar" style={{ height: '45%' }} />
+                    <span className="forecast-bar forecast-bar--glow" style={{ height: '78%' }} />
+                    <span className="forecast-bar" style={{ height: '20%' }} />
+                  </div>
+                  <div className="forecast-alert-badge">
+                    <span className="badge-dot" />
+                    <span className="badge-txt">Fault in 40h</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Row 3: From alert to resolved, on its own */}
+          <div className="feature-row">
+            <div className="feature-info">
+              <div className="feature-title-row">
+                <span className="feature-row-icon"><ResolvedIcon /></span>
+                <h3 className="feature-row-title">From alert to resolved, on its own</h3>
+              </div>
+              <p className="feature-row-desc">
+                When a fault is confirmed, the AI agent opens the work order, routes it to the right crew with the diagnosis attached, and tracks it to closure.
+              </p>
+              <ul className="feature-row-bullets">
+                <li><BulletCheckIcon /> <span>Auto-generated, pre-diagnosed work orders</span></li>
+                <li><BulletCheckIcon /> <span>Crew routing and SLA tracking</span></li>
+                <li><BulletCheckIcon /> <span>Closed-loop: confirms recovered output</span></li>
+              </ul>
+            </div>
+            
+            <div className="feature-preview-container">
+              <div className="preview-card card-dark">
+                <div className="preview-header">
+                  <span className="preview-title">Auto work order</span>
+                  <span className="preview-tag">preview</span>
+                </div>
+                <div className="preview-body work-order-body">
+                  <div className="work-order-flow">
+                    <span className="flow-pill">Detect</span>
+                    <span className="flow-connector" />
+                    <span className="flow-pill flow-pill--active">Diagnose</span>
+                    <span className="flow-connector" />
+                    <span className="flow-pill">Dispatch</span>
+                  </div>
+                  <div className="work-order-status">
+                    <span className="status-dot" />
+                    <span className="status-txt">Work order #2342 · routed</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Row 4: Numbers your owners trust */}
+          <div className="feature-row feature-row--reverse">
+            <div className="feature-info">
+              <div className="feature-title-row">
+                <span className="feature-row-icon"><TrustIcon /></span>
+                <h3 className="feature-row-title">Numbers your owners trust</h3>
+              </div>
+              <p className="feature-row-desc">
+                Produce the metrics owners and lenders ask for — yield, performance ratio, availability, IRR impact — on schedule and branded to your fund.
+              </p>
+              <ul className="feature-row-bullets">
+                <li><BulletCheckIcon /> <span>Yield, PR, availability, IRR impact</span></li>
+                <li><BulletCheckIcon /> <span>Scheduled, branded, exportable</span></li>
+                <li><BulletCheckIcon /> <span>Asset-level drill-down for diligence</span></li>
+              </ul>
+            </div>
+            
+            <div className="feature-preview-container">
+              <div className="preview-card card-dark">
+                <div className="preview-header">
+                  <span className="preview-title">Owner report</span>
+                  <span className="preview-tag">preview</span>
+                </div>
+                <div className="preview-body owner-report-body">
+                  <div className="report-chart">
+                    <span className="report-bar" style={{ height: '35%' }} />
+                    <span className="report-bar" style={{ height: '55%' }} />
+                    <span className="report-bar" style={{ height: '75%' }} />
+                  </div>
+                  <div className="report-actions">
+                    <button className="btn-report-action btn-report-action--active" disabled>Export PDF</button>
+                    <button className="btn-report-action" disabled>Scheduled</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
       </div>
     </section>
   );

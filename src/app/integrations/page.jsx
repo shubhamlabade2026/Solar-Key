@@ -4,9 +4,11 @@ import Footer from '../../components/Footer';
 import '../../components/integrations/integrations.css';
 
 export const metadata = {
-  title: 'Supported Systems & Integrations — SolarKey',
+  title: 'Integrations — SolarKey | Works with Your Inverters, SCADA & Meters',
   description:
-    'SolarKey is vendor-neutral. It connects with your existing inverters, SCADA, meters, and weather stations to monitor your solar portfolio from a single platform.',
+    'Vendor-neutral by design. SolarKey connects to Sungrow, Huawei, SMA, Modbus, IEC 61850 and more, with no rip-and-replace.',
+  alternates: { canonical: '/integrations' },
+  openGraph: { url: '/integrations' },
 };
 
 export default function IntegrationsPage() {

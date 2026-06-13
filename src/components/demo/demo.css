@@ -81,39 +81,28 @@
   line-height: 1.6;
 }
 
-/* Metrics Card */
-.demo-metrics-card {
-  background: #111827;
-  border-radius: 12px;
-  padding: 28px 24px;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-  margin-top: 16px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-}
-
-.demo-metric-item {
+/* Reassurance Strip */
+.demo-reassurance-strip {
   display: flex;
-  flex-direction: column;
-  gap: 8px;
-  text-align: center;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  background: #f9fafb;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 16px 20px;
+  margin-top: 16px;
 }
 
-.metric-num {
-  font-size: 28px;
-  font-weight: 800;
-  color: #f59e0b; /* Vibrant amber/gold */
-  letter-spacing: -0.5px;
-  line-height: 1;
+.reassurance-item {
+  font-size: 13.5px;
+  color: #4b5563;
+  font-weight: 600;
 }
 
-.metric-label {
-  font-size: 10px;
-  font-weight: 700;
+.reassurance-dot {
   color: #9ca3af;
-  letter-spacing: 0.8px;
-  line-height: 1.3;
+  font-weight: 800;
 }
 
 /* ── Right Side: Form ── */
@@ -305,10 +294,15 @@
     gap: 20px;
   }
 
-  .demo-metrics-card {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 24px;
-    padding: 24px;
+  .demo-reassurance-strip {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 16px;
+  }
+  
+  .reassurance-dot {
+    display: none;
   }
   
   .demo-info-title {

@@ -73,6 +73,149 @@
   flex-shrink: 0;
 }
 
+/* ── Integrations Card ── */
+.hiw-integrations-card {
+  margin-top: 56px;
+  background: #f9fafb;
+  border: 1.5px solid #f3f4f6;
+  border-radius: 16px;
+  padding: 32px 40px;
+  text-align: left;
+}
+
+.hiw-int-heading {
+  font-size: 20px;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 8px;
+}
+
+.hiw-int-desc {
+  font-size: 15px;
+  color: #6b7280;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.hiw-int-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.hiw-int-logos {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.hiw-logo-placeholder {
+  width: 76px;
+  height: 32px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+}
+
+.hiw-int-link {
+  font-size: 15px;
+  font-weight: 600;
+  color: #2563eb;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.15s;
+}
+
+.hiw-int-link:hover {
+  color: #1d4ed8;
+}
+
+.hiw-int-link .arrow {
+  transition: transform 0.15s;
+}
+
+.hiw-int-link:hover .arrow {
+  transform: translateX(4px);
+}
+
+/* ── Security Banner ── */
+.hiw-security-banner {
+  margin-top: 20px;
+  background: #090d16;
+  border: 1.5px solid #1e293b;
+  border-radius: 16px;
+  padding: 24px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  color: #fff;
+  text-align: left;
+}
+
+.hiw-sec-left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.hiw-sec-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background: rgba(37, 99, 235, 0.15);
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+.hiw-sec-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.hiw-sec-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.hiw-sec-desc {
+  font-size: 14px;
+  color: #94a3b8;
+  line-height: 1.5;
+}
+
+.hiw-sec-link {
+  font-size: 14px;
+  font-weight: 600;
+  color: #64748b;
+  text-decoration: none;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.15s;
+}
+
+.hiw-sec-link:hover {
+  color: #ffffff;
+}
+
+.hiw-sec-link .arrow {
+  transition: transform 0.15s;
+}
+
+.hiw-sec-link:hover .arrow {
+  transform: translateX(4px);
+}
+
 /* ── Tablet ── */
 @media (max-width: 1024px) {
   .how-it-works {
@@ -89,6 +232,13 @@
   .step-arrow {
     padding: 0 6px;
     font-size: 18px;
+  }
+  .hiw-integrations-card {
+    padding: 24px 30px;
+    margin-top: 48px;
+  }
+  .hiw-security-banner {
+    padding: 20px 24px;
   }
 }
 
@@ -123,6 +273,46 @@
     transform: rotate(90deg);
     font-size: 16px;
     padding: 6px 0;
+  }
+  .hiw-integrations-card {
+    padding: 20px;
+    margin-top: 36px;
+  }
+  .hiw-int-heading {
+    font-size: 18px;
+  }
+  .hiw-int-desc {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+  .hiw-int-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  .hiw-int-logos {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .hiw-logo-placeholder {
+    width: 68px;
+    height: 28px;
+  }
+  .hiw-security-banner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 20px;
+  }
+  .hiw-sec-left {
+    align-items: flex-start;
+    gap: 16px;
+  }
+  .hiw-sec-link {
+    border-top: 1px solid #1e293b;
+    width: 100%;
+    padding-top: 12px;
+    justify-content: space-between;
   }
 }
 

@@ -12,7 +12,7 @@ const PartnerBanner = () => {
             Shape the roadmap for your role — and get in before everyone else.
           </p>
         </div>
-        <a href="/demo" className="sol-partner-btn" id="sol-partner-cta-btn">
+        <a href="mailto:vikram@solar-key.com?subject=Design%20Partner%20Programme" className="sol-partner-btn" id="sol-partner-cta-btn">
           Become a partner
         </a>
       </div>

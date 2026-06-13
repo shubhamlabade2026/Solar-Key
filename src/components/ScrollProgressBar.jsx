@@ -20,7 +20,34 @@ export default function ScrollProgressBar() {
     // Initial check
     handleScroll();
 
-    return () => window.removeEventListener('scroll', handleScroll);
+    // Scroll reveal observer
+    const revealObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('scroll-revealed');
+          }
+        });
+      },
+      { threshold: 0.05, rootMargin: '0px 0px -50px 0px' }
+    );
+
+    const observeNewElements = () => {
+      const elements = document.querySelectorAll('.scroll-reveal:not(.scroll-revealed)');
+      elements.forEach((el) => revealObserver.observe(el));
+    };
+
+    observeNewElements();
+
+    // Watch for route changes injecting new DOM elements
+    const domObserver = new MutationObserver(observeNewElements);
+    domObserver.observe(document.body, { childList: true, subtree: true });
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      revealObserver.disconnect();
+      domObserver.disconnect();
+    };
   }, []);
 
   return (

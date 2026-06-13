@@ -76,6 +76,20 @@ const FAQItem = ({ q, a, id }) => {
 const SolutionsFAQ = () => {
   return (
     <section className="sol-faq-section">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: faqs.map((f) => ({
+              '@type': 'Question',
+              name: f.q,
+              acceptedAnswer: { '@type': 'Answer', text: f.a },
+            })),
+          }),
+        }}
+      />
       <div className="sol-faq-container">
         <p className="sol-eyebrow">FAQ</p>
         <h2 className="sol-faq-h2">Questions, answered</h2>
