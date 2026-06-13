@@ -76,7 +76,7 @@ export default function DemoClient() {
           <span className="reassurance-dot">·</span>
           <span className="reassurance-item">SOC 2 Type II audit planned</span>
           <span className="reassurance-dot">·</span>
-          <span className="reassurance-item">India &amp; West Asia</span>
+          <span className="reassurance-item">2-22, Evergreen Industrial Estate, Shakti Mill Lane, Mahalaxmi West, South Mumbai, Maharashtra, India 400011</span>
         </div>
       </div>
 
