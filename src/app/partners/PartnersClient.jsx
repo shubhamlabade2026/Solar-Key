@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import { useForm, ValidationError } from '@formspree/react';
 import '../../components/partners/partners.css';
 
 export default function PartnersClient() {
@@ -11,7 +12,7 @@ export default function PartnersClient() {
     portfolioSize: '',
     message: ''
   });
-  const [submitted, setSubmitted] = useState(false);
+  const [state, handleSubmitFormspree, resetFormspree] = useForm('mjgdlkjy');
   const [error, setError] = useState('');
 
   const handleChange = (e) => {
@@ -25,22 +26,7 @@ export default function PartnersClient() {
       return;
     }
     setError('');
-
-    // Construct the mailto URL
-    const subject = encodeURIComponent(`Design Partner Program - ${formData.company}`);
-    const body = encodeURIComponent(
-      `Name: ${formData.fullName}\n` +
-      `Email: ${formData.email}\n` +
-      `Company: ${formData.company}\n` +
-      `Portfolio Size: ${formData.portfolioSize ? `${formData.portfolioSize} MW` : 'N/A'}\n\n` +
-      `Message:\n${formData.message}`
-    );
-
-    const mailtoLink = `mailto:vikram@solar-key.com?subject=${subject}&body=${body}`;
-    
-    // Open standard mailto link
-    window.location.href = mailtoLink;
-    setSubmitted(true);
+    handleSubmitFormspree(e);
   };
 
   return (
@@ -100,7 +86,7 @@ export default function PartnersClient() {
       {/* ── Right Side: Partnership Form ── */}
       <div className="partners-form-section">
         <div className="partners-form-card">
-          {submitted ? (
+          {state.succeeded ? (
             <div className="partners-success-message">
               <div className="success-icon-wrap">
                 <svg width="64" height="64" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -108,13 +94,13 @@ export default function PartnersClient() {
                   <path d="M8 12.5l3 3 5-6" stroke="#2563eb" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
               </div>
-              <h2 className="success-title">Draft Created!</h2>
+              <h2 className="success-title">Thank You!</h2>
               <p className="success-desc">
-                Your partnership details have been formatted and passed to your default email client. Please send the generated draft to <strong>vikram@solar-key.com</strong>.
+                Your partnership inquiry has been successfully submitted. Our team will contact you at <strong>{formData.email}</strong> within 24 hours.
               </p>
               <button 
                 onClick={() => {
-                  setSubmitted(false);
+                  resetFormspree();
                   setFormData({ fullName: '', email: '', company: '', portfolioSize: '', message: '' });
                 }}
                 className="btn-primary success-btn"
@@ -127,6 +113,11 @@ export default function PartnersClient() {
               <h2 className="partners-form-title">Join the Program</h2>
               
               {error && <div className="form-error-alert">{error}</div>}
+              {state.errors && (
+                <div className="form-error-alert">
+                  {state.errors.message || 'Submission failed. Please check your fields and try again.'}
+                </div>
+              )}
 
               <form onSubmit={handleSubmit} className="partners-form">
                 
@@ -142,6 +133,12 @@ export default function PartnersClient() {
                       onChange={handleChange}
                       placeholder="Vikram Shetty"
                     />
+                    <ValidationError 
+                      prefix="Full Name" 
+                      field="fullName" 
+                      errors={state.errors} 
+                      style={{ color: '#ef4444', fontSize: '13px', marginTop: '4px', display: 'block', fontWeight: '600' }}
+                    />
                   </div>
                   
                   <div className="form-group">
@@ -154,6 +151,12 @@ export default function PartnersClient() {
                       value={formData.email}
                       onChange={handleChange}
                       placeholder="vikram@solar-key.com"
+                    />
+                    <ValidationError 
+                      prefix="Email" 
+                      field="email" 
+                      errors={state.errors} 
+                      style={{ color: '#ef4444', fontSize: '13px', marginTop: '4px', display: 'block', fontWeight: '600' }}
                     />
                   </div>
                 </div>
@@ -170,6 +173,12 @@ export default function PartnersClient() {
                       onChange={handleChange}
                       placeholder="SolarKey"
                     />
+                    <ValidationError 
+                      prefix="Company" 
+                      field="company" 
+                      errors={state.errors} 
+                      style={{ color: '#ef4444', fontSize: '13px', marginTop: '4px', display: 'block', fontWeight: '600' }}
+                    />
                   </div>
 
                   <div className="form-group">
@@ -182,6 +191,12 @@ export default function PartnersClient() {
                       onChange={handleChange}
                       placeholder="50"
                       min="0"
+                    />
+                    <ValidationError 
+                      prefix="Portfolio Size" 
+                      field="portfolioSize" 
+                      errors={state.errors} 
+                      style={{ color: '#ef4444', fontSize: '13px', marginTop: '4px', display: 'block', fontWeight: '600' }}
                     />
                   </div>
                 </div>
@@ -197,10 +212,21 @@ export default function PartnersClient() {
                     placeholder="Tell us about your portfolio and what features you are interested in co-designing..."
                     rows={5}
                   />
+                  <ValidationError 
+                    prefix="Message" 
+                    field="message" 
+                    errors={state.errors} 
+                    style={{ color: '#ef4444', fontSize: '13px', marginTop: '4px', display: 'block', fontWeight: '600' }}
+                  />
                 </div>
 
-                <button type="submit" className="submit-partners-btn">
-                  Open Email Draft
+                <button 
+                  type="submit" 
+                  className="submit-partners-btn"
+                  disabled={state.submitting}
+                  style={{ opacity: state.submitting ? 0.7 : 1, cursor: state.submitting ? 'not-allowed' : 'pointer' }}
+                >
+                  {state.submitting ? 'Submitting...' : 'Submit Inquiry'}
                 </button>
               </form>
             </>

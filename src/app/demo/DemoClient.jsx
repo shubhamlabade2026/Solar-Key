@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import { useForm, ValidationError } from '@formspree/react';
 import '../../components/demo/demo.css';
 
 export default function DemoClient() {
@@ -11,7 +12,7 @@ export default function DemoClient() {
     role: '',
     message: ''
   });
-  const [submitted, setSubmitted] = useState(false);
+  const [state, handleSubmitFormspree, resetFormspree] = useForm('mjgdlkjy');
   const [error, setError] = useState('');
 
   const handleChange = (e) => {
@@ -25,8 +26,7 @@ export default function DemoClient() {
       return;
     }
     setError('');
-    // Simulate API Submission
-    setSubmitted(true);
+    handleSubmitFormspree(e);
   };
 
   return (
@@ -83,7 +83,7 @@ export default function DemoClient() {
       {/* ── Right Side: Booking Form ── */}
       <div className="demo-form-section">
         <div className="demo-form-card">
-          {submitted ? (
+          {state.succeeded ? (
             <div className="demo-success-message">
               <div className="success-icon-wrap">
                 <svg width="64" height="64" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -97,7 +97,7 @@ export default function DemoClient() {
               </p>
               <button 
                 onClick={() => {
-                  setSubmitted(false);
+                  resetFormspree();
                   setFormData({ fullName: '', email: '', company: '', role: '', message: '' });
                 }}
                 className="btn-primary success-btn"
@@ -110,6 +110,11 @@ export default function DemoClient() {
               <h2 className="demo-form-title">Book Your Demo</h2>
               
               {error && <div className="form-error-alert">{error}</div>}
+              {state.errors && (
+                <div className="form-error-alert">
+                  {state.errors.message || 'Submission failed. Please check your fields and try again.'}
+                </div>
+              )}
 
               <form onSubmit={handleSubmit} className="demo-booking-form">
                 
@@ -125,6 +130,12 @@ export default function DemoClient() {
                       onChange={handleChange}
                       placeholder="Alex Johnson"
                     />
+                    <ValidationError 
+                      prefix="Full Name" 
+                      field="fullName" 
+                      errors={state.errors} 
+                      style={{ color: '#ef4444', fontSize: '13px', marginTop: '4px', display: 'block', fontWeight: '600' }}
+                    />
                   </div>
                   
                   <div className="form-group">
@@ -138,6 +149,12 @@ export default function DemoClient() {
                       onChange={handleChange}
                       placeholder="alex@company.com"
                     />
+                    <ValidationError 
+                      prefix="Email" 
+                      field="email" 
+                      errors={state.errors} 
+                      style={{ color: '#ef4444', fontSize: '13px', marginTop: '4px', display: 'block', fontWeight: '600' }}
+                    />
                   </div>
                 </div>
 
@@ -150,6 +167,12 @@ export default function DemoClient() {
                     value={formData.company}
                     onChange={handleChange}
                     placeholder="Acme Renewables Ltd."
+                  />
+                  <ValidationError 
+                    prefix="Company" 
+                    field="company" 
+                    errors={state.errors} 
+                    style={{ color: '#ef4444', fontSize: '13px', marginTop: '4px', display: 'block', fontWeight: '600' }}
                   />
                 </div>
 
@@ -171,6 +194,12 @@ export default function DemoClient() {
                       <option value="Other">Other</option>
                     </select>
                   </div>
+                  <ValidationError 
+                    prefix="Role" 
+                    field="role" 
+                    errors={state.errors} 
+                    style={{ color: '#ef4444', fontSize: '13px', marginTop: '4px', display: 'block', fontWeight: '600' }}
+                  />
                 </div>
 
                 <div className="form-group">
@@ -184,10 +213,21 @@ export default function DemoClient() {
                     placeholder="Tell us about your portfolio and what you're looking to solve..."
                     rows={4}
                   />
+                  <ValidationError 
+                    prefix="Message" 
+                    field="message" 
+                    errors={state.errors} 
+                    style={{ color: '#ef4444', fontSize: '13px', marginTop: '4px', display: 'block', fontWeight: '600' }}
+                  />
                 </div>
 
-                <button type="submit" className="submit-demo-btn">
-                  Request My Demo
+                <button 
+                  type="submit" 
+                  className="submit-demo-btn"
+                  disabled={state.submitting}
+                  style={{ opacity: state.submitting ? 0.7 : 1, cursor: state.submitting ? 'not-allowed' : 'pointer' }}
+                >
+                  {state.submitting ? 'Submitting...' : 'Request My Demo'}
                 </button>
               </form>
             </>
