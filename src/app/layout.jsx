@@ -6,7 +6,6 @@ import PageTransition from '../components/PageTransition';
 /* ── Component CSS (imported here for guaranteed server-side inclusion) ── */
 import '../components/Navbar.css';
 import '../components/Hero.css';
-import '../components/DashboardPreview.css';
 import '../components/HowItWorks.css';
 import '../components/Features.css';
 import '../components/BuiltBy.css';
