@@ -12,7 +12,7 @@ export default function PartnersClient() {
     portfolioSize: '',
     message: ''
   });
-  const [state, handleSubmitFormspree, resetFormspree] = useForm('mjgdlkjy');
+  const [state, handleSubmitFormspree, resetFormspree] = useForm('mjgdlkqk');
   const [error, setError] = useState('');
 
   const handleChange = (e) => {
