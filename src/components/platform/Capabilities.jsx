@@ -13,94 +13,65 @@ const handleMouseMove = (e) => {
 /* ── Mini product visuals inline (dark panel previews) ── */
 
 const LiveDashboardVisual = () => (
-  <div className="cap-visual" onMouseMove={handleMouseMove}>
-    <div className="cap-visual-header">
+  <div className="cap-visual" onMouseMove={handleMouseMove} style={{ padding: '16px' }}>
+    <div className="cap-visual-header" style={{ marginBottom: '12px' }}>
       <span className="cap-visual-label">Live dashboard</span>
       <span className="cap-visual-badge">preview</span>
     </div>
-    <div className="cap-live-row-layout">
-      <div className="cap-live-box">
-        <span className="cap-live-dot cap-live-dot--green" />
-        <div className="cap-live-line cap-live-line--short" />
-      </div>
-      <div className="cap-live-box">
-        <span className="cap-live-dot cap-live-dot--green" />
-        <div className="cap-live-line cap-live-line--medium" />
-      </div>
-      <div className="cap-live-box cap-live-box--warn">
-        <span className="cap-live-dot cap-live-dot--warn" />
-        <div className="cap-live-line cap-live-line--short" />
-      </div>
-      <div className="cap-live-box">
-        <span className="cap-live-dot cap-live-dot--green" />
-        <div className="cap-live-line cap-live-line--long" />
-      </div>
+    <div style={{ borderRadius: '8px', overflow: 'hidden', border: '1px solid rgba(255, 255, 255, 0.08)' }}>
+      <img 
+        src="/site-details-overview.jpg" 
+        alt="Live dashboard preview" 
+        style={{ width: '100%', display: 'block', height: 'auto' }}
+      />
     </div>
   </div>
 );
 
 const FaultForecastVisual = () => (
-  <div className="cap-visual" onMouseMove={handleMouseMove}>
-    <div className="cap-visual-header">
+  <div className="cap-visual" onMouseMove={handleMouseMove} style={{ padding: '16px' }}>
+    <div className="cap-visual-header" style={{ marginBottom: '12px' }}>
       <span className="cap-visual-label">Fault forecast</span>
       <span className="cap-visual-badge">preview</span>
     </div>
-    <div className="cap-fault-chart-container">
-      <div className="cap-fault-chart-bars">
-        <div className="cap-fault-chart-bar" style={{ height: '35%' }} />
-        <div className="cap-fault-chart-bar" style={{ height: '55%' }} />
-        <div className="cap-fault-chart-bar" style={{ height: '45%' }} />
-        <div className="cap-fault-chart-bar" style={{ height: '75%' }} />
-        <div className="cap-fault-chart-bar cap-fault-chart-bar--active" style={{ height: '95%' }} />
-      </div>
-      <div className="cap-fault-chart-badge">
-        <span className="cap-fault-badge-dot" />
-        Fault in 48h
-      </div>
+    <div style={{ borderRadius: '8px', overflow: 'hidden', border: '1px solid rgba(255, 255, 255, 0.08)' }}>
+      <img 
+        src="/energy-loss-cascade.jpg" 
+        alt="Fault forecast preview" 
+        style={{ width: '100%', display: 'block', height: 'auto' }}
+      />
     </div>
   </div>
 );
 
 const WorkOrderVisual = () => (
-  <div className="cap-visual" onMouseMove={handleMouseMove}>
-    <div className="cap-visual-header">
+  <div className="cap-visual" onMouseMove={handleMouseMove} style={{ padding: '16px' }}>
+    <div className="cap-visual-header" style={{ marginBottom: '12px' }}>
       <span className="cap-visual-label">Auto work order</span>
       <span className="cap-visual-badge">preview</span>
     </div>
-    <div className="cap-wo-flow">
-      <div className="cap-wo-steps-row">
-        <span className="cap-wo-step-btn">Detect</span>
-        <span className="cap-wo-step-line" />
-        <span className="cap-wo-step-btn cap-wo-step-btn--active">Diagnose</span>
-        <span className="cap-wo-step-line" />
-        <span className="cap-wo-step-btn">Dispatch</span>
-      </div>
-      <div className="cap-wo-status-box">
-        Work order #1242 · routed
-      </div>
+    <div style={{ borderRadius: '8px', overflow: 'hidden', border: '1px solid rgba(255, 255, 255, 0.08)' }}>
+      <img 
+        src="/maintenance-schedule.jpg" 
+        alt="Auto work order preview" 
+        style={{ width: '100%', display: 'block', height: 'auto' }}
+      />
     </div>
   </div>
 );
 
 const ReportVisual = () => (
-  <div className="cap-visual" onMouseMove={handleMouseMove}>
-    <div className="cap-visual-header">
+  <div className="cap-visual" onMouseMove={handleMouseMove} style={{ padding: '16px' }}>
+    <div className="cap-visual-header" style={{ marginBottom: '12px' }}>
       <span className="cap-visual-label">Owner report</span>
       <span className="cap-visual-badge">preview</span>
     </div>
-    <div className="cap-report-layout">
-      <div className="cap-report-inner-card">
-        <span className="cap-report-inner-title">Portfolio report</span>
-        <div className="cap-report-chart">
-          <div className="cap-report-chart-bar" style={{ height: '40%' }} />
-          <div className="cap-report-chart-bar" style={{ height: '80%' }} />
-          <div className="cap-report-chart-bar" style={{ height: '60%' }} />
-        </div>
-      </div>
-      <div className="cap-report-actions">
-        <div className="cap-report-btn">Export PDF</div>
-        <div className="cap-report-btn">Scheduled</div>
-      </div>
+    <div style={{ borderRadius: '8px', overflow: 'hidden', border: '1px solid rgba(255, 255, 255, 0.08)' }}>
+      <img 
+        src="/equipment-registry.jpg" 
+        alt="Owner report preview" 
+        style={{ width: '100%', display: 'block', height: 'auto' }}
+      />
     </div>
   </div>
 );

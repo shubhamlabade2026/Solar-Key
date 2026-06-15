@@ -1,6 +1,5 @@
 'use client';
 import React from 'react';
-import DashboardPreview from '../DashboardPreview';
 import useMagnetic from '../hooks/useMagnetic';
 
 const PlatformHero = () => {
@@ -45,8 +44,18 @@ const PlatformHero = () => {
         </div>
 
         {/* Right — Dashboard Panel */}
-        <div className="plat-hero-right">
-          <DashboardPreview />
+        <div className="plat-hero-right" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+          <img 
+            src="/energy-loss-cascade.jpg" 
+            alt="SolarKey Energy Loss Cascade Dashboard" 
+            style={{ 
+              width: '100%', 
+              maxWidth: '680px', 
+              height: 'auto', 
+              borderRadius: '12px', 
+              boxShadow: '0 20px 40px rgba(0,0,0,0.12), 0 0 0 1px rgba(0,0,0,0.05)' 
+            }}
+          />
         </div>
       </div>
     </section>
