@@ -12,19 +12,16 @@ const BulletList = ({ items }) => (
 /* ─── Asset Owners Mock Card ─── */
 const AssetOwnersMock = () => (
   <div className="sol-mock-card">
-    <div className="sol-mock-header">
+    <div className="sol-mock-header" style={{ marginBottom: '16px' }}>
       <span className="sol-mock-title">Portfolio view</span>
-      <span className="sol-mock-badge">demo</span>
+      <span className="sol-mock-badge">preview</span>
     </div>
-    <div className="sol-mock-site-grid" style={{ gridTemplateColumns: 'repeat(4, 1fr)', gap: '12px' }}>
-      {Array.from({ length: 8 }).map((_, i) => (
-        <div
-          key={i}
-          className="sol-mock-empty-slot"
-        >
-          <span className="sol-mock-tooltip">Available Slot (Connect Site)</span>
-        </div>
-      ))}
+    <div style={{ borderRadius: '8px', overflow: 'hidden', border: '1px solid rgba(255, 255, 255, 0.08)' }}>
+      <img 
+        src="/site-details-overview.jpg" 
+        alt="Portfolio view" 
+        style={{ width: '100%', display: 'block', height: 'auto' }}
+      />
     </div>
   </div>
 );
@@ -32,25 +29,16 @@ const AssetOwnersMock = () => (
 /* ─── O&M Providers Mock Card ─── */
 const OMMock = () => (
   <div className="sol-mock-card">
-    <div className="sol-mock-header">
+    <div className="sol-mock-header" style={{ marginBottom: '16px' }}>
       <span className="sol-mock-title">Work queue</span>
-      <span className="sol-mock-badge">demo</span>
+      <span className="sol-mock-badge">preview</span>
     </div>
-    <div className="sol-mock-wo-list">
-      {[
-        { id: 'WO #1042', desc: 'Inverter 3', badge: 'Routed', badgeClass: 'sol-badge--blue', tooltip: 'Routed to Pavagada Team A · SLA: 2h' },
-        { id: 'WO #1043', desc: 'String drift', badge: 'Open', badgeClass: 'sol-badge--blue-outline', tooltip: 'String drift detected on Inverter 5 · Lead time: 3 days' },
-        { id: 'WO #1051', desc: 'Tracker', badge: 'Closed', badgeClass: 'sol-badge--dark-outline', tooltip: 'Tracker resolved on Sakaka Block 4 · Closed yesterday' },
-      ].map((wo) => (
-        <div key={wo.id} className="sol-mock-wo-row">
-          <div className="sol-mock-wo-left">
-            <span className="sol-mock-wo-id">{wo.id}</span>
-            <span className="sol-mock-wo-desc">{wo.desc}</span>
-          </div>
-          <span className={`sol-badge ${wo.badgeClass}`}>{wo.badge}</span>
-          <span className="sol-mock-tooltip">{wo.tooltip}</span>
-        </div>
-      ))}
+    <div style={{ borderRadius: '8px', overflow: 'hidden', border: '1px solid rgba(255, 255, 255, 0.08)' }}>
+      <img 
+        src="/field-crew-operations.jpg" 
+        alt="Work queue" 
+        style={{ width: '100%', display: 'block', height: 'auto' }}
+      />
     </div>
   </div>
 );
@@ -58,37 +46,17 @@ const OMMock = () => (
 /* ─── Investors Mock Card ─── */
 const InvestorsMock = () => (
   <div className="sol-mock-card">
-    <div className="sol-mock-header">
+    <div className="sol-mock-header" style={{ marginBottom: '16px' }}>
       <span className="sol-mock-title">Fund overview</span>
-      <span className="sol-mock-badge">demo</span>
+      <span className="sol-mock-badge">preview</span>
     </div>
-    <table className="sol-mock-table">
-      <thead>
-        <tr>
-          <th>Asset</th>
-          <th>PR</th>
-          <th>Avail.</th>
-          <th>IRR Δ</th>
-        </tr>
-      </thead>
-      <tbody>
-        {[
-          { asset: 'Rajasthan I', pr: '88%', avail: '90.3%', delta: '+0.4', tooltip: 'Yield: 240 MWh · IRR positive' },
-          { asset: 'Gujarat II', pr: '86%', avail: '90.9%', delta: '+0.2', tooltip: 'Yield: 180 MWh · IRR stable' },
-          { asset: 'Sakaka', pr: '90%', avail: '89.5%', delta: '+0.8', tooltip: 'Yield: 310 MWh · IRR target exceeded' },
-        ].map((row) => (
-          <tr key={row.asset}>
-            <td style={{ position: 'relative' }}>
-              {row.asset}
-              <span className="sol-mock-tooltip">{row.tooltip}</span>
-            </td>
-            <td>{row.pr}</td>
-            <td>{row.avail}</td>
-            <td className="sol-mock-delta">{row.delta}</td>
-          </tr>
-        ))}
-      </tbody>
-    </table>
+    <div style={{ borderRadius: '8px', overflow: 'hidden', border: '1px solid rgba(255, 255, 255, 0.08)' }}>
+      <img 
+        src="/equipment-registry.jpg" 
+        alt="Fund overview" 
+        style={{ width: '100%', display: 'block', height: 'auto' }}
+      />
+    </div>
   </div>
 );
 

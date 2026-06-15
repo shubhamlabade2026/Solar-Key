@@ -74,26 +74,12 @@ const Features = () => {
                   <span className="preview-title">Live dashboard</span>
                   <span className="preview-tag">preview</span>
                 </div>
-                <div className="preview-body live-dash-body">
-                  <div className="dash-grid-slots">
-                    <span className="dash-slot" />
-                    <span className="dash-slot" />
-                    <span className="dash-slot" />
-                    <span className="dash-slot" />
-                  </div>
-                  {/* Line Chart Visual Representation */}
-                  <div className="dash-subtle-graph">
-                    <svg viewBox="0 0 300 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M0 45 C30 40, 60 55, 90 35 C120 15, 150 45, 180 30 C210 15, 240 50, 270 20 C285 10, 300 15, 300 15" stroke="#2563EB" strokeWidth="2.5" strokeLinecap="round" />
-                      <path d="M0 45 C30 40, 60 55, 90 35 C120 15, 150 45, 180 30 C210 15, 240 50, 270 20 C285 10, 300 15, 300 15 L300 60 L0 60 Z" fill="url(#blue-grad)" opacity="0.1" />
-                      <defs>
-                        <linearGradient id="blue-grad" x1="0" y1="0" x2="0" y2="1">
-                          <stop offset="0%" stopColor="#2563EB" />
-                          <stop offset="100%" stopColor="#2563EB" stopOpacity="0" />
-                        </linearGradient>
-                      </defs>
-                    </svg>
-                  </div>
+                <div style={{ borderRadius: '8px', overflow: 'hidden', border: '1px solid rgba(255, 255, 255, 0.08)' }}>
+                  <img 
+                    src="/site-details-overview.jpg" 
+                    alt="Live dashboard preview" 
+                    style={{ width: '100%', display: 'block', height: 'auto' }}
+                  />
                 </div>
               </div>
             </div>
@@ -122,18 +108,12 @@ const Features = () => {
                   <span className="preview-title">Fault forecast</span>
                   <span className="preview-tag">preview</span>
                 </div>
-                <div className="preview-body fault-forecast-body">
-                  <div className="forecast-bars">
-                    <span className="forecast-bar" style={{ height: '35%' }} />
-                    <span className="forecast-bar" style={{ height: '55%' }} />
-                    <span className="forecast-bar" style={{ height: '45%' }} />
-                    <span className="forecast-bar forecast-bar--glow" style={{ height: '78%' }} />
-                    <span className="forecast-bar" style={{ height: '20%' }} />
-                  </div>
-                  <div className="forecast-alert-badge">
-                    <span className="badge-dot" />
-                    <span className="badge-txt">Fault in 40h</span>
-                  </div>
+                <div style={{ borderRadius: '8px', overflow: 'hidden', border: '1px solid rgba(255, 255, 255, 0.08)' }}>
+                  <img 
+                    src="/energy-loss-cascade.jpg" 
+                    alt="Fault forecast preview" 
+                    style={{ width: '100%', display: 'block', height: 'auto' }}
+                  />
                 </div>
               </div>
             </div>
@@ -162,18 +142,12 @@ const Features = () => {
                   <span className="preview-title">Auto work order</span>
                   <span className="preview-tag">preview</span>
                 </div>
-                <div className="preview-body work-order-body">
-                  <div className="work-order-flow">
-                    <span className="flow-pill">Detect</span>
-                    <span className="flow-connector" />
-                    <span className="flow-pill flow-pill--active">Diagnose</span>
-                    <span className="flow-connector" />
-                    <span className="flow-pill">Dispatch</span>
-                  </div>
-                  <div className="work-order-status">
-                    <span className="status-dot" />
-                    <span className="status-txt">Work order #2342 · routed</span>
-                  </div>
+                <div style={{ borderRadius: '8px', overflow: 'hidden', border: '1px solid rgba(255, 255, 255, 0.08)' }}>
+                  <img 
+                    src="/maintenance-schedule.jpg" 
+                    alt="Auto work order preview" 
+                    style={{ width: '100%', display: 'block', height: 'auto' }}
+                  />
                 </div>
               </div>
             </div>
@@ -202,16 +176,12 @@ const Features = () => {
                   <span className="preview-title">Owner report</span>
                   <span className="preview-tag">preview</span>
                 </div>
-                <div className="preview-body owner-report-body">
-                  <div className="report-chart">
-                    <span className="report-bar" style={{ height: '35%' }} />
-                    <span className="report-bar" style={{ height: '55%' }} />
-                    <span className="report-bar" style={{ height: '75%' }} />
-                  </div>
-                  <div className="report-actions">
-                    <button className="btn-report-action btn-report-action--active" disabled>Export PDF</button>
-                    <button className="btn-report-action" disabled>Scheduled</button>
-                  </div>
+                <div style={{ borderRadius: '8px', overflow: 'hidden', border: '1px solid rgba(255, 255, 255, 0.08)' }}>
+                  <img 
+                    src="/equipment-registry.jpg" 
+                    alt="Owner report preview" 
+                    style={{ width: '100%', display: 'block', height: 'auto' }}
+                  />
                 </div>
               </div>
             </div>
