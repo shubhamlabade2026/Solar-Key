@@ -2,8 +2,12 @@
 
 import React from 'react';
 import Link from 'next/link';
+import useMagnetic from '../hooks/useMagnetic';
 
 export default function ResourcesCTA() {
+  const demoRef = useMagnetic();
+  const partnerRef = useMagnetic();
+
   return (
     <section className="res-cta-section">
       <div className="res-cta-container">
@@ -12,10 +16,20 @@ export default function ResourcesCTA() {
           Book a walkthrough, or come in early as a design partner.
         </p>
         <div className="res-cta-btns">
-          <Link href="/demo" className="res-cta-btn-primary">
+          <Link 
+            href="/demo" 
+            className="res-cta-btn-primary"
+            ref={demoRef}
+            style={{ display: 'inline-block' }}
+          >
             Request a demo
           </Link>
-          <Link href="/partners" className="res-cta-btn-secondary">
+          <Link 
+            href="/partners" 
+            className="res-cta-btn-secondary"
+            ref={partnerRef}
+            style={{ display: 'inline-block' }}
+          >
             Become a design partner
           </Link>
         </div>
