@@ -28,9 +28,6 @@ const BuiltBy = () => {
           ))}
         </div>
 
-        <p className="founders-footnote">
-          Add real founder bios + prior experience here — with no clients yet, the team is your strongest trust signal.
-        </p>
       </div>
     </section>
   );

@@ -70,9 +70,6 @@ export default function TeamSection() {
           ))}
         </div>
 
-        <span className="comp-team-footer-caption">
-          Short bios pending — team to add prior companies and domain experience.
-        </span>
       </div>
     </section>
   );
