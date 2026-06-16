@@ -46,7 +46,7 @@ const PlatformHero = () => {
         {/* Right — Dashboard Panel */}
         <div className="plat-hero-right" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
           <img 
-            src="/platform-site-list.jpg" 
+            src="/platform-site-list-v2.jpg" 
             alt="SolarKey Site List Dashboard" 
             style={{ 
               width: '100%', 
