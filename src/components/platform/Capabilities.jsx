@@ -12,21 +12,7 @@ const handleMouseMove = (e) => {
 
 /* ── Mini product visuals inline (dark panel previews) ── */
 
-const LiveDashboardVisual = () => (
-  <div className="cap-visual" onMouseMove={handleMouseMove} style={{ padding: '16px' }}>
-    <div className="cap-visual-header" style={{ marginBottom: '12px' }}>
-      <span className="cap-visual-label">Live dashboard</span>
-      <span className="cap-visual-badge">preview</span>
-    </div>
-    <div style={{ borderRadius: '8px', overflow: 'hidden', border: '1px solid rgba(255, 255, 255, 0.08)' }}>
-      <img 
-        src="/site-details-overview.jpg" 
-        alt="Live dashboard preview" 
-        style={{ width: '100%', display: 'block', height: 'auto' }}
-      />
-    </div>
-  </div>
-);
+const LiveDashboardVisual = () => null;
 
 const FaultForecastVisual = () => (
   <div className="cap-visual" onMouseMove={handleMouseMove} style={{ padding: '16px' }}>

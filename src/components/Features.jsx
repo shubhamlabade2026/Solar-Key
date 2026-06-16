@@ -69,19 +69,7 @@ const Features = () => {
             </div>
             
             <div className="feature-preview-container">
-              <div className="preview-card card-dark">
-                <div className="preview-header">
-                  <span className="preview-title">Live dashboard</span>
-                  <span className="preview-tag">preview</span>
-                </div>
-                <div style={{ borderRadius: '8px', overflow: 'hidden', border: '1px solid rgba(255, 255, 255, 0.08)' }}>
-                  <img 
-                    src="/site-details-overview.jpg" 
-                    alt="Live dashboard preview" 
-                    style={{ width: '100%', display: 'block', height: 'auto' }}
-                  />
-                </div>
-              </div>
+              {/* Temporarily removed preview card and screenshot */}
             </div>
           </div>
 
