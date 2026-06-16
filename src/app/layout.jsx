@@ -89,7 +89,8 @@ export default function RootLayout({ children }) {
         <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Organization",
-          "name": "SolarKey Advanced Ai Solutions Pvt. Ltd.",
+          "name": "SolarKey Advanced AI Solutions Pvt. Ltd.",
+
           "alternateName": "SolarKey",
           "url": "https://www.solar-key.com",
           "logo": "https://www.solar-key.com/logo.png",
