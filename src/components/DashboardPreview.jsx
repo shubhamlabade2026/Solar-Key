@@ -1,5 +1,6 @@
 'use client';
 import React from 'react';
+import './DashboardPreview.css';
 
 
 // Bar heights matching the reference image pattern (7 bars, varying heights)

@@ -66,10 +66,10 @@ const Footer = () => {
               </span>
             </Link>
             <div className="footer-address-info">
-              <p>SolarKey Advanced AI Solutions Pvt. Ltd.</p>
+              <p>SolarKey Advanced Ai Solutions Pvt. Ltd.</p>
               <p>2-22, Evergreen Industrial Estate, Shakti Mill Lane,</p>
               <p>Mahalaxmi West, South Mumbai, Maharashtra, India - 400011</p>
-              <p>+91 96194 22279</p>
+              <p>+91-9619422279</p>
             </div>
 
           </div>
@@ -115,7 +115,7 @@ const Footer = () => {
         {/* ── Bottom metadata bar ── */}
         <div className="footer-bottom-bar">
           <p className="footer-copyright">
-            © 2026 SolarKey Advanced AI Solutions Pvt. Ltd.
+            © 2026 SolarKey Advanced Ai Solutions Pvt. Ltd.
           </p>
           <div className="footer-bottom-links">
             <Link href="/privacy">Privacy</Link>

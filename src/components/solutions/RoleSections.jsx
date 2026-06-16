@@ -10,13 +10,47 @@ const BulletList = ({ items }) => (
 );
 
 /* ─── Asset Owners Mock Card ─── */
-const AssetOwnersMock = () => null;
+const AssetOwnersMock = () => (
+  <img 
+    src="/command-centre-dashboard.jpg" 
+    alt="Command Centre Dashboard" 
+    style={{
+      width: '100%',
+      height: 'auto',
+      borderRadius: '12px',
+      boxShadow: '0 20px 40px rgba(0,0,0,0.12), 0 0 0 1px rgba(0,0,0,0.05)'
+    }}
+  />
+);
 
 /* ─── O&M Providers Mock Card ─── */
-const OMMock = () => null;
+const OMMock = () => (
+  <img 
+    src="/energy-loss-cascade.jpg" 
+    alt="Energy Loss Cascade" 
+    style={{
+      width: '100%',
+      height: 'auto',
+      borderRadius: '12px',
+      boxShadow: '0 20px 40px rgba(0,0,0,0.12), 0 0 0 1px rgba(0,0,0,0.05)'
+    }}
+  />
+);
 
 /* ─── Investors Mock Card ─── */
-const InvestorsMock = () => null;
+const InvestorsMock = () => (
+  <img 
+    src="/fleet-loss-waterfall.jpg" 
+    alt="Fleet Loss Waterfall" 
+    style={{
+      width: '100%',
+      height: 'auto',
+      borderRadius: '12px',
+      boxShadow: '0 20px 40px rgba(0,0,0,0.12), 0 0 0 1px rgba(0,0,0,0.05)'
+    }}
+  />
+);
+
 
 /* ─── Main component ─── */
 const RoleSections = () => {

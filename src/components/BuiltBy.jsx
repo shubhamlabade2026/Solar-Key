@@ -1,9 +1,10 @@
 import React from 'react';
+import './BuiltBy.css';
 
 const founders = [
   { id: 'founder-vs', initials: 'VS', name: 'Vikram Shetty',  role: 'Co-founder & CEO' },
-  { id: 'founder-kc', initials: 'KC', name: 'Kunal Chandra',  role: 'Co-founder' },
   { id: 'founder-sb', initials: 'SB', name: 'Dr. Sudesh Bhagwat', role: 'Director [Technology Innovation]' },
+  { id: 'founder-kc', initials: 'KC', name: 'Kunal Chandra',  role: 'Co-founder' },
 ];
 
 const BuiltBy = () => {
@@ -26,6 +27,10 @@ const BuiltBy = () => {
             </div>
           ))}
         </div>
+
+        <p className="founders-footnote">
+          Add real founder bios + prior experience here — with no clients yet, the team is your strongest trust signal.
+        </p>
       </div>
     </section>
   );

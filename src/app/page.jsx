@@ -2,8 +2,7 @@ import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
 import HowItWorks from '../components/HowItWorks';
 import Features from '../components/Features';
-import BuiltForRole from '../components/platform/BuiltForRole';
-import PlatformFAQ from '../components/platform/PlatformFAQ';
+import BuiltBy from '../components/BuiltBy';
 import CTABanner from '../components/CTABanner';
 import Footer from '../components/Footer';
 
@@ -21,10 +20,9 @@ export default function HomePage() {
       <Navbar />
       <main>
         <Hero />
-        <Features />
         <HowItWorks />
-        <BuiltForRole />
-        <PlatformFAQ />
+        <Features />
+        <BuiltBy />
         <CTABanner />
       </main>
       <Footer />

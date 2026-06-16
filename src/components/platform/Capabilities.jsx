@@ -12,13 +12,45 @@ const handleMouseMove = (e) => {
 
 /* ── Mini product visuals inline (dark panel previews) ── */
 
-const LiveDashboardVisual = () => null;
+const LiveDashboardVisual = () => (
+  <div className="cap-visual" onMouseMove={handleMouseMove} style={{ background: 'transparent', padding: 0, boxShadow: 'none' }}>
+    <img 
+      src="/site-details-overview.jpg" 
+      alt="One live view of every site" 
+      style={{ width: '100%', display: 'block', height: 'auto', borderRadius: '12px', boxShadow: '0 20px 40px rgba(0,0,0,0.12), 0 0 0 1px rgba(0,0,0,0.05)' }}
+    />
+  </div>
+);
 
-const FaultForecastVisual = () => null;
+const FaultForecastVisual = () => (
+  <div className="cap-visual" onMouseMove={handleMouseMove} style={{ background: 'transparent', padding: 0, boxShadow: 'none' }}>
+    <img 
+      src="/energy-loss-cascade.jpg" 
+      alt="Catch the failure before it costs you" 
+      style={{ width: '100%', display: 'block', height: 'auto', borderRadius: '12px', boxShadow: '0 20px 40px rgba(0,0,0,0.12), 0 0 0 1px rgba(0,0,0,0.05)' }}
+    />
+  </div>
+);
 
-const WorkOrderVisual = () => null;
+const WorkOrderVisual = () => (
+  <div className="cap-visual" onMouseMove={handleMouseMove} style={{ background: 'transparent', padding: 0, boxShadow: 'none' }}>
+    <img 
+      src="/maintenance-schedule.jpg" 
+      alt="From alert to resolved, on its own" 
+      style={{ width: '100%', display: 'block', height: 'auto', borderRadius: '12px', boxShadow: '0 20px 40px rgba(0,0,0,0.12), 0 0 0 1px rgba(0,0,0,0.05)' }}
+    />
+  </div>
+);
 
-const ReportVisual = () => null;
+const ReportVisual = () => (
+  <div className="cap-visual" onMouseMove={handleMouseMove} style={{ background: 'transparent', padding: 0, boxShadow: 'none' }}>
+    <img 
+      src="/equipment-registry.jpg" 
+      alt="Numbers your owners trust" 
+      style={{ width: '100%', display: 'block', height: 'auto', borderRadius: '12px', boxShadow: '0 20px 40px rgba(0,0,0,0.12), 0 0 0 1px rgba(0,0,0,0.05)' }}
+    />
+  </div>
+);
 
 const capabilities = [
   {

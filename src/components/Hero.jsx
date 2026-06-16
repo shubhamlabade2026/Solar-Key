@@ -9,14 +9,16 @@ const Hero = () => {
   return (
     <section className="hero">
       <div className="hero-container">
-        {/* Left Content */}
+        {/* Content */}
         <div className="hero-left">
-          <p className="hero-eyebrow">THE PLATFORM</p>
+          <p className="hero-eyebrow">AI MONITORING &amp; OPERATIONS PLATFORM</p>
           <h1 className="hero-headline">
-            Monitor, diagnose and run your whole portfolio, from one platform.
+            See every site.<br />
+            Catch every fault.<br />
+            Prove every kWh.
           </h1>
           <p className="hero-description">
-            SolarKey connects to the kit already on your sites, watches every asset in real time, predicts faults before they cut output, and lets AI agents handle the routine response.
+            SolarKey connects to the inverters, SCADA and meters you already run, monitors every site in real time, and flags faults with AI before they cut your output.
           </p>
           <div className="hero-cta">
             <a 
@@ -29,25 +31,38 @@ const Hero = () => {
               Request a demo
             </a>
             <a 
-              href="#how-it-works" 
+              href="/solutions#savings-calculator" 
               className="btn-secondary" 
-              id="hero-see-how"
+              id="hero-see-savings"
               ref={seeRef}
               style={{ display: 'inline-block' }}
             >
-              See how it works
+              See your savings
             </a>
           </div>
-          <p className="hero-footnote">Built for asset owners, OEM providers and investors across India &amp; West Asia.</p>
+          <p className="hero-footnote">Built for asset owners, O&amp;M providers and investors across India &amp; West Asia.</p>
         </div>
 
-        {/* Right - Dashboard Preview */}
-        <div className="hero-right" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-          {/* Temporarily removed dashboard preview screenshot */}
+        {/* Right - Dashboard image */}
+        <div className="hero-right">
+          <img 
+            src="/command-centre.jpg" 
+            alt="SolarKey O&M Platform Dashboard" 
+            style={{ 
+              width: '100%', 
+              maxWidth: '720px', 
+              height: 'auto', 
+              borderRadius: '12px', 
+              boxShadow: '0 20px 40px rgba(0,0,0,0.12), 0 0 0 1px rgba(0,0,0,0.05)' 
+            }}
+          />
         </div>
+
+
       </div>
     </section>
   );
 };
+
 
 export default Hero;
