@@ -91,19 +91,7 @@ const Features = () => {
             </div>
             
             <div className="feature-preview-container">
-              <div className="preview-card card-dark">
-                <div className="preview-header">
-                  <span className="preview-title">Fault forecast</span>
-                  <span className="preview-tag">preview</span>
-                </div>
-                <div style={{ borderRadius: '8px', overflow: 'hidden', border: '1px solid rgba(255, 255, 255, 0.08)' }}>
-                  <img 
-                    src="/energy-loss-cascade.jpg" 
-                    alt="Fault forecast preview" 
-                    style={{ width: '100%', display: 'block', height: 'auto' }}
-                  />
-                </div>
-              </div>
+              {/* Temporarily removed preview card and screenshot */}
             </div>
           </div>
 
@@ -125,19 +113,7 @@ const Features = () => {
             </div>
             
             <div className="feature-preview-container">
-              <div className="preview-card card-dark">
-                <div className="preview-header">
-                  <span className="preview-title">Auto work order</span>
-                  <span className="preview-tag">preview</span>
-                </div>
-                <div style={{ borderRadius: '8px', overflow: 'hidden', border: '1px solid rgba(255, 255, 255, 0.08)' }}>
-                  <img 
-                    src="/maintenance-schedule.jpg" 
-                    alt="Auto work order preview" 
-                    style={{ width: '100%', display: 'block', height: 'auto' }}
-                  />
-                </div>
-              </div>
+              {/* Temporarily removed preview card and screenshot */}
             </div>
           </div>
 
@@ -159,19 +135,7 @@ const Features = () => {
             </div>
             
             <div className="feature-preview-container">
-              <div className="preview-card card-dark">
-                <div className="preview-header">
-                  <span className="preview-title">Owner report</span>
-                  <span className="preview-tag">preview</span>
-                </div>
-                <div style={{ borderRadius: '8px', overflow: 'hidden', border: '1px solid rgba(255, 255, 255, 0.08)' }}>
-                  <img 
-                    src="/equipment-registry.jpg" 
-                    alt="Owner report preview" 
-                    style={{ width: '100%', display: 'block', height: 'auto' }}
-                  />
-                </div>
-              </div>
+              {/* Temporarily removed preview card and screenshot */}
             </div>
           </div>
 

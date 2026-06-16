@@ -10,55 +10,13 @@ const BulletList = ({ items }) => (
 );
 
 /* ─── Asset Owners Mock Card ─── */
-const AssetOwnersMock = () => (
-  <div className="sol-mock-card">
-    <div className="sol-mock-header" style={{ marginBottom: '16px' }}>
-      <span className="sol-mock-title">Portfolio view</span>
-      <span className="sol-mock-badge">preview</span>
-    </div>
-    <div style={{ borderRadius: '8px', overflow: 'hidden', border: '1px solid rgba(255, 255, 255, 0.08)' }}>
-      <img 
-        src="/site-details-overview.jpg" 
-        alt="Portfolio view" 
-        style={{ width: '100%', display: 'block', height: 'auto' }}
-      />
-    </div>
-  </div>
-);
+const AssetOwnersMock = () => null;
 
 /* ─── O&M Providers Mock Card ─── */
-const OMMock = () => (
-  <div className="sol-mock-card">
-    <div className="sol-mock-header" style={{ marginBottom: '16px' }}>
-      <span className="sol-mock-title">Work queue</span>
-      <span className="sol-mock-badge">preview</span>
-    </div>
-    <div style={{ borderRadius: '8px', overflow: 'hidden', border: '1px solid rgba(255, 255, 255, 0.08)' }}>
-      <img 
-        src="/field-crew-operations.jpg" 
-        alt="Work queue" 
-        style={{ width: '100%', display: 'block', height: 'auto' }}
-      />
-    </div>
-  </div>
-);
+const OMMock = () => null;
 
 /* ─── Investors Mock Card ─── */
-const InvestorsMock = () => (
-  <div className="sol-mock-card">
-    <div className="sol-mock-header" style={{ marginBottom: '16px' }}>
-      <span className="sol-mock-title">Fund overview</span>
-      <span className="sol-mock-badge">preview</span>
-    </div>
-    <div style={{ borderRadius: '8px', overflow: 'hidden', border: '1px solid rgba(255, 255, 255, 0.08)' }}>
-      <img 
-        src="/equipment-registry.jpg" 
-        alt="Fund overview" 
-        style={{ width: '100%', display: 'block', height: 'auto' }}
-      />
-    </div>
-  </div>
-);
+const InvestorsMock = () => null;
 
 /* ─── Main component ─── */
 const RoleSections = () => {
