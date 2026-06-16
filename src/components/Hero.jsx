@@ -46,8 +46,9 @@ const Hero = () => {
         {/* Right - Dashboard image */}
         <div className="hero-right">
           <img 
-            src="/command-centre.jpg" 
+            src="/dashboard-screenshot.jpg" 
             alt="SolarKey O&M Platform Dashboard" 
+            className="hero-dashboard-img"
             style={{ 
               width: '100%', 
               maxWidth: '720px', 

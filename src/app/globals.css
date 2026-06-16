@@ -185,4 +185,29 @@ img {
   animation: float-orb 16s infinite ease-in-out;
 }
 
+/* ── Hero Dashboard Image Premium Entrance & Float ── */
+.hero-dashboard-img {
+  animation: heroImageEntrance 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards,
+             heroImageFloat 6s ease-in-out infinite 1.2s;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+@keyframes heroImageEntrance {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes heroImageFloat {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+
 
